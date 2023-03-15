@@ -11,8 +11,12 @@
             "id": "e50f032f5350d5dc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Templates/Variable & Methods Table Template.md",
+                "mode": "preview",
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 209.50852584838867
   },
   "right": {
     "id": "c4949ce70ada0b4b",
@@ -135,9 +139,18 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-markdown-formatting-assistant-plugin:Open Markdown Formatting Assistant": false
     }
   },
-  "active": "e50f032f5350d5dc",
-  "lastOpenFiles": []
+  "active": "2d856adbc930ddf4",
+  "lastOpenFiles": [
+    "TDD/TDD.md",
+    "TDD/Untitled.md",
+    "Technical Requirements",
+    "Templates/Variable & Methods Table Template.md",
+    "Templates",
+    "TDD"
+  ]
 }
