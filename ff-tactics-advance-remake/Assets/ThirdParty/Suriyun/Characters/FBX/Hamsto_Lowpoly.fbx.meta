@@ -1,0 +1,697 @@
+fileFormatVersion: 2
+guid: 14dc0dab558577b4dad9ccad6905419f
+timeCreated: 1499513920
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Ankle_L
+    100002: Ankle_R
+    100004: Chest_M
+    100006: ear1
+    100008: ear2
+    100010: ear3
+    100012: ear4
+    100014: ear5
+    100016: ear6
+    100018: ear_root
+    100020: Elbow_L
+    100022: Elbow_R
+    100024: Face_low
+    100026: FKExtraRoot_M
+    100028: FKIKParentConstraintSpine_M
+    100030: FKIKSpine_M
+    100032: FKIKSystem
+    100034: FKOffsetRoot_M
+    100036: FKRoot_M
+    100038: FKSystem
+    100040: FKXRoot_M
+    100042: Group
+    100044: Hamsto_low
+    100046: //RootNode
+    100048: Head_M
+    100050: HeadEnd_M
+    100052: Hip_L
+    100054: Hip_R
+    100056: HipSwingReverse
+    100058: HipSwingReverseRoot
+    100060: IKExtraSpine1_M
+    100062: IKExtraSpine2_M
+    100064: IKHandle
+    100066: IKJoints
+    100068: IKOffsetSpine1_M
+    100070: IKOffsetSpine2_M
+    100072: IKParentConstraintRoot_M
+    100074: IKRootConstraint
+    100076: IKScalerRoot_M
+    100078: IKSpine1_M
+    100080: IKSpine2_M
+    100082: IKSpRoot_M
+    100084: IKSpRootFollowOffset_M
+    100086: IKSpSpineOffset_M
+    100088: IKSystem
+    100090: IKXOffsetRoot_M
+    100092: IKXRoot_M
+    100094: Knee_L
+    100096: Knee_R
+    100098: Main
+    100100: Mesh
+    100102: MotionSystem
+    100104: Neck_M
+    100106: Root_M
+    100108: Scapula_L
+    100110: Scapula_R
+    100112: Shoulder_L
+    100114: Shoulder_R
+    100116: Spine1_M
+    100118: Toes_L
+    100120: Toes_R
+    100122: ToesEnd_L
+    100124: ToesEnd_R
+    100126: Wrist_L
+    100128: Wrist_R
+    400000: Ankle_L
+    400002: Ankle_R
+    400004: Chest_M
+    400006: ear1
+    400008: ear2
+    400010: ear3
+    400012: ear4
+    400014: ear5
+    400016: ear6
+    400018: ear_root
+    400020: Elbow_L
+    400022: Elbow_R
+    400024: Face_low
+    400026: FKExtraRoot_M
+    400028: FKIKParentConstraintSpine_M
+    400030: FKIKSpine_M
+    400032: FKIKSystem
+    400034: FKOffsetRoot_M
+    400036: FKRoot_M
+    400038: FKSystem
+    400040: FKXRoot_M
+    400042: Group
+    400044: Hamsto_low
+    400046: //RootNode
+    400048: Head_M
+    400050: HeadEnd_M
+    400052: Hip_L
+    400054: Hip_R
+    400056: HipSwingReverse
+    400058: HipSwingReverseRoot
+    400060: IKExtraSpine1_M
+    400062: IKExtraSpine2_M
+    400064: IKHandle
+    400066: IKJoints
+    400068: IKOffsetSpine1_M
+    400070: IKOffsetSpine2_M
+    400072: IKParentConstraintRoot_M
+    400074: IKRootConstraint
+    400076: IKScalerRoot_M
+    400078: IKSpine1_M
+    400080: IKSpine2_M
+    400082: IKSpRoot_M
+    400084: IKSpRootFollowOffset_M
+    400086: IKSpSpineOffset_M
+    400088: IKSystem
+    400090: IKXOffsetRoot_M
+    400092: IKXRoot_M
+    400094: Knee_L
+    400096: Knee_R
+    400098: Main
+    400100: Mesh
+    400102: MotionSystem
+    400104: Neck_M
+    400106: Root_M
+    400108: Scapula_L
+    400110: Scapula_R
+    400112: Shoulder_L
+    400114: Shoulder_R
+    400116: Spine1_M
+    400118: Toes_L
+    400120: Toes_R
+    400122: ToesEnd_L
+    400124: ToesEnd_R
+    400126: Wrist_L
+    400128: Wrist_R
+    4300000: Hamsto_low
+    4300002: Face_low
+    9500000: //RootNode
+    13700000: Face_low
+    13700002: Hamsto_low
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 2
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: Root_M
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hip_L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Hip_R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Knee_L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Knee_R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Ankle_L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Ankle_R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine1_M
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Neck_M
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head_M
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Scapula_L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Scapula_R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shoulder_L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Shoulder_R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Elbow_L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Elbow_R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Wrist_L
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Wrist_R
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Toes_L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Toes_R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Hamsto_Lowpoly(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Group
+      parentName: Hamsto_Lowpoly(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Main
+      parentName: Group
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: MotionSystem
+      parentName: Main
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FKIKSystem
+      parentName: MotionSystem
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FKIKParentConstraintSpine_M
+      parentName: FKIKSystem
+      position: {x: -1.9709483e-18, y: 0.0982851, z: -0.0017717207}
+      rotation: {x: 0.5667435, y: -0.42284966, z: -0.5667435, w: 0.42284966}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FKIKSpine_M
+      parentName: FKIKParentConstraintSpine_M
+      position: {x: -0.039466728, y: -4.440892e-18, z: 0.024893345}
+      rotation: {x: 0.5667435, y: -0.42284966, z: -0.5667435, w: -0.42284966}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FKSystem
+      parentName: MotionSystem
+      position: {x: 2.4651902e-33, y: 0, z: 3.6082247e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FKOffsetRoot_M
+      parentName: FKSystem
+      position: {x: -1.9709483e-18, y: 0.0982851, z: -0.0017717207}
+      rotation: {x: 0.5667435, y: -0.42284966, z: -0.5667435, w: 0.42284966}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FKExtraRoot_M
+      parentName: FKOffsetRoot_M
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FKRoot_M
+      parentName: FKExtraRoot_M
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FKXRoot_M
+      parentName: FKRoot_M
+      position: {x: -0, y: -1.3322676e-17, z: 2.3665827e-32}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: HipSwingReverse
+      parentName: FKRoot_M
+      position: {x: -0.06673204, y: 2.2204459e-17, z: -2.9279977e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: HipSwingReverseRoot
+      parentName: HipSwingReverse
+      position: {x: 0.06673204, y: -3.5527136e-17, z: 2.9279977e-17}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IKSystem
+      parentName: MotionSystem
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IKHandle
+      parentName: IKSystem
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IKRootConstraint
+      parentName: IKHandle
+      position: {x: 2.4651902e-33, y: 0, z: 3.6082247e-18}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IKOffsetSpine1_M
+      parentName: IKRootConstraint
+      position: {x: -1.9709483e-18, y: 0.0982851, z: -0.0017717207}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IKExtraSpine1_M
+      parentName: IKOffsetSpine1_M
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IKSpine1_M
+      parentName: IKExtraSpine1_M
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IKOffsetSpine2_M
+      parentName: IKRootConstraint
+      position: {x: -2.7553044e-17, y: 0.24426937, z: 0.030569864}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IKExtraSpine2_M
+      parentName: IKOffsetSpine2_M
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IKSpine2_M
+      parentName: IKExtraSpine2_M
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IKScalerRoot_M
+      parentName: IKHandle
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IKJoints
+      parentName: IKSystem
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IKParentConstraintRoot_M
+      parentName: IKJoints
+      position: {x: -1.9709483e-18, y: 0.0982851, z: -0.0017717207}
+      rotation: {x: -0.5667435, y: 0.42284966, z: 0.5667435, w: -0.42284966}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IKXOffsetRoot_M
+      parentName: IKParentConstraintRoot_M
+      position: {x: -0, y: -8.881784e-18, z: 1.5777218e-32}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IKXRoot_M
+      parentName: IKXOffsetRoot_M
+      position: {x: -1.7763568e-17, y: 8.881784e-18, z: -1.5777218e-32}
+      rotation: {x: 0, y: -0, z: -7.632783e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IKSpSpineOffset_M
+      parentName: IKJoints
+      position: {x: -1.9709483e-18, y: 0.0982851, z: -0.0017717207}
+      rotation: {x: -0.55142933, y: 0.44263497, z: 0.55142933, w: -0.44263497}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IKSpRoot_M
+      parentName: IKSpSpineOffset_M
+      position: {x: -3.5527136e-17, y: 4.440892e-18, z: 0}
+      rotation: {x: -4.1633363e-16, y: -1.6653345e-16, z: -5.551115e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: IKSpRootFollowOffset_M
+      parentName: IKSpRoot_M
+      position: {x: 1.7763568e-17, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0.035377562, w: 0.99937403}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mesh
+      parentName: Hamsto_Lowpoly(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Face_low
+      parentName: Mesh
+      position: {x: -0, y: 0, z: 0.0025535836}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1.0282534, y: 1.0282534, z: 1.0282534}
+    - name: Hamsto_low
+      parentName: Mesh
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Root_M
+      parentName: Hamsto_Lowpoly(Clone)
+      position: {x: -1.9709483e-18, y: 0.0982851, z: -0.0017717207}
+      rotation: {x: 0.5667435, y: -0.42284966, z: -0.5667435, w: 0.42284966}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hip_R
+      parentName: Root_M
+      position: {x: 0.0021580283, y: 0.00008274572, z: -0.11852326}
+      rotation: {x: -0.18835701, y: 0.9819638, z: -0.007842092, w: -0.0143938465}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Knee_R
+      parentName: Hip_R
+      position: {x: -0.049741242, y: 8.2156505e-17, z: 3.0198067e-16}
+      rotation: {x: 0, y: 0, z: 0.0821995, w: 0.9966159}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ankle_R
+      parentName: Knee_R
+      position: {x: -0.038301792, y: -1.06928354e-16, z: -1.7763567e-16}
+      rotation: {x: -0.012982783, y: -0.014627566, z: -0.03724877, w: 0.99911463}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Toes_R
+      parentName: Ankle_R
+      position: {x: -0.0066611706, y: 0.013424176, z: -1.7763568e-17}
+      rotation: {x: 0.0045593283, y: 0.003982278, z: -0.6578248, w: 0.75314665}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ToesEnd_R
+      parentName: Toes_R
+      position: {x: -0.00626901, y: -2.8288482e-15, z: 0.000000016203483}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine1_M
+      parentName: Root_M
+      position: {x: -0.06673204, y: 2.2204459e-17, z: -2.9279977e-17}
+      rotation: {x: 0, y: 0, z: 0.06375095, w: 0.9979659}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Chest_M
+      parentName: Spine1_M
+      position: {x: -0.08309294, y: 1.11022296e-17, z: -2.839454e-17}
+      rotation: {x: 0, y: 0, z: 0.08897008, w: 0.9960343}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Scapula_R
+      parentName: Chest_M
+      position: {x: -0.007124099, y: 0.0039020418, z: -0.16623533}
+      rotation: {x: -0.0059957947, y: -0.7071044, z: -0.005921882, w: 0.70705897}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shoulder_R
+      parentName: Scapula_R
+      position: {x: -0.03300032, y: 1.7514878e-14, z: -2.842171e-16}
+      rotation: {x: -6.489992e-13, y: 0.00003438993, z: 0.015457505, w: 0.99988055}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Elbow_R
+      parentName: Shoulder_R
+      position: {x: -0.044143036, y: 2.6645352e-17, z: 5.32907e-16}
+      rotation: {x: -0.0000064583646, y: -0.00000019643201, z: -0.030401075, w: 0.99953777}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Wrist_R
+      parentName: Elbow_R
+      position: {x: -0.04518258, y: -4.8849813e-17, z: -4.3129942e-14}
+      rotation: {x: 0.0000042704633, y: 0.0000014295842, z: 0.012836805, w: 0.9999176}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Neck_M
+      parentName: Chest_M
+      position: {x: -0.06315563, y: 5.3290704e-17, z: 2.0097099e-17}
+      rotation: {x: 0, y: 0, z: -0.030428758, w: 0.99953693}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head_M
+      parentName: Neck_M
+      position: {x: -0.063508384, y: -6.217249e-17, z: -4.4735827e-17}
+      rotation: {x: 0, y: 0, z: 0.021944676, w: 0.9997592}
+      scale: {x: 1, y: 1, z: 1}
+    - name: HeadEnd_M
+      parentName: Head_M
+      position: {x: -0.120432794, y: -3.5527136e-17, z: -2.0610437e-16}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ear_root
+      parentName: HeadEnd_M
+      position: {x: 0.00116299, y: -0.0037393938, z: -2.2511342e-18}
+      rotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ear4
+      parentName: ear_root
+      position: {x: 0.14355999, y: -0.027102921, z: -0.028545186}
+      rotation: {x: 1, y: 0, z: -3.081488e-33, w: -6.123234e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ear5
+      parentName: ear4
+      position: {x: 0.036023, y: -0.056237, z: 5.0517694e-18}
+      rotation: {x: 1.1856273e-17, y: -3.6213305e-17, z: 5.551115e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ear6
+      parentName: ear5
+      position: {x: 0.043130998, y: -0.069832, z: 7.098285e-18}
+      rotation: {x: 1.1856273e-17, y: -3.6213305e-17, z: 5.551115e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ear1
+      parentName: ear_root
+      position: {x: -0.1435601, y: -0.027103314, z: -0.028545186}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ear2
+      parentName: ear1
+      position: {x: -0.036022518, y: 0.05623742, z: 4.206695e-18}
+      rotation: {x: 0, y: -0, z: -5.551115e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ear3
+      parentName: ear2
+      position: {x: -0.043131307, y: 0.06983164, z: 4.203639e-11}
+      rotation: {x: 0.008649722, y: -0.008802021, z: -0.008649722, w: 0.99988645}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Scapula_L
+      parentName: Chest_M
+      position: {x: -0.007124099, y: 0.0039020418, z: 0.16623533}
+      rotation: {x: 0.7071044, y: -0.0059957947, z: 0.70705897, w: 0.005921882}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Shoulder_L
+      parentName: Scapula_L
+      position: {x: 0.03300032, y: -2.1138646e-14, z: -1.4210854e-16}
+      rotation: {x: -1.5932211e-12, y: 0.00003438993, z: 0.015457505, w: 0.99988055}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Elbow_L
+      parentName: Shoulder_L
+      position: {x: 0.044143036, y: -8.8817837e-17, z: -6.252776e-15}
+      rotation: {x: -0.0000064583655, y: -0.00000019643201, z: -0.030401075, w: 0.99953777}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Wrist_L
+      parentName: Elbow_L
+      position: {x: 0.04518258, y: -4.8849813e-17, z: 5.0910387e-14}
+      rotation: {x: 0.000004270462, y: 0.0000014295842, z: 0.012836805, w: 0.9999176}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hip_L
+      parentName: Root_M
+      position: {x: 0.0021580283, y: 0.00008274572, z: 0.11852326}
+      rotation: {x: 0.9819638, y: 0.18835701, z: 0.0143938465, w: -0.007842092}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Knee_L
+      parentName: Hip_L
+      position: {x: 0.049741242, y: -5.662137e-17, z: -3.375078e-16}
+      rotation: {x: 0, y: 0, z: 0.0821995, w: 0.9966159}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Ankle_L
+      parentName: Knee_L
+      position: {x: 0.038301792, y: -2.7075564e-16, z: 1.7763568e-17}
+      rotation: {x: -0.012982783, y: -0.014627566, z: -0.03724877, w: 0.99911463}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Toes_L
+      parentName: Ankle_L
+      position: {x: 0.0066611706, y: -0.013424176, z: 1.7763568e-17}
+      rotation: {x: 0.004560311, y: 0.0039831363, z: -0.6578248, w: 0.75314665}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ToesEnd_L
+      parentName: Toes_L
+      position: {x: 0.00626901, y: 2.8865798e-17, z: -2.4868996e-16}
+      rotation: {x: 0.0000000877082, y: 0.0000012982733, z: -1.1386921e-13, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
