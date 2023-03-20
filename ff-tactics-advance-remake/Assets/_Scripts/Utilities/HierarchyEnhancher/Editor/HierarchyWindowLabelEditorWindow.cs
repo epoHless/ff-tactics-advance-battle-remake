@@ -25,8 +25,6 @@ public class HierarchyWindowLabelEditorWindow : EditorWindow
 
     private void Awake()
     {
-        // FetchPresets();
-
         Presets = new List<HierarchyLabelPreset>(HierarchyWindowGameObjectLabel.Presets);
         
         sidebarStyle = new GUIStyle()
@@ -56,7 +54,13 @@ public class HierarchyWindowLabelEditorWindow : EditorWindow
         RenderPresets();
         
         GUILayout.FlexibleSpace();
-
+        
+        if (GUILayout.Button("Fetch Labels", GUILayout.Width(220)))
+        {
+            HierarchyWindowGameObjectLabel.FetchLabels();
+            Presets = new List<HierarchyLabelPreset>(HierarchyWindowGameObjectLabel.Presets);
+        }
+        
         GUILayout.BeginHorizontal();
 
         if (GUILayout.Button("Add All", GUILayout.Width(110)))
@@ -169,7 +173,7 @@ public class HierarchyWindowLabelEditorWindow : EditorWindow
     private void AddNewLabel(string name)
     {
         var label = ScriptableObject.CreateInstance<HierarchyLabelPreset>();
-        string labelPath = $"Assets/ScriptableObjects/_EditorUtilities/HierarchyLabels/LabelPreset_{name}.asset";
+        string labelPath = String.Concat(HierarchyWindowGameObjectLabel.LabelsDirectory, $"/LabelPreset_{name}.asset");
 
         if (!File.Exists(labelPath))
         {
@@ -207,7 +211,7 @@ public class HierarchyWindowLabelEditorWindow : EditorWindow
         HierarchyWindowGameObjectLabel.RemovePreset(_label);
         RemovePreset(_label);
 
-        string assetPath = $"Assets/ScriptableObjects/_EditorUtilities/HierarchyLabels/{_label.name}.asset";
+        string assetPath = String.Concat(HierarchyWindowGameObjectLabel.LabelsDirectory, $"/{_label.name}.asset");
 
         if (File.Exists(assetPath))
         {
@@ -216,29 +220,11 @@ public class HierarchyWindowLabelEditorWindow : EditorWindow
             AssetDatabase.Refresh();
 
             selectedPreset = Presets[0];
+            Presets.Remove(_label);
         }
         else
         {
             EditorUtility.DisplayDialog("ERROR", $"Could not find asset at path: {assetPath}", "OK");
-        }
-    }
-    
-    /// <summary>
-    /// Fetch all the Labels ScriptableObjects in the default folder
-    /// </summary>
-    private void FetchPresets()
-    {
-        var assets = AssetDatabase.FindAssets("t:ScriptableObject", new[] { "Assets/ScriptableObjects/_EditorUtilities/HierarchyLabels/" });
-        
-        foreach (var asset in assets)
-        {
-            var path = AssetDatabase.GUIDToAssetPath(asset);
-            var item = AssetDatabase.LoadAssetAtPath(path, typeof(HierarchyLabelPreset)) as HierarchyLabelPreset;
-        
-            if (item)
-            {
-                AddPreset(item);
-            }
         }
     }
 

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using UnityEditor;
 using UnityEngine;
 
@@ -7,6 +9,8 @@ using UnityEngine;
 [InitializeOnLoad]
 public static class HierarchyWindowGameObjectLabel
 {
+    public static string LabelsDirectory { get; private set; }
+    
     public static List<HierarchyLabelPreset> Presets = new List<HierarchyLabelPreset>();
 
     private static readonly Color SelectedColor = new Color(44f / 255f, 93f / 255f, 135f / 255f, 1f);
@@ -20,7 +24,11 @@ public static class HierarchyWindowGameObjectLabel
 
     public static void FetchLabels()
     {
-        var assets = AssetDatabase.FindAssets("t:ScriptableObject", new[] { "Assets/ScriptableObjects/_EditorUtilities/HierarchyLabels/" });
+        LabelsDirectory = !Directory.Exists($"{Application.dataPath}/HierarchyLabels") ? 
+            AssetDatabase.CreateFolder("Assets", "HierarchyLabels") : 
+            "Assets/HierarchyLabels/";
+
+        var assets = AssetDatabase.FindAssets("", new[] { LabelsDirectory });
 
         Presets = new List<HierarchyLabelPreset>();
         
@@ -73,7 +81,7 @@ public static class HierarchyWindowGameObjectLabel
         } : new GUIStyleState
         {
             background = EditorUtility.InstanceIDToObject(instanceID) != Selection.activeObject ? HierarchyUtilities.MakeTex(1, 1, _preset.inactiveBackgroundColor) : HierarchyUtilities.MakeTex(1, 1, SelectedColor),
-            textColor = _preset.useCustomInactiveColors ? _preset.inactiveTextColor : HierarchyUtilities.ChangeColorBrightness(_preset.textColor, 0.4f)
+            textColor = _preset.useCustomInactiveColors ? _preset.inactiveTextColor : HierarchyUtilities.ChangeColorBrightness(_preset.textColor, 0.45f)
         };
 
         style.normal = normalStyleState;

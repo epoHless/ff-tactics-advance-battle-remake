@@ -1,0 +1,1 @@
+The move option lets the characters move around the map for a fixed amount of tiles based on the character
