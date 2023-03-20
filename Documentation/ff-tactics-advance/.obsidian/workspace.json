@@ -27,14 +27,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TDD/Technical Requirements/Game Mechanics/Fighting System.md",
+                "file": "TDD/Technical Requirements/Game Mechanics/Movement.md",
                 "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6f4f4d5f8ff1d766",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TDD/Technical Requirements/Grid System/Grid Mechanic.md",
+                "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -100,7 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TDD/Technical Requirements/Game Mechanics/Fighting System.md",
+                "file": "TDD/Technical Requirements/Grid System/Grid Mechanic.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +129,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "TDD/Technical Requirements/Game Mechanics/Fighting System.md",
+                "file": "TDD/Technical Requirements/Grid System/Grid Mechanic.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +152,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TDD/Technical Requirements/Game Mechanics/Fighting System.md"
+                "file": "TDD/Technical Requirements/Grid System/Grid Mechanic.md"
               }
             }
           },
@@ -171,15 +183,17 @@
       "obsidian-markdown-formatting-assistant-plugin:Open Markdown Formatting Assistant": false
     }
   },
-  "active": "196b823ddcbae3bd",
+  "active": "6f4f4d5f8ff1d766",
   "lastOpenFiles": [
     "TDD/Technical Requirements/Game Mechanics/Movement.md",
+    "TDD/Technical Requirements/Grid System/Grid Mechanic.md",
+    "TDD/Technical Requirements/Grid System",
     "TDD/Technical Requirements/Game Mechanics/Fighting System.md",
+    "TDD/Technical Requirements/Game Mechanics/Characters, Statistics & Jobs.md",
+    "TDD/Technical Requirements/Fighting System/Move.md",
     "TDD/Technical Requirements/Analisys.md",
     "TDD/Technical Requirements/Game Mechanics/Items, Abilities & Equipment.md",
-    "TDD/Technical Requirements/Game Mechanics/Characters, Statistics & Jobs.md",
     "TDD/Project Kanban.md",
-    "TDD/Technical Requirements/Fighting System/Move.md",
     "TDD/Technical Requirements/Fighting System",
     "TDD/Project Kanban 1.md",
     "TDD/TDD.md",
