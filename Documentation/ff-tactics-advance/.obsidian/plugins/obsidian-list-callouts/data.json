@@ -1,7 +1,8 @@
 [
   {
     "color": "255, 214, 0",
-    "char": "&"
+    "char": "&",
+    "icon": "lucide-folder"
   },
   {
     "color": "255, 145, 0",
@@ -13,7 +14,8 @@
   },
   {
     "color": "124, 77, 255",
-    "char": "~"
+    "char": "~",
+    "icon": "lucide-book"
   },
   {
     "color": "0, 184, 212",
@@ -27,5 +29,17 @@
   {
     "color": "158, 158, 158",
     "char": "%"
+  },
+  {
+    "char": "^",
+    "color": "148, 148, 148",
+    "icon": "lucide-corner-down-right",
+    "custom": true
+  },
+  {
+    "char": "!!",
+    "color": "255, 205, 26",
+    "icon": "admonition-warning",
+    "custom": true
   }
 ]

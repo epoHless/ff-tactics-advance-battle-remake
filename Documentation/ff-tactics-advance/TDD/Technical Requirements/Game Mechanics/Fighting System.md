@@ -5,13 +5,25 @@ The turn will begin giving the highest speed character priority</p>
 
 #### The System
 
+Every time a character gets to move a menu will be visible to the player, indicating the current character statistics and it's options for the turn.
+
 - During it's turn a characher can chose to make different actions:
-	- Move -> [[Movement]]
-	- Action
-	- Wait
-	- Status
+	- [[Move]]
+	- [[Action]]
+	- [[Wait]]
+	- [[Status]]
 
 Each action holds a different output.
+
+> [!info] Turn Menu
+> ![[ff-choices.png|inlL]] <p style="text-align: center; "><i>Current character's turn menu</i></p>
+
+---
+
+```ad-note
+title: Menu Flow
+>![[Diagram 2.svg]]
+```
 
 ---
 

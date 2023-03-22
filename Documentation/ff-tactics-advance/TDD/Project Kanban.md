@@ -6,11 +6,12 @@ kanban-plugin: basic
 
 ## Planned 🗃️
 
+- [ ] <span style="color:#0f0f0f">**Movement System**
 
 
 ## <span style="color:#54ccf7">In Progress ⚒️
 
-- [ ] Project Analysis<br><br> - [x] Movement System<br> - [ ] Items & Equipment<br> - [x] Characters<br> - [ ] Abilities
+- [ ] Project Analysis<br><br> - [x] Movement System<br> - [x] Items & Equipment<br> - [x] Characters<br> - [ ] Abilities
 
 
 ## <span style="color:#6ff754"> Done ✅

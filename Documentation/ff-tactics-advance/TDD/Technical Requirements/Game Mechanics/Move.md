@@ -2,6 +2,8 @@ The Movement will be grid based on square tiles, each tile will have a travel co
 Climbing a hill or traversing a river for example will cost more energy.<br>
 The movement will be in 4 directions, each entity in the current combat will be able to move in the map, Enemies too.
 
+- !! **Each character can move once per turn. when the turn ends, the player will have to chose a position to face.**
+
 ----
 
 #### **The grids will**
@@ -16,6 +18,13 @@ The movement will be in 4 directions, each entity in the current combat will be 
 	- *During the move state the player will be able to move the cursor to each tile, giving the tooltip of a character if selected;*
 	- *A highlight of the traversable tiles will appear showing the player the tiles it can move to;*	
 	- *A highlight of the range of the attacks will appear when selecting a target for an attack*
+
+---
+
+> [!info] Movement Highlight
+> ![](ff-move.png)
+> <p style="text-align: center; "><i>Movement highlight</i></p>
+> 
 
 ---
 
@@ -48,4 +57,4 @@ The movement will be in 4 directions, each entity in the current combat will be 
 
 #### **Final Choice**
 
-The **Unity Tile System** will be the choice for this project as it already has all the necessary features and it's easier to get online support in case of need.
+The **Unity Tile System** will be used to place some **custom tile components** in order to facilitate level building.

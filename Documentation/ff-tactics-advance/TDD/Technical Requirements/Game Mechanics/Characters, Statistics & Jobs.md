@@ -1,5 +1,6 @@
-
 Characters are the entities that fight and move around the map, wether they are controlled by the player or by the AI.
+
+---
 
 #### Charaters can be controlled by
 

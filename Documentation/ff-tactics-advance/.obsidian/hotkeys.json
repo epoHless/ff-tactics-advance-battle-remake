@@ -1,1 +1,11 @@
-{}
+{
+  "symbols-prettifier:symbols-prettifier-format-symbols": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "P"
+    }
+  ]
+}
