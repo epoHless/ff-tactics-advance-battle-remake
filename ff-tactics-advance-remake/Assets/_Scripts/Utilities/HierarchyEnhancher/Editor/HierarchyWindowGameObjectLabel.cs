@@ -14,7 +14,7 @@ public static class HierarchyWindowGameObjectLabel
     public static List<HierarchyLabelPreset> Presets = new List<HierarchyLabelPreset>();
 
     private static readonly Color SelectedColor = new Color(44f / 255f, 93f / 255f, 135f / 255f, 1f);
-    private static readonly Color UnselectedColor = new Color(56f / 255f, 56f / 255f, 56f / 255f);
+    private static readonly Color UnselectedColor = new Color(200f / 255f, 200f / 255f, 200f / 255f);
 
     static HierarchyWindowGameObjectLabel()
     {

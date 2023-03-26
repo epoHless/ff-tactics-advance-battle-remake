@@ -25,11 +25,29 @@
             "id": "217efb9a4dd5a88f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "TDD/Technical Requirements/Game Mechanics/Fighting System.md",
-                "mode": "preview",
-                "source": false
+                "file": "TDD/Sub Kanbans/Grid System - Movement.md"
+              }
+            }
+          },
+          {
+            "id": "76fc5cb55dc8df13",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "TDD/Sub Kanbans/Characters.md"
+              }
+            }
+          },
+          {
+            "id": "f42b29f348489b89",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "TDD/Sub Kanbans/Input System.md"
               }
             }
           }
@@ -100,7 +118,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TDD/Technical Requirements/Game Mechanics/Fighting System.md",
+                "file": "TDD/Sub Kanbans/Grid System - Movement.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -117,7 +135,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "TDD/Technical Requirements/Game Mechanics/Fighting System.md",
+                "file": "TDD/Sub Kanbans/Grid System - Movement.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -140,7 +158,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TDD/Technical Requirements/Game Mechanics/Fighting System.md"
+                "file": "TDD/Sub Kanbans/Grid System - Movement.md"
               }
             }
           },
@@ -156,7 +174,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 289.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -173,29 +191,39 @@
   },
   "active": "217efb9a4dd5a88f",
   "lastOpenFiles": [
-    "TDD/Technical Requirements/Game Mechanics/Items, Abilities & Equipment.md",
-    "TDD/Technical Requirements/Game Mechanics/Fighting System.md",
-    "TDD/Technical Requirements/Game Mechanics/Action.md",
-    "TDD/Technical Requirements/Game Mechanics/Characters, Statistics & Jobs.md",
-    "Diagram 2.svg.xml",
-    "Diagram 2.svg",
-    "TDD/Technical Requirements/Game Mechanics/Wait.md",
-    "TDD/Technical Requirements/Analisys.md",
-    "TDD/Technical Requirements/Technical Requirements.md",
-    "TDD/Technical Requirements/Grid System/Grid Mechanic.md",
-    "TDD/Technical Requirements/Game Mechanics/Move.md",
-    "TDD/Technical Requirements/Game Mechanics/Status.md",
     "TDD/Project Kanban.md",
-    "Diagram 1.svg.xml",
-    "Diagram 1.svg",
-    "Templates/Colored Text Template.md",
-    "Diagram.svg.xml",
-    "Diagram.svg",
+    "TDD/Technical Requirements/Game Mechanics/Move.md",
+    "TDD/Sub Kanbans/Characters.md",
+    "TDD/Sub Kanbans/Grid System - Movement.md",
+    "TDD/Sub Kanbans/Input System.md",
+    "TDD/Technical Requirements/Analisys.md",
+    "TDD/Technical Requirements/Game Mechanics/Fighting System.md",
+    "TDD/Kanban Notes/Grid System.md",
+    "TDD/Sub Kanbans/Grid System & Movement.md",
+    "Templates/Kanban Template.md",
+    "TDD/Sub Kanbans",
+    "TDD/Technical Requirements/Technical Requirements.md",
+    "TDD/UML/Project UML.md",
+    "TDD/Technical Requirements/Game Mechanics/Items, Abilities & Equipment.md",
+    "TDD/Technical Requirements/Game Mechanics/Characters, Statistics & Jobs.md",
+    "TDD/Technical Requirements/Game Mechanics/Action.md",
     "Resources/Images/ff-action.png",
-    "Resources/Images/ff-move.png",
     "Resources/Images/ff-choices.png",
-    "TDD/Technical Requirements/Fighting System/Move.md",
     "Resources/Images/ff-equipment.png",
+    "TDD/UML/Diagrams/Diagram.svg",
+    "TDD/UML/Diagrams",
+    "TDD/UML/Diagrams/Diagram 1.svg",
+    "TDD/UML/Diagrams/Diagram 2.svg",
+    "TDD/UML",
+    "TDD/UML/Diagrams/Diagram 2.svg.xml",
+    "TDD/Technical Requirements/Game Mechanics/Wait.md",
+    "TDD/Technical Requirements/Grid System/Grid Mechanic.md",
+    "TDD/Technical Requirements/Game Mechanics/Status.md",
+    "TDD/UML/Diagrams/Diagram 1.svg.xml",
+    "Templates/Colored Text Template.md",
+    "TDD/UML/Diagrams/Diagram.svg.xml",
+    "Resources/Images/ff-move.png",
+    "TDD/Technical Requirements/Fighting System/Move.md",
     "Resources/Images",
     "Resources",
     "TDD/Technical Requirements/Grid System",
@@ -204,12 +232,7 @@
     "TDD/TDD.md",
     "TDD/Project Kanban 1 1.md",
     "Templates/Templates.md",
-    "TDD/Kanban Notes",
     "Characters,.md",
-    "TDD/Technical Requirements/Game Mechanics/Grid based movement.md",
-    "TDD/Technical Requirements/Game Mechanics",
-    "TDD/Untitled.md",
-    "Templates/Variable & Methods Table Template.md",
-    "Templates"
+    "TDD/Technical Requirements/Game Mechanics/Grid based movement.md"
   ]
 }

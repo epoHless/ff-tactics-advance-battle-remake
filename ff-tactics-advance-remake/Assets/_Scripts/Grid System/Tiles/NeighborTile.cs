@@ -8,17 +8,17 @@ public class NeighborTile
 
     [field: SerializeField] public Tile Tile;
     [field: SerializeField] public Vector3Int Direction;
-    [field: SerializeField] public float Cost;
+    [field: SerializeField] public int HeightDifference;
 
     #endregion
 
     #region Constructors
 
-    public NeighborTile(Tile tile, Vector3Int direction, float cost)
+    public NeighborTile(Tile _tile, Vector3Int _direction,int _height)
     {
-        Tile = tile;
-        Direction = direction;
-        Cost = cost;
+        Tile = _tile;
+        Direction = _direction;
+        HeightDifference = Mathf.Abs(_tile.Height - _height);
     }
 
     #endregion
