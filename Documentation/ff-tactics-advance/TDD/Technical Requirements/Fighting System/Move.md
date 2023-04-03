@@ -2,11 +2,11 @@ The Movement will be grid based on square tiles, each tile will have a travel co
 Climbing a hill or traversing a river for example will cost more energy.<br>
 The movement will be in 4 directions, each entity in the current combat will be able to move in the map, Enemies too.
 
-- !! **Each character can move once per turn. when the turn ends, the player will have to chose a position to face.**
+- !! **Each character can move once per turn. when the turn ends, the player will have to chose a [[Facing Direction]].**
 
 ----
 
-#### **The grids will**
+#### **The tiles will**
 
 - **Be Traversable**
 	- *By the player*

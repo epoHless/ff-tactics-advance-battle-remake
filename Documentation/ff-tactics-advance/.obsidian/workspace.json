@@ -14,7 +14,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "TDD/Technical Requirements/Analisys.md",
+                "file": "TDD/Analisys.md",
                 "mode": "preview",
                 "source": false
               },
@@ -22,17 +22,19 @@
             }
           },
           {
-            "id": "217efb9a4dd5a88f",
+            "id": "6c952cfdeb3804d5",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "kanban",
               "state": {
-                "file": "TDD/Sub Kanbans/Grid System - Movement.md"
-              }
+                "file": "TDD/Project Kanban.md"
+              },
+              "pinned": true
             }
           },
           {
-            "id": "76fc5cb55dc8df13",
+            "id": "568e737572d0678a",
             "type": "leaf",
             "state": {
               "type": "kanban",
@@ -42,17 +44,19 @@
             }
           },
           {
-            "id": "f42b29f348489b89",
+            "id": "a2744349374de0bb",
             "type": "leaf",
             "state": {
-              "type": "kanban",
+              "type": "markdown",
               "state": {
-                "file": "TDD/Sub Kanbans/Input System.md"
+                "file": "TDD/Technical Requirements/Jobs & Race/Job.md",
+                "mode": "preview",
+                "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -118,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TDD/Sub Kanbans/Grid System - Movement.md",
+                "file": "TDD/Sub Kanbans/Characters.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -135,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "TDD/Sub Kanbans/Grid System - Movement.md",
+                "file": "TDD/Sub Kanbans/Characters.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -158,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TDD/Sub Kanbans/Grid System - Movement.md"
+                "file": "TDD/Sub Kanbans/Characters.md"
               }
             }
           },
@@ -169,12 +173,21 @@
               "type": "online.tokuhirom.obsidian-pomodoro-plugin",
               "state": {}
             }
+          },
+          {
+            "id": "30cbb274ee1995e3",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 289.5,
+    "width": 288.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -189,50 +202,52 @@
       "obsidian-markdown-formatting-assistant-plugin:Open Markdown Formatting Assistant": false
     }
   },
-  "active": "217efb9a4dd5a88f",
+  "active": "568e737572d0678a",
   "lastOpenFiles": [
-    "TDD/Project Kanban.md",
-    "TDD/Technical Requirements/Game Mechanics/Move.md",
+    "TDD/Technical Requirements/Jobs & Race/Race.md",
     "TDD/Sub Kanbans/Characters.md",
-    "TDD/Sub Kanbans/Grid System - Movement.md",
-    "TDD/Sub Kanbans/Input System.md",
-    "TDD/Technical Requirements/Analisys.md",
+    "TDD/Technical Requirements/Jobs & Race/Job.md",
+    "TDD/Project Kanban.md",
+    "TDD/Technical Requirements/Game Mechanics/Characters, Statistics & Jobs.md",
+    "TDD/Analisys.md",
     "TDD/Technical Requirements/Game Mechanics/Fighting System.md",
+    "TDD/Technical Requirements/Fighting System/Move.md",
+    "TDD/Sub Kanbans/Grid System - Movement.md",
+    "UML.md",
+    "TDD/Technical Requirements/Game Mechanics/Items, Abilities & Equipment.md",
+    "TDD/UML/Diagrams/JobsMock.svg",
+    "TDD/UML/Diagrams/JobsMock.svg.xml",
+    "TDD/Technical Requirements/Jobs & Race",
+    "TDD/Technical Requirements/Fighting System/Facing Direction.md",
+    "Resources/Images/ff-jobtree.png",
+    "TDD/UML/Project UML.md",
+    "TDD/Technical Requirements/Fighting System/Action.md",
+    "TDD/Technical Requirements/Fighting System/Wait.md",
+    "TDD/Technical Requirements/Grid System/Grid Mechanic.md",
+    "TDD/UML/Diagrams/Diagram.svg",
+    "TDD/Technical Requirements/Fighting System/Status.md",
+    "TDD/Technical Requirements/Technical Requirements.md",
+    "Resources/Images/ff-direction.png",
+    "Diagram 2.svg.md",
+    "TDD/UML/Diagrams/MenuFlow.svg",
+    "TDD/UML/Diagrams/ItemsMock.svg",
+    "TDD/TDD.md",
+    "TDD/Sub Kanbans/Input System.md",
     "TDD/Kanban Notes/Grid System.md",
     "TDD/Sub Kanbans/Grid System & Movement.md",
     "Templates/Kanban Template.md",
     "TDD/Sub Kanbans",
-    "TDD/Technical Requirements/Technical Requirements.md",
-    "TDD/UML/Project UML.md",
-    "TDD/Technical Requirements/Game Mechanics/Items, Abilities & Equipment.md",
-    "TDD/Technical Requirements/Game Mechanics/Characters, Statistics & Jobs.md",
-    "TDD/Technical Requirements/Game Mechanics/Action.md",
     "Resources/Images/ff-action.png",
     "Resources/Images/ff-choices.png",
     "Resources/Images/ff-equipment.png",
-    "TDD/UML/Diagrams/Diagram.svg",
     "TDD/UML/Diagrams",
-    "TDD/UML/Diagrams/Diagram 1.svg",
-    "TDD/UML/Diagrams/Diagram 2.svg",
     "TDD/UML",
-    "TDD/UML/Diagrams/Diagram 2.svg.xml",
-    "TDD/Technical Requirements/Game Mechanics/Wait.md",
-    "TDD/Technical Requirements/Grid System/Grid Mechanic.md",
-    "TDD/Technical Requirements/Game Mechanics/Status.md",
-    "TDD/UML/Diagrams/Diagram 1.svg.xml",
+    "TDD/UML/Diagrams/MenuFlow.svg.xml",
+    "TDD/UML/Diagrams/ItemsMock.svg.xml",
     "Templates/Colored Text Template.md",
     "TDD/UML/Diagrams/Diagram.svg.xml",
     "Resources/Images/ff-move.png",
-    "TDD/Technical Requirements/Fighting System/Move.md",
     "Resources/Images",
-    "Resources",
-    "TDD/Technical Requirements/Grid System",
-    "TDD/Technical Requirements/Fighting System",
-    "TDD/Project Kanban 1.md",
-    "TDD/TDD.md",
-    "TDD/Project Kanban 1 1.md",
-    "Templates/Templates.md",
-    "Characters,.md",
-    "TDD/Technical Requirements/Game Mechanics/Grid based movement.md"
+    "Resources"
   ]
 }

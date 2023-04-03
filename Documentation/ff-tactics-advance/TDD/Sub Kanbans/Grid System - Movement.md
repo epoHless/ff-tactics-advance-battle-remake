@@ -6,6 +6,7 @@ kanban-plugin: basic
 
 ## Planned 🗃️
 
+- [ ] **Character Movement** 🟨
 
 
 ## <span style="color:#4284f5">**In Progress** ⚒️
@@ -19,12 +20,16 @@ kanban-plugin: basic
 ## <span style="color:#c9d600">** Testing** 🎛️
 
 - [ ] **A* Path Finder** 🟥 @{25-03-2023}
-- [ ] **Tiles** 🟨 @{25-03-2023}
 - [ ] **Debugging Helper** 🟩 @{25-03-2023}
 
 
 ## <span style="color:#f53131">Bugs 🐞
 
+
+
+## **Refactor** 📊
+
+- [ ] **Tiles** 🟨 @{25-03-2023}
 
 
 ***

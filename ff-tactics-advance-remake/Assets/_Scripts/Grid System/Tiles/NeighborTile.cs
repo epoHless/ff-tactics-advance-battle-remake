@@ -22,9 +22,4 @@ public class NeighborTile
     }
 
     #endregion
-
-    #region Methods
-
-    #endregion
-
 }

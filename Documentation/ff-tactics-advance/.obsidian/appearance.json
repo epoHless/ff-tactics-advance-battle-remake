@@ -1,9 +1,10 @@
 {
-  "accentColor": "",
+  "accentColor": "#516fe6",
   "cssTheme": "",
-  "baseFontSize": 14,
+  "baseFontSize": 15,
   "theme": "moonstone",
   "enabledCssSnippets": [
-    "center-Image"
+    "center-Image",
+    "table-readable"
   ]
 }

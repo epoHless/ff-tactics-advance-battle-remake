@@ -35,6 +35,8 @@ namespace FinalFantasy
 
         #region Methods
 
+        #region Grid Movement
+
         public static void EnableGridMovement()
         {
             Actions.Combat.GridMovement.Enable();
@@ -45,6 +47,42 @@ namespace FinalFantasy
             Actions.Combat.GridMovement.Disable();
         }
         
+        public static void AddGridMovementListener(Action<InputAction.CallbackContext> context, EInputType _inputType = EInputType.STARTED)
+        {
+            switch (_inputType)
+            {
+                case EInputType.STARTED:
+                    Actions.Combat.GridMovement.started += context;
+                    break;
+                case EInputType.PERFORMED:
+                    Actions.Combat.GridMovement.performed += context;
+                    break;
+                case EInputType.CANCELLED:
+                    Actions.Combat.GridMovement.canceled += context;
+                    break;
+            }
+        }
+        
+        public static void RemoveGridMovementListener(Action<InputAction.CallbackContext> context, EInputType _inputType = EInputType.STARTED)
+        {
+            switch (_inputType)
+            {
+                case EInputType.STARTED:
+                    Actions.Combat.GridMovement.started -= context;
+                    break;
+                case EInputType.PERFORMED:
+                    Actions.Combat.GridMovement.performed -= context;
+                    break;
+                case EInputType.CANCELLED:
+                    Actions.Combat.GridMovement.canceled -= context;
+                    break;
+            }
+        }
+
+        #endregion
+
+        #region Confirm Tile Selection
+
         public static void EnableConfirm()
         {
             Actions.Combat.Confirm.Enable();
@@ -55,25 +93,39 @@ namespace FinalFantasy
             Actions.Combat.Confirm.Disable();
         }
 
-        public static void AddGridMovementListener(Action<InputAction.CallbackContext> context)
+        public static void AddConfirmListener(Action<InputAction.CallbackContext> context, EInputType _inputType = EInputType.STARTED)
         {
-            Actions.Combat.GridMovement.started += context;
+            switch (_inputType)
+            {
+                case EInputType.STARTED:
+                    Actions.Combat.Confirm.started += context;
+                    break;
+                case EInputType.PERFORMED:
+                    Actions.Combat.Confirm.performed += context;
+                    break;
+                case EInputType.CANCELLED:
+                    Actions.Combat.Confirm.canceled += context;
+                    break;
+            }
         }
         
-        public static void RemoveGridMovementListener(Action<InputAction.CallbackContext> context)
+        public static void RemoveConfirmListener(Action<InputAction.CallbackContext> context, EInputType _inputType = EInputType.STARTED)
         {
-            Actions.Combat.GridMovement.started -= context;
+            switch (_inputType)
+            {
+                case EInputType.STARTED:
+                    Actions.Combat.Confirm.started -= context;
+                    break;
+                case EInputType.PERFORMED:
+                    Actions.Combat.Confirm.performed -= context;
+                    break;
+                case EInputType.CANCELLED:
+                    Actions.Combat.Confirm.canceled -= context;
+                    break;
+            }
         }
-        
-        public static void AddConfirmListener(Action<InputAction.CallbackContext> context)
-        {
-            Actions.Combat.Confirm.started += context;
-        }
-        
-        public static void RemoveConfirmListener(Action<InputAction.CallbackContext> context)
-        {
-            Actions.Combat.Confirm.started -= context;
-        }
+
+        #endregion
 
         #endregion
     }

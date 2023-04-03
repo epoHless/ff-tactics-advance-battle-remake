@@ -18,15 +18,19 @@ Every character will have an equipment option with 5 item slots.
 	- *will be stored in the inventory*
 	- *during combat only some are usable*
 
-##### Possible Creation
+
+---
+
+##### Possible Implementation
 
 - **IStoreable**
-	- *Interface to store items in the inventory*
+	- *Interface to store and load items in the inventory*
 
 - **Base Item class**
-	-  **Consumable**
+	- **Consumable**
 	- **Equippable**
 
 ---
 
-![[Diagram 1.svg]]
+
+![[ItemsMock.svg]]

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PathFinder
 {
-    public static List<Tile> GetPath(Character _character, Tile _endTile)
+    public static List<Tile> CalculatePath(Character _character, Tile _endTile)
     {
         var OpenTiles = new List<Tile>();
         var ClosedTiles = new List<Tile>();
@@ -24,11 +24,11 @@ public class PathFinder
                 return GetFinishedList(_character.Movement.OccupiedTile, _endTile);
             }
 
-            var neighborTiles = GetNeighbors(currentTile);
+            var neighborTiles = GetTileNeighbors(_character, currentTile);
 
             foreach (var neighborTile in currentTile.Neighbors)
             {
-                if (ClosedTiles.Contains(neighborTile.Tile) || neighborTile.HeightDifference > 1 || !neighborTile.Tile.CanTravel)
+                if (ClosedTiles.Contains(neighborTile.Tile) || neighborTile.HeightDifference > _character.Movement.MovementData.JumpHeight || !neighborTile.Tile.CanTravel)
                 {
                     continue;
                 }
@@ -63,20 +63,26 @@ public class PathFinder
         {
             var surroundingTiles = new List<Tile>();
 
-            foreach (var tile in tilesForPreviousStep) //todo add height check
+            foreach (var tile in tilesForPreviousStep)
             {
-                surroundingTiles.AddRange(GetNeighbors(tile));
+                surroundingTiles.AddRange(GetTileNeighbors(_character, tile));
             }
 
             inRangeTiles.AddRange(surroundingTiles);
             tilesForPreviousStep = surroundingTiles.Distinct().ToList();
+            
             stepCount++;
         }
 
         return inRangeTiles.Distinct().ToList();
     }
     
-    public static Tile GetTileFromPosition(Vector3 _position)
+    /// <summary>
+    /// Gets the tile from the given position
+    /// </summary>
+    /// <param name="_position"></param>
+    /// <returns></returns>
+    public static Tile GetTileAtPosition(Vector3 _position)
     {
         Ray ray = new Ray(_position, Vector3.down);
 
@@ -91,7 +97,13 @@ public class PathFinder
         return null;
     }
     
-    public static Tile GetTileFromPosition(Vector3 _position, Vector3 _direction)
+    /// <summary>
+    /// Gets the tile from the given position + direction
+    /// </summary>
+    /// <param name="_position"></param>
+    /// <param name="_direction"></param>
+    /// <returns></returns>
+    public static Tile GetTileAtPosition(Vector3 _position, Vector3 _direction)
     {
         Ray ray = new Ray(_position, _direction);
 
@@ -106,10 +118,15 @@ public class PathFinder
         return null;
     }
 
+    /// <summary>
+    /// Returns the complete path as a list, called if CalculatePath is successful
+    /// </summary>
+    /// <param name="_start"></param>
+    /// <param name="_end"></param>
+    /// <returns></returns>
     private static List<Tile> GetFinishedList(Tile _start, Tile _end)
     {
-        List<Tile> finishedList = new List<Tile>();
-
+        var finishedList = new List<Tile>();
         Tile currentTile = _end;
 
         while (currentTile != _start)
@@ -119,24 +136,26 @@ public class PathFinder
         }
 
         finishedList.Reverse();
-
         return finishedList;
     }
 
-    private static int GetManhattanDistance(Tile _start, Tile _neighbor)
+    private static List<Tile> GetTileNeighbors(Character _character, Tile _currentTile)
     {
-        return Mathf.CeilToInt(Mathf.Abs(_start.transform.position.x - _neighbor.transform.position.x) +  Mathf.Abs(_start.transform.position.y - _neighbor.transform.position.y));
-    }
+        var neighbors = new List<Tile>();
 
-    private static List<Tile> GetNeighbors(Tile currentTile)
-    {
-        List<Tile> neighbors = new List<Tile>();
-
-        foreach (var neighbor in currentTile.Neighbors)
+        foreach (var neighbor in _currentTile.Neighbors)
         {
-            neighbors.Add(neighbor.Tile);
+            if (neighbor.HeightDifference <= _character.Movement.MovementData.JumpHeight)
+            {
+                neighbors.Add(neighbor.Tile);
+            }
         }
 
         return neighbors;
+    }
+    
+    private static int GetManhattanDistance(Tile _start, Tile _neighbor)
+    {
+        return Mathf.CeilToInt(Mathf.Abs(_start.transform.position.x - _neighbor.transform.position.x) +  Mathf.Abs(_start.transform.position.y - _neighbor.transform.position.y));
     }
 }

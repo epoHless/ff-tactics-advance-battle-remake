@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5d8bbe8a2f842989f4a7afe340fbf7f, type: 3}
   m_Name: MovementData_Test
   m_EditorClassIdentifier: 
-  <Range>k__BackingField: 4
-  <JumpHeight>k__BackingField: 2
+  <Range>k__BackingField: 5
+  <JumpHeight>k__BackingField: 1

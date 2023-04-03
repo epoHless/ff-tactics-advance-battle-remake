@@ -16,12 +16,15 @@ namespace GridSystem
         
         [field: SerializeField] public int Height { get; private set; }
 
+        #region Path Inits
+
         private BoxCollider Collider => GetComponent<BoxCollider>();
         public GameObject SelectionBox => ArrivalTransform.GetChild(0).gameObject;
         public bool CanTravel => SelectionBox.gameObject.activeInHierarchy;
-        
 
-        #region Pathfindg Properties
+        #endregion
+
+        #region Pathfinding Properties
 
         public int G { get; set; }
         public int H { get; set; }

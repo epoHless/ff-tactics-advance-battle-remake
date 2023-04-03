@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73bedee5f4e54508984a9ca23291673f, type: 3}
+  m_Name: Job_Soldier
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Soldier
+  <Branches>k__BackingField:
+  - <Job>k__BackingField: {fileID: 11400000, guid: 6f82f48297085a94797ed26d88885cf3,
+      type: 2}
+    <AbilitiesRequired>k__BackingField: 2
+  - <Job>k__BackingField: {fileID: 11400000, guid: 2cacca1ff24b99141abf03feb4b99109,
+      type: 2}
+    <AbilitiesRequired>k__BackingField: 2

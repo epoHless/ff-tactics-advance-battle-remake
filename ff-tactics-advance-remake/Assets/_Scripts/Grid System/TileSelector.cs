@@ -1,39 +1,64 @@
-using System;
 using GridSystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using InputSystem = FinalFantasy.InputSystem;
 
-public class TileSelector : MonoBehaviour
+namespace GridSystem
 {
-    [field: SerializeField] public Tile currentTile { get; private set; }
-
-    private void Awake()
+    public class TileSelector : MonoBehaviour
     {
-        currentTile = PathFinder.GetTileFromPosition(transform.position);
-    }
+        #region Properties
 
-    private void OnEnable()
-    {
-        InputSystem.EnableGridMovement();
-        InputSystem.EnableConfirm();
+        [field: SerializeField] public Tile CurrentTile { get; private set; }
+
+        #endregion
+
+        #region Unity Method
+
+        private void Awake()
+        {
+            CurrentTile = PathFinder.GetTileAtPosition(transform.position);
+        }
+
+        private void OnEnable()
+        {
+            InputSystem.EnableGridMovement();
+            InputSystem.EnableConfirm();
         
-        InputSystem.AddGridMovementListener(CallMoveSelector);
-        InputSystem.AddConfirmListener(CallConfirmMovement);
-    }
+            InputSystem.AddGridMovementListener(SelectTile);
+            InputSystem.AddConfirmListener(ConfirmMovement);
+        }
 
-    private void CallConfirmMovement(InputAction.CallbackContext obj)
-    {
-        MovementManager.OnMovement?.Invoke(currentTile);
-    }
+        private void OnDisable()
+        {
+            InputSystem.DisableGridMovement();
+            InputSystem.DisableConfirm();
+        
+            InputSystem.RemoveGridMovementListener(SelectTile);
+            InputSystem.RemoveConfirmListener(ConfirmMovement);
+        }
 
-    private void CallMoveSelector(InputAction.CallbackContext obj)
-    {
-        var axis = obj.ReadValue<Vector2>();
+        #endregion
 
-        var adjustedPosition = new Vector3(transform.position.x, 0.5f, transform.position.z);
-        currentTile = PathFinder.GetTileFromPosition(adjustedPosition, new Vector3(axis.x, 0, axis.y));
+        #region Input Event Methods
 
-        if(currentTile) transform.position = currentTile.ArrivalTransform.position;
+        private void ConfirmMovement(InputAction.CallbackContext obj)
+        {
+            MovementManager.OnMovement?.Invoke(CurrentTile);
+        }
+
+        private void SelectTile(InputAction.CallbackContext obj)
+        {
+            var axis = InputSystem.GridAxis;
+            var adjustedPosition = new Vector3(transform.position.x, 0.5f, transform.position.z);
+        
+            var tile = PathFinder.GetTileAtPosition(adjustedPosition, new Vector3(axis.x, 0, axis.y));
+            CurrentTile = tile ? tile : CurrentTile;
+
+            if(CurrentTile) transform.position = CurrentTile.ArrivalTransform.position;
+        }
+
+        #endregion
     }
 }
+

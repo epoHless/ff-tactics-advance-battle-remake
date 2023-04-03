@@ -6,12 +6,13 @@ kanban-plugin: basic
 
 ## Planned 🗃️
 
-- [ ] <span style="color:#0f0f0f">**[[Characters]]**
 
 
 ## <span style="color:#54ccf7">In Progress ⚒️
 
-- [ ] [[Grid System - Movement]]
+- [ ] **[[Grid System - Movement]]** 🟩
+- [ ] <span style="color:#0f0f0f">**[[Characters]]** 🟨
+- [ ] **[[UML]]** 🟥
 
 
 ## <span style="color:#6ff754"> Done ✅
@@ -23,6 +24,10 @@ kanban-plugin: basic
 
 
 ## <span style="color:#f53131">Bugs 🐞
+
+
+
+## Refactor 📊
 
 
 

@@ -55,7 +55,7 @@ public class PathHelperWindow : EditorWindow
         {
             if (startTile && endTile)
             {
-                var path = PathFinder.GetPath(character, endTile);
+                var path = PathFinder.CalculatePath(character, endTile);
 
                 foreach (var tile in path)
                 {
@@ -69,7 +69,7 @@ public class PathHelperWindow : EditorWindow
         {
             if (startTile && endTile)
             {
-                var path = PathFinder.GetPath(character, endTile);
+                var path = PathFinder.CalculatePath(character, endTile);
 
                 foreach (var tile in path)
                 {
@@ -83,6 +83,8 @@ public class PathHelperWindow : EditorWindow
         
         if (GUILayout.Button("Get Range"))
         {
+            if (!character) return;
+
             if (character.Movement.MovementData.Range > 0)
             {
                 foreach (var tile in PathFinder.GetTilesInRange(character))

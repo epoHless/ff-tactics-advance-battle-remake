@@ -1,14 +1,23 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using GridSystem;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class MovementManager : Singleton<MovementManager>
 {
+    #region Properties
+
     [field: SerializeField] public Character Character { get; private set; }
 
+    #endregion
+
+    #region Events
+
     public static UnityEvent<Tile> OnMovement = new UnityEvent<Tile>();
+
+    #endregion
+
+    #region Unity Events
 
     protected override void OnEnable()
     {
@@ -21,6 +30,10 @@ public class MovementManager : Singleton<MovementManager>
     {
         ActivateTilesInRange(); //todo remove when state machine is implemented
     }
+
+    #endregion
+
+    #region Methods
 
     private void ActivateTilesInRange() //todo call this on turn start
     {
@@ -38,6 +51,10 @@ public class MovementManager : Singleton<MovementManager>
         }
     }
 
+    #endregion
+
+    #region Movement Event Methods
+
     private void CallMoveCharacter(Tile _endTile)
     {
         if (!PathFinder.GetTilesInRange(Character).Contains(_endTile)) return;
@@ -48,7 +65,7 @@ public class MovementManager : Singleton<MovementManager>
 
     IEnumerator MoveCharacter(Tile _endTile)
     {
-        var path = PathFinder.GetPath(Character, _endTile);
+        var path = PathFinder.CalculatePath(Character, _endTile);
 
         foreach (var tile in path)
         {
@@ -57,4 +74,6 @@ public class MovementManager : Singleton<MovementManager>
         
         ActivateTilesInRange();
     }
+
+    #endregion
 }

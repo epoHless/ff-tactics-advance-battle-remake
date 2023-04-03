@@ -12,6 +12,7 @@ Every time a character gets to move a menu will be visible to the player, indica
 	- [[Action]]
 	- [[Wait]]
 	- [[Status]]
+	- [[Facing Direction]]
 
 Each action holds a different output.
 
@@ -22,7 +23,7 @@ Each action holds a different output.
 
 ```ad-note
 title: Menu Flow
->![[Diagram 2.svg]]
+>![[MenuFlow.svg]]
 ```
 
 ---
