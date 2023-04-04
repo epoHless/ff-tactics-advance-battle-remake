@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using GridSystem;
 using UnityEngine;
 using UnityEngine.Events;
@@ -13,7 +14,6 @@ public class MovementManager : Singleton<MovementManager>
 
     #region Events
 
-    public static UnityEvent<Tile> OnMovement = new UnityEvent<Tile>();
 
     #endregion
 
@@ -22,8 +22,12 @@ public class MovementManager : Singleton<MovementManager>
     protected override void OnEnable()
     {
         base.OnEnable();
-        
-        OnMovement.AddListener(CallMoveCharacter);
+        EventManager.OnMovement += CallMoveCharacter;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnMovement -= CallMoveCharacter;
     }
 
     private void Start()
@@ -57,7 +61,7 @@ public class MovementManager : Singleton<MovementManager>
 
     private void CallMoveCharacter(Tile _endTile)
     {
-        if (!PathFinder.GetTilesInRange(Character).Contains(_endTile)) return;
+        if (!PathFinder.GetTilesInRange(Character).Contains(_endTile) || Character.Movement.OccupiedTile == _endTile) return;
         
         StartCoroutine(nameof(MoveCharacter), _endTile);
         DeactivateTilesInRange();
@@ -72,6 +76,7 @@ public class MovementManager : Singleton<MovementManager>
             yield return Character.Movement.Move(tile);
         }
         
+        EventManager.OnCharacterHovered?.Invoke(Character);
         ActivateTilesInRange();
     }
 

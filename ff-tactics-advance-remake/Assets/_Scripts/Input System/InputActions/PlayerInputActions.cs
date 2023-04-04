@@ -24,7 +24,7 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     ""name"": ""PlayerInputActions"",
     ""maps"": [
         {
-            ""name"": ""Combat"",
+            ""name"": ""CharacterMovement"",
             ""id"": ""02e42d6e-63b0-4395-8ba4-a44a5577af33"",
             ""actions"": [
                 {
@@ -158,9 +158,288 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
+                    ""name"": ""2D Vector GamePad"",
+                    ""id"": ""c0ce7ae4-8d4c-4b1d-9a8e-adbc48b1856e"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""bb030a1e-3c98-4050-9b1c-8325ccffc8cd"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""500c5aed-662b-487c-915c-7f5a4e5d52f9"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""d2e3c3e6-bd72-471c-8cf6-47c5a6e47d56"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""3f72d882-eb39-49a8-a2eb-693089cd7072"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
                     ""name"": """",
                     ""id"": ""f321a0c9-81dd-4a68-b22d-48a75af4c91e"",
                     ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Confirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""43a257b5-ea39-451f-8a63-ed9594c35e92"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Confirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""FacingDirection"",
+            ""id"": ""4f75cc77-8518-4768-92ef-469e0eec6431"",
+            ""actions"": [
+                {
+                    ""name"": ""GridMovement"",
+                    ""type"": ""Value"",
+                    ""id"": ""42e8f7e1-43b5-421b-8515-20faba90257e"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Confirm"",
+                    ""type"": ""Button"",
+                    ""id"": ""1159be5c-efed-46fc-9cbb-9a66e1a96d2c"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": ""2D Vector WASD"",
+                    ""id"": ""faecfb94-a96f-4c13-bffc-db393df3754c"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""4e34ab0e-935a-43be-9e32-5a851a0988a0"",
+                    ""path"": ""<Keyboard>/w"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""b6a8ef87-8915-4534-b54a-8a174cbd4808"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""21b15779-febb-4051-b08b-f3b0087a3edf"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""518f62d1-3098-441d-b7a8-cf234c00df6b"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector Arrows"",
+                    ""id"": ""42f13fa8-bd55-42b4-b1f0-8eb6b8ef6978"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""87049bcf-e31b-4fb4-98a9-5d11f2d0315e"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""9d02ac4b-cfa4-4491-99fd-1cadc84d6515"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""8a143911-3f0f-497d-af86-720a1517d9fc"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""5b626d62-0e7f-421e-88f6-20a5319fd329"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector GamePad"",
+                    ""id"": ""acc6fa53-ce19-4afa-b409-3cbdae553a76"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""7414cd16-2043-4c86-84d3-93290f5ce264"",
+                    ""path"": ""<Gamepad>/dpad/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""2f9d6aa5-370c-4b8a-ae8b-711dbcb1b942"",
+                    ""path"": ""<Gamepad>/dpad/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""6eff0304-2692-4408-8b2f-91d6fa9b376d"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""03a60e78-1e87-463e-a3c0-fe1a5fdb176a"",
+                    ""path"": ""<Gamepad>/dpad/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""GridMovement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4f8a5094-817f-4d54-8417-6b1dcaaa109a"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Confirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""db9ace38-04bb-4f41-a5be-8e76d5ae8c89"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -173,10 +452,14 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
     ],
     ""controlSchemes"": []
 }");
-        // Combat
-        m_Combat = asset.FindActionMap("Combat", throwIfNotFound: true);
-        m_Combat_GridMovement = m_Combat.FindAction("GridMovement", throwIfNotFound: true);
-        m_Combat_Confirm = m_Combat.FindAction("Confirm", throwIfNotFound: true);
+        // CharacterMovement
+        m_CharacterMovement = asset.FindActionMap("CharacterMovement", throwIfNotFound: true);
+        m_CharacterMovement_GridMovement = m_CharacterMovement.FindAction("GridMovement", throwIfNotFound: true);
+        m_CharacterMovement_Confirm = m_CharacterMovement.FindAction("Confirm", throwIfNotFound: true);
+        // FacingDirection
+        m_FacingDirection = asset.FindActionMap("FacingDirection", throwIfNotFound: true);
+        m_FacingDirection_GridMovement = m_FacingDirection.FindAction("GridMovement", throwIfNotFound: true);
+        m_FacingDirection_Confirm = m_FacingDirection.FindAction("Confirm", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -233,34 +516,34 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Combat
-    private readonly InputActionMap m_Combat;
-    private ICombatActions m_CombatActionsCallbackInterface;
-    private readonly InputAction m_Combat_GridMovement;
-    private readonly InputAction m_Combat_Confirm;
-    public struct CombatActions
+    // CharacterMovement
+    private readonly InputActionMap m_CharacterMovement;
+    private ICharacterMovementActions m_CharacterMovementActionsCallbackInterface;
+    private readonly InputAction m_CharacterMovement_GridMovement;
+    private readonly InputAction m_CharacterMovement_Confirm;
+    public struct CharacterMovementActions
     {
         private @PlayerInputActions m_Wrapper;
-        public CombatActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @GridMovement => m_Wrapper.m_Combat_GridMovement;
-        public InputAction @Confirm => m_Wrapper.m_Combat_Confirm;
-        public InputActionMap Get() { return m_Wrapper.m_Combat; }
+        public CharacterMovementActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @GridMovement => m_Wrapper.m_CharacterMovement_GridMovement;
+        public InputAction @Confirm => m_Wrapper.m_CharacterMovement_Confirm;
+        public InputActionMap Get() { return m_Wrapper.m_CharacterMovement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(CombatActions set) { return set.Get(); }
-        public void SetCallbacks(ICombatActions instance)
+        public static implicit operator InputActionMap(CharacterMovementActions set) { return set.Get(); }
+        public void SetCallbacks(ICharacterMovementActions instance)
         {
-            if (m_Wrapper.m_CombatActionsCallbackInterface != null)
+            if (m_Wrapper.m_CharacterMovementActionsCallbackInterface != null)
             {
-                @GridMovement.started -= m_Wrapper.m_CombatActionsCallbackInterface.OnGridMovement;
-                @GridMovement.performed -= m_Wrapper.m_CombatActionsCallbackInterface.OnGridMovement;
-                @GridMovement.canceled -= m_Wrapper.m_CombatActionsCallbackInterface.OnGridMovement;
-                @Confirm.started -= m_Wrapper.m_CombatActionsCallbackInterface.OnConfirm;
-                @Confirm.performed -= m_Wrapper.m_CombatActionsCallbackInterface.OnConfirm;
-                @Confirm.canceled -= m_Wrapper.m_CombatActionsCallbackInterface.OnConfirm;
+                @GridMovement.started -= m_Wrapper.m_CharacterMovementActionsCallbackInterface.OnGridMovement;
+                @GridMovement.performed -= m_Wrapper.m_CharacterMovementActionsCallbackInterface.OnGridMovement;
+                @GridMovement.canceled -= m_Wrapper.m_CharacterMovementActionsCallbackInterface.OnGridMovement;
+                @Confirm.started -= m_Wrapper.m_CharacterMovementActionsCallbackInterface.OnConfirm;
+                @Confirm.performed -= m_Wrapper.m_CharacterMovementActionsCallbackInterface.OnConfirm;
+                @Confirm.canceled -= m_Wrapper.m_CharacterMovementActionsCallbackInterface.OnConfirm;
             }
-            m_Wrapper.m_CombatActionsCallbackInterface = instance;
+            m_Wrapper.m_CharacterMovementActionsCallbackInterface = instance;
             if (instance != null)
             {
                 @GridMovement.started += instance.OnGridMovement;
@@ -272,8 +555,54 @@ public partial class @PlayerInputActions : IInputActionCollection2, IDisposable
             }
         }
     }
-    public CombatActions @Combat => new CombatActions(this);
-    public interface ICombatActions
+    public CharacterMovementActions @CharacterMovement => new CharacterMovementActions(this);
+
+    // FacingDirection
+    private readonly InputActionMap m_FacingDirection;
+    private IFacingDirectionActions m_FacingDirectionActionsCallbackInterface;
+    private readonly InputAction m_FacingDirection_GridMovement;
+    private readonly InputAction m_FacingDirection_Confirm;
+    public struct FacingDirectionActions
+    {
+        private @PlayerInputActions m_Wrapper;
+        public FacingDirectionActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
+        public InputAction @GridMovement => m_Wrapper.m_FacingDirection_GridMovement;
+        public InputAction @Confirm => m_Wrapper.m_FacingDirection_Confirm;
+        public InputActionMap Get() { return m_Wrapper.m_FacingDirection; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(FacingDirectionActions set) { return set.Get(); }
+        public void SetCallbacks(IFacingDirectionActions instance)
+        {
+            if (m_Wrapper.m_FacingDirectionActionsCallbackInterface != null)
+            {
+                @GridMovement.started -= m_Wrapper.m_FacingDirectionActionsCallbackInterface.OnGridMovement;
+                @GridMovement.performed -= m_Wrapper.m_FacingDirectionActionsCallbackInterface.OnGridMovement;
+                @GridMovement.canceled -= m_Wrapper.m_FacingDirectionActionsCallbackInterface.OnGridMovement;
+                @Confirm.started -= m_Wrapper.m_FacingDirectionActionsCallbackInterface.OnConfirm;
+                @Confirm.performed -= m_Wrapper.m_FacingDirectionActionsCallbackInterface.OnConfirm;
+                @Confirm.canceled -= m_Wrapper.m_FacingDirectionActionsCallbackInterface.OnConfirm;
+            }
+            m_Wrapper.m_FacingDirectionActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @GridMovement.started += instance.OnGridMovement;
+                @GridMovement.performed += instance.OnGridMovement;
+                @GridMovement.canceled += instance.OnGridMovement;
+                @Confirm.started += instance.OnConfirm;
+                @Confirm.performed += instance.OnConfirm;
+                @Confirm.canceled += instance.OnConfirm;
+            }
+        }
+    }
+    public FacingDirectionActions @FacingDirection => new FacingDirectionActions(this);
+    public interface ICharacterMovementActions
+    {
+        void OnGridMovement(InputAction.CallbackContext context);
+        void OnConfirm(InputAction.CallbackContext context);
+    }
+    public interface IFacingDirectionActions
     {
         void OnGridMovement(InputAction.CallbackContext context);
         void OnConfirm(InputAction.CallbackContext context);

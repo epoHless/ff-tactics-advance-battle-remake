@@ -44,7 +44,7 @@ namespace GridSystem
 
         private void ConfirmMovement(InputAction.CallbackContext obj)
         {
-            MovementManager.OnMovement?.Invoke(CurrentTile);
+            EventManager.OnMovement?.Invoke(CurrentTile);
         }
 
         private void SelectTile(InputAction.CallbackContext obj)
@@ -56,6 +56,34 @@ namespace GridSystem
             CurrentTile = tile ? tile : CurrentTile;
 
             if(CurrentTile) transform.position = CurrentTile.ArrivalTransform.position;
+            
+            if (CharacterOnTile(out Character character))
+                EventManager.OnCharacterHovered?.Invoke(character);
+            else 
+                EventManager.OnCharacterUnhovered?.Invoke();
+        }
+
+        /// <summary>
+        /// Checks if a character is in the current tile
+        /// </summary>
+        /// <param name="_character"></param>
+        /// <returns></returns>
+        private bool CharacterOnTile(out Character _character)
+        {
+            var rayOrigin = transform.position + (Vector3.up * 2f);
+            Ray ray = new Ray(rayOrigin, Vector3.down);
+
+            if (Physics.Raycast(ray, out RaycastHit hit, 3f))
+            {
+                if (hit.transform.TryGetComponent(out Character character))
+                {
+                    _character = character;
+                    return true;
+                }
+            }
+
+            _character = null;
+            return false;
         }
 
         #endregion

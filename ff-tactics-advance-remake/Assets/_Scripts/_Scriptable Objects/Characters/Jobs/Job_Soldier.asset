@@ -20,3 +20,5 @@ MonoBehaviour:
   - <Job>k__BackingField: {fileID: 11400000, guid: 2cacca1ff24b99141abf03feb4b99109,
       type: 2}
     <AbilitiesRequired>k__BackingField: 2
+  <BaseStatistics>k__BackingField: {fileID: 11400000, guid: 1eb5b8935a508f3488df0ee33573f0d2,
+    type: 2}

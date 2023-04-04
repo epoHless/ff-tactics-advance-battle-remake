@@ -10,19 +10,19 @@ kanban-plugin: basic
 
 ## <span style="color:#4284f5">**In Progress** ⚒️
 
-- [ ] **Character Data** 🟩
-- [ ] **[[Job]]** 🟩
-- [ ] **[[Race]]** 🟩
-- [ ] **Statistics** 🟩
 
 
 ## <span style="color:#009c68"> Done ✅
 
+- [ ] **[[Job]]** 🟩
+- [ ] **[[Race]]** 🟩
+- [ ] **Character Data** 🟩
+- [ ] **Statistics** 🟩
+- [ ] **Link To Path** 🟨 @{28-03-2023}
 
 
 ## <span style="color:#c9d600">** Testing** 🎛️
 
-- [ ] **Link To Path** 🟨 @{28-03-2023}
 
 
 ## <span style="color:#f53131">Bugs 🐞

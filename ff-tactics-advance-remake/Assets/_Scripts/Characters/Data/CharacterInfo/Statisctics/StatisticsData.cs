@@ -10,4 +10,6 @@ public class StatisticsData : ScriptableObject
     [field: SerializeField] public float Magic { get; private set; }
     [field: SerializeField] public float Resist { get; private set; }
     [field: SerializeField] public float Speed { get; private set; }
+
+    public BattleStatistics Clone => new BattleStatistics(this);
 }

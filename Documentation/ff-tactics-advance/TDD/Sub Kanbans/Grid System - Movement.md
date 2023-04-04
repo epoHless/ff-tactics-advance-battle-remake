@@ -10,18 +10,20 @@ kanban-plugin: basic
 
 ## <span style="color:#4284f5">**In Progress** ⚒️
 
-- [ ] **Character Info** 🟨
 
 
 ## <span style="color:#009c68"> Done ✅
 
+- [ ] **Character Info Display** 🟨 @{04-04-2023}
+- [ ] **Character Hovering** 🟨
+- [ ] **Character Movement** 🟨
+- [ ] **Debugging Helper** 🟩 @{25-03-2023}
+- [ ] **A* Path Finder** 🟥 @{25-03-2023}
+- [ ] **Tiles** 🟨 @{25-03-2023}
 
 
 ## <span style="color:#c9d600">** Testing** 🎛️
 
-- [ ] **A* Path Finder** 🟥 @{25-03-2023}
-- [ ] **Debugging Helper** 🟩 @{25-03-2023}
-- [ ] **Character Movement** 🟨
 
 
 ## <span style="color:#f53131">Bugs 🐞
@@ -30,7 +32,6 @@ kanban-plugin: basic
 
 ## **Refactor** 📊
 
-- [ ] **Tiles** 🟨 @{25-03-2023}
 
 
 ***

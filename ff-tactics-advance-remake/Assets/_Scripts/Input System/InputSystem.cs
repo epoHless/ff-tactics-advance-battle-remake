@@ -10,7 +10,7 @@ namespace FinalFantasy
 
         private static PlayerInputActions Actions { get; set; }
         
-        public static Vector2 GridAxis => Actions.Combat.GridMovement.ReadValue<Vector2>();
+        public static Vector2 GridAxis => Actions.CharacterMovement.GridMovement.ReadValue<Vector2>();
         private static bool IsInit { get; set; } = false;
 
         #endregion
@@ -39,12 +39,12 @@ namespace FinalFantasy
 
         public static void EnableGridMovement()
         {
-            Actions.Combat.GridMovement.Enable();
+            Actions.CharacterMovement.GridMovement.Enable();
         }
         
         public static void DisableGridMovement()
         {
-            Actions.Combat.GridMovement.Disable();
+            Actions.CharacterMovement.GridMovement.Disable();
         }
         
         public static void AddGridMovementListener(Action<InputAction.CallbackContext> context, EInputType _inputType = EInputType.STARTED)
@@ -52,13 +52,13 @@ namespace FinalFantasy
             switch (_inputType)
             {
                 case EInputType.STARTED:
-                    Actions.Combat.GridMovement.started += context;
+                    Actions.CharacterMovement.GridMovement.started += context;
                     break;
                 case EInputType.PERFORMED:
-                    Actions.Combat.GridMovement.performed += context;
+                    Actions.CharacterMovement.GridMovement.performed += context;
                     break;
                 case EInputType.CANCELLED:
-                    Actions.Combat.GridMovement.canceled += context;
+                    Actions.CharacterMovement.GridMovement.canceled += context;
                     break;
             }
         }
@@ -68,13 +68,13 @@ namespace FinalFantasy
             switch (_inputType)
             {
                 case EInputType.STARTED:
-                    Actions.Combat.GridMovement.started -= context;
+                    Actions.CharacterMovement.GridMovement.started -= context;
                     break;
                 case EInputType.PERFORMED:
-                    Actions.Combat.GridMovement.performed -= context;
+                    Actions.CharacterMovement.GridMovement.performed -= context;
                     break;
                 case EInputType.CANCELLED:
-                    Actions.Combat.GridMovement.canceled -= context;
+                    Actions.CharacterMovement.GridMovement.canceled -= context;
                     break;
             }
         }
@@ -85,12 +85,12 @@ namespace FinalFantasy
 
         public static void EnableConfirm()
         {
-            Actions.Combat.Confirm.Enable();
+            Actions.CharacterMovement.Confirm.Enable();
         }
         
         public static void DisableConfirm()
         {
-            Actions.Combat.Confirm.Disable();
+            Actions.CharacterMovement.Confirm.Disable();
         }
 
         public static void AddConfirmListener(Action<InputAction.CallbackContext> context, EInputType _inputType = EInputType.STARTED)
@@ -98,13 +98,13 @@ namespace FinalFantasy
             switch (_inputType)
             {
                 case EInputType.STARTED:
-                    Actions.Combat.Confirm.started += context;
+                    Actions.CharacterMovement.Confirm.started += context;
                     break;
                 case EInputType.PERFORMED:
-                    Actions.Combat.Confirm.performed += context;
+                    Actions.CharacterMovement.Confirm.performed += context;
                     break;
                 case EInputType.CANCELLED:
-                    Actions.Combat.Confirm.canceled += context;
+                    Actions.CharacterMovement.Confirm.canceled += context;
                     break;
             }
         }
@@ -114,13 +114,13 @@ namespace FinalFantasy
             switch (_inputType)
             {
                 case EInputType.STARTED:
-                    Actions.Combat.Confirm.started -= context;
+                    Actions.CharacterMovement.Confirm.started -= context;
                     break;
                 case EInputType.PERFORMED:
-                    Actions.Combat.Confirm.performed -= context;
+                    Actions.CharacterMovement.Confirm.performed -= context;
                     break;
                 case EInputType.CANCELLED:
-                    Actions.Combat.Confirm.canceled -= context;
+                    Actions.CharacterMovement.Confirm.canceled -= context;
                     break;
             }
         }
