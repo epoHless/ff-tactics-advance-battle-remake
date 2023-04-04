@@ -6,11 +6,11 @@ kanban-plugin: basic
 
 ## Planned 🗃️
 
-- [ ] **Character Movement** 🟨
 
 
 ## <span style="color:#4284f5">**In Progress** ⚒️
 
+- [ ] **Character Info** 🟨
 
 
 ## <span style="color:#009c68"> Done ✅
@@ -21,6 +21,7 @@ kanban-plugin: basic
 
 - [ ] **A* Path Finder** 🟥 @{25-03-2023}
 - [ ] **Debugging Helper** 🟩 @{25-03-2023}
+- [ ] **Character Movement** 🟨
 
 
 ## <span style="color:#f53131">Bugs 🐞

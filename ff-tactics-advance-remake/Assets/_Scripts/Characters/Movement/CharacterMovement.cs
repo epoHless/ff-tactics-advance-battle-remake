@@ -24,7 +24,14 @@ public class CharacterMovement : MonoBehaviour
     public IEnumerator Move(Tile _nextTile)
     {
         var isArrived = false;
+        
         LeanTween.move(gameObject, _nextTile.ArrivalTransform.position, 1 / Speed).setOnComplete(() => isArrived = true);
+
+        var targetRot = _nextTile.transform.position;
+        targetRot.y = transform.position.y;
+        
+        transform.LookAt(targetRot);
+        
         yield return new WaitUntil(() => isArrived);
         OccupiedTile = _nextTile;
     }

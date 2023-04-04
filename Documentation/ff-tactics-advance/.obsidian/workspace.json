@@ -39,7 +39,7 @@
             "state": {
               "type": "kanban",
               "state": {
-                "file": "TDD/Sub Kanbans/Characters.md"
+                "file": "TDD/Sub Kanbans/Grid System - Movement.md"
               }
             }
           },
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TDD/Sub Kanbans/Characters.md",
+                "file": "TDD/Sub Kanbans/Grid System - Movement.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "TDD/Sub Kanbans/Characters.md",
+                "file": "TDD/Sub Kanbans/Grid System - Movement.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TDD/Sub Kanbans/Characters.md"
+                "file": "TDD/Sub Kanbans/Grid System - Movement.md"
               }
             }
           },
@@ -204,15 +204,16 @@
   },
   "active": "568e737572d0678a",
   "lastOpenFiles": [
-    "TDD/Technical Requirements/Jobs & Race/Race.md",
-    "TDD/Sub Kanbans/Characters.md",
-    "TDD/Technical Requirements/Jobs & Race/Job.md",
     "TDD/Project Kanban.md",
+    "TDD/Sub Kanbans/Grid System - Movement.md",
+    "TDD/Sub Kanbans/Input System.md",
+    "TDD/Sub Kanbans/Characters.md",
+    "TDD/Technical Requirements/Jobs & Race/Race.md",
+    "TDD/Technical Requirements/Jobs & Race/Job.md",
     "TDD/Technical Requirements/Game Mechanics/Characters, Statistics & Jobs.md",
     "TDD/Analisys.md",
     "TDD/Technical Requirements/Game Mechanics/Fighting System.md",
     "TDD/Technical Requirements/Fighting System/Move.md",
-    "TDD/Sub Kanbans/Grid System - Movement.md",
     "UML.md",
     "TDD/Technical Requirements/Game Mechanics/Items, Abilities & Equipment.md",
     "TDD/UML/Diagrams/JobsMock.svg",
@@ -232,7 +233,6 @@
     "TDD/UML/Diagrams/MenuFlow.svg",
     "TDD/UML/Diagrams/ItemsMock.svg",
     "TDD/TDD.md",
-    "TDD/Sub Kanbans/Input System.md",
     "TDD/Kanban Notes/Grid System.md",
     "TDD/Sub Kanbans/Grid System & Movement.md",
     "Templates/Kanban Template.md",
