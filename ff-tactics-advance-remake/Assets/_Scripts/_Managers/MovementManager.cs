@@ -22,24 +22,22 @@ public class MovementManager : Singleton<MovementManager>
     protected override void OnEnable()
     {
         base.OnEnable();
+        
         EventManager.OnMovement += CallMoveCharacter;
+        EventManager.OnDirectionSelect += SelectDirection;
     }
 
     private void OnDisable()
     {
         EventManager.OnMovement -= CallMoveCharacter;
-    }
-
-    private void Start()
-    {
-        ActivateTilesInRange(); //todo remove when state machine is implemented
+        EventManager.OnDirectionSelect -= SelectDirection;
     }
 
     #endregion
 
     #region Methods
 
-    private void ActivateTilesInRange() //todo call this on turn start
+    public void ActivateTilesInRange()
     {
         foreach (var tile in PathFinder.GetTilesInRange(Character))
         {
@@ -77,7 +75,15 @@ public class MovementManager : Singleton<MovementManager>
         }
         
         EventManager.OnCharacterHovered?.Invoke(Character);
-        ActivateTilesInRange();
+        GameManager.Instance.ChangeState(GameManager.Instance.facingDirectionState);
+    }
+    
+    private void SelectDirection(Vector3 _direction)
+    {
+        var targetRot = Character.transform.position + _direction;
+        targetRot.y = Character.transform.position.y;
+        
+        Character.transform.LookAt(targetRot);
     }
 
     #endregion

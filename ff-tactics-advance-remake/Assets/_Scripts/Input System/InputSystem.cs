@@ -10,7 +10,10 @@ namespace FinalFantasy
 
         private static PlayerInputActions Actions { get; set; }
         
-        public static Vector2 GridAxis => Actions.CharacterMovement.GridMovement.ReadValue<Vector2>();
+        public static Vector2 GridAxis => Actions.Movement.GridMovement.ReadValue<Vector2>();
+
+        public static bool WasConfirmPressed => Actions.Menu.Confirm.WasPressedThisFrame();
+        public static bool WasBackPressed => Actions.Menu.Back.WasPressedThisFrame();
         private static bool IsInit { get; set; } = false;
 
         #endregion
@@ -27,6 +30,7 @@ namespace FinalFantasy
             if (!IsInit)
             {
                 Actions = new PlayerInputActions();
+                Actions.Enable();
                 IsInit = true;
             }
         }
@@ -35,16 +39,40 @@ namespace FinalFantasy
 
         #region Methods
 
+        #region Inputs
+
+        public static void EnableInput()
+        {
+            Actions.Enable();
+        }
+        
+        public static void DisableInput()
+        {
+            Actions.Disable();
+        }
+
+        #endregion
+        
         #region Grid Movement
 
+        public static void EnableMovement()
+        {
+            Actions.Movement.Enable();
+        }
+        
+        public static void DisableMovement()
+        {
+            Actions.Movement.Disable();
+        }
+        
         public static void EnableGridMovement()
         {
-            Actions.CharacterMovement.GridMovement.Enable();
+            Actions.Movement.GridMovement.Enable();
         }
         
         public static void DisableGridMovement()
         {
-            Actions.CharacterMovement.GridMovement.Disable();
+            Actions.Movement.GridMovement.Disable();
         }
         
         public static void AddGridMovementListener(Action<InputAction.CallbackContext> context, EInputType _inputType = EInputType.STARTED)
@@ -52,13 +80,13 @@ namespace FinalFantasy
             switch (_inputType)
             {
                 case EInputType.STARTED:
-                    Actions.CharacterMovement.GridMovement.started += context;
+                    Actions.Movement.GridMovement.started += context;
                     break;
                 case EInputType.PERFORMED:
-                    Actions.CharacterMovement.GridMovement.performed += context;
+                    Actions.Movement.GridMovement.performed += context;
                     break;
                 case EInputType.CANCELLED:
-                    Actions.CharacterMovement.GridMovement.canceled += context;
+                    Actions.Movement.GridMovement.canceled += context;
                     break;
             }
         }
@@ -68,13 +96,13 @@ namespace FinalFantasy
             switch (_inputType)
             {
                 case EInputType.STARTED:
-                    Actions.CharacterMovement.GridMovement.started -= context;
+                    Actions.Movement.GridMovement.started -= context;
                     break;
                 case EInputType.PERFORMED:
-                    Actions.CharacterMovement.GridMovement.performed -= context;
+                    Actions.Movement.GridMovement.performed -= context;
                     break;
                 case EInputType.CANCELLED:
-                    Actions.CharacterMovement.GridMovement.canceled -= context;
+                    Actions.Movement.GridMovement.canceled -= context;
                     break;
             }
         }
@@ -85,12 +113,12 @@ namespace FinalFantasy
 
         public static void EnableConfirm()
         {
-            Actions.CharacterMovement.Confirm.Enable();
+            Actions.Menu.Confirm.Enable();
         }
         
         public static void DisableConfirm()
         {
-            Actions.CharacterMovement.Confirm.Disable();
+            Actions.Menu.Confirm.Disable();
         }
 
         public static void AddConfirmListener(Action<InputAction.CallbackContext> context, EInputType _inputType = EInputType.STARTED)
@@ -98,13 +126,13 @@ namespace FinalFantasy
             switch (_inputType)
             {
                 case EInputType.STARTED:
-                    Actions.CharacterMovement.Confirm.started += context;
+                    Actions.Menu.Confirm.started += context;
                     break;
                 case EInputType.PERFORMED:
-                    Actions.CharacterMovement.Confirm.performed += context;
+                    Actions.Menu.Confirm.performed += context;
                     break;
                 case EInputType.CANCELLED:
-                    Actions.CharacterMovement.Confirm.canceled += context;
+                    Actions.Menu.Confirm.canceled += context;
                     break;
             }
         }
@@ -114,19 +142,33 @@ namespace FinalFantasy
             switch (_inputType)
             {
                 case EInputType.STARTED:
-                    Actions.CharacterMovement.Confirm.started -= context;
+                    Actions.Menu.Confirm.started -= context;
                     break;
                 case EInputType.PERFORMED:
-                    Actions.CharacterMovement.Confirm.performed -= context;
+                    Actions.Menu.Confirm.performed -= context;
                     break;
                 case EInputType.CANCELLED:
-                    Actions.CharacterMovement.Confirm.canceled -= context;
+                    Actions.Menu.Confirm.canceled -= context;
                     break;
             }
         }
 
         #endregion
 
+        #region Facing Direction
+
+        public static void EnableFacingDirection()
+        {
+            Actions.FaceDirection.Enable();
+        }
+        
+        public static void DisableFacingDirection()
+        {
+            Actions.FaceDirection.Disable();
+        }
+
+        #endregion
+        
         #endregion
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using GridSystem;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -13,27 +14,26 @@ namespace GridSystem
 
         #endregion
 
-        #region Unity Method
+        #region Unity Methods
 
         private void Awake()
         {
             CurrentTile = PathFinder.GetTileAtPosition(transform.position);
         }
 
+        private void Start()
+        {
+            gameObject.SetActive(false);
+        }
+
         private void OnEnable()
         {
-            InputSystem.EnableGridMovement();
-            InputSystem.EnableConfirm();
-        
             InputSystem.AddGridMovementListener(SelectTile);
             InputSystem.AddConfirmListener(ConfirmMovement);
         }
 
         private void OnDisable()
         {
-            InputSystem.DisableGridMovement();
-            InputSystem.DisableConfirm();
-        
             InputSystem.RemoveGridMovementListener(SelectTile);
             InputSystem.RemoveConfirmListener(ConfirmMovement);
         }
@@ -44,7 +44,7 @@ namespace GridSystem
 
         private void ConfirmMovement(InputAction.CallbackContext obj)
         {
-            EventManager.OnMovement?.Invoke(CurrentTile);
+            if(CurrentTile) EventManager.OnMovement?.Invoke(CurrentTile);
         }
 
         private void SelectTile(InputAction.CallbackContext obj)
@@ -57,9 +57,14 @@ namespace GridSystem
 
             if(CurrentTile) transform.position = CurrentTile.ArrivalTransform.position;
             
+            IsCharacterOnTile();
+        }
+
+        public void IsCharacterOnTile()
+        {
             if (CharacterOnTile(out Character character))
                 EventManager.OnCharacterHovered?.Invoke(character);
-            else 
+            else
                 EventManager.OnCharacterUnhovered?.Invoke();
         }
 
@@ -84,6 +89,15 @@ namespace GridSystem
 
             _character = null;
             return false;
+        }
+
+        #endregion
+
+        #region Methods
+
+        public void ToggleSelector(bool _toggle)
+        {
+            gameObject.SetActive(_toggle);
         }
 
         #endregion

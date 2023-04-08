@@ -20,10 +20,10 @@ public class ToggablePanel : MonoBehaviour
 
     #region Methods
 
-    protected virtual void Toggle(bool _toggle)
+    public virtual LTDescr Toggle(bool _toggle, int _direction = 1)
     {
         var multiplier = _toggle ? 1 : -1;
-        rectTransform.LeanMoveX(_toggle ? 0 : rectTransform.rect.width * multiplier, .15f);
+        return rectTransform.LeanMoveX(_toggle ? 0 : rectTransform.rect.width * multiplier * _direction, .15f);
     }
 
     #endregion

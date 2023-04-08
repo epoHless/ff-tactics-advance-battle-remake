@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   identifier: '>'
   icon: {fileID: 2800000, guid: ec2e3aa6d0ab8ce4eac29b56d65d61d5, type: 3}
-  fontStyle: 1
+  fontStyle: 3
   alignment: 3
   textColor: {r: 0.51166046, g: 0.48584908, b: 1, a: 1}
   inactiveTextColor: {r: 1, g: 1, b: 1, a: 1}
