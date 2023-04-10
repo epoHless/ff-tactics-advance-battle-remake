@@ -19,7 +19,7 @@ public class GameManager : Singleton<GameManager>
 
     [field: SerializeField] public TileSelector tileSelector { get; private set; }
     [field: SerializeField] public TurnManager TurnManager { get; private set; }
-
+    
     #endregion
 
     #region Unity Methods

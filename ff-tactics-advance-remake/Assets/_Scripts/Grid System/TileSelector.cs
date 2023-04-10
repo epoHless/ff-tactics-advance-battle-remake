@@ -69,7 +69,7 @@ namespace GridSystem
             }
             else
             {
-                EventManager.OnCharacterUnhovered?.Invoke();
+                EventManager.OnCharacterUnhovered?.Invoke(character);
                 return false;
             }
         }

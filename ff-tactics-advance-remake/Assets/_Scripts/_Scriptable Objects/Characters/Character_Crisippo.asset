@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Character_Crisippo
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Crisippo
-  <Icon>k__BackingField: {fileID: 1126525802, guid: 63d31bd1c065b9641b61b9eac4e22144,
+  <Model>k__BackingField: {fileID: 1077234952779422, guid: b1ab96dc46f36d9428c8bffb32c9ddaa,
     type: 3}
   <RaceData>k__BackingField: {fileID: 11400000, guid: 6a2c4847610ca50468797dd39a0143c9,
     type: 2}

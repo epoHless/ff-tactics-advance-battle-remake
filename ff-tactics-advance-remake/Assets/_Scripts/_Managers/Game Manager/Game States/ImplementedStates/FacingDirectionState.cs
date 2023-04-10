@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.InputSystem;
 using InputSystem = FinalFantasy.InputSystem;
 
@@ -15,19 +16,27 @@ public class FacingDirectionState : GameState
     {
         base.OnEnter(_manager);
         
-        InputSystem.EnableFacingDirection();
-        
         facingDirectionHolder.gameObject.SetActive(true);
         facingDirectionHolder.Init(_manager.TurnManager.currentTurn.Character.transform.position + Vector3.up * 1.4f);
+        
+        InputSystem.EnableFacingDirection();
     }
 
     public override void OnUpdate(GameManager _manager)
     {
         base.OnUpdate(_manager);
+
+        if (InputSystem.WasBackPressed && !_manager.TurnManager.currentTurn.HasMoved)
+        {
+            _manager.ChangeState(_manager.menuState);
+            return;
+        }
         
         if (InputSystem.WasConfirmPressed)
         {
+            Debug.Log($"PRESSED CONFIRM ON FACING DIRECTION!");
             _manager.ChangeState(_manager.menuState);
+            return;
         }
     }
 

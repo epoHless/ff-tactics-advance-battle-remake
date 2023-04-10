@@ -9,7 +9,7 @@ public static class EventManager
     #region Tile Selector Events
 
     public static Evt<Character> OnCharacterHovered;
-    public static Evt OnCharacterUnhovered;
+    public static Evt<Character> OnCharacterUnhovered;
 
     #endregion
 

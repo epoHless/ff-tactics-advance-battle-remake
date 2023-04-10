@@ -1,4 +1,5 @@
-﻿using FinalFantasy;
+﻿using System;
+using FinalFantasy;
 using GridSystem;
 using UnityEngine;
 
@@ -31,11 +32,13 @@ public class MovementState : GameState
         if (_manager.TurnManager.currentTurn.HasMoved)
         {
             _manager.ChangeState(_manager.menuState);
+            return;
         }
         
         if (InputSystem.WasBackPressed && !MovementManager.Instance.IsMoving)
         {
             _manager.ChangeState(_manager.menuState);
+            return;
         }
     }
 

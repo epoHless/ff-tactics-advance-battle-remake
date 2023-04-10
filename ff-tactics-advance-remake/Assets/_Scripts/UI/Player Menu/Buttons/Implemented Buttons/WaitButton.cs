@@ -1,4 +1,6 @@
-﻿public class WaitButton : MenuButton
+﻿using FinalFantasy;
+
+public class WaitButton : MenuButton
 {
     protected override void ExecuteAction()
     {

@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public abstract class MenuButton : MonoBehaviour
+public abstract class MenuButton : MonoBehaviour, ISubmitHandler
 {
     private Button button;
 
@@ -14,8 +15,13 @@ public abstract class MenuButton : MonoBehaviour
 
     private void OnEnable()
     {
-        button.onClick.AddListener(ExecuteAction);
+        // button.onClick.AddListener(ExecuteAction);
     }
 
     protected virtual void ExecuteAction() { }
+    
+    public void OnSubmit(BaseEventData eventData)
+    {
+        ExecuteAction();
+    }
 }
