@@ -1,4 +1,5 @@
 ﻿using FinalFantasy;
+using UnityEngine;
 
 public class MenuState : GameState
 {
@@ -12,13 +13,24 @@ public class MenuState : GameState
     public override void OnEnter(GameManager _manager)
     {
         base.OnEnter(_manager);
-
-        InputSystem.DisableInput();
         
-        menu.gameObject.SetActive(true);
+        if (_manager.TurnManager.currentTurn.HasMoved) //todo add ability check
+        {
+            _manager.ChangeState(_manager.facingDirectionState);
+        }
+        else
+        {
+            InputSystem.DisableGameInput();
 
-        menu.Init();
-        menu.Toggle(true);
+            _manager.tileSelector.transform.position = _manager.TurnManager.currentTurn.Character.transform.position + Vector3.up * 0.5f;
+            _manager.tileSelector.IsCharacterOnTile();
+            _manager.tileSelector.ToggleSelector(true);
+        
+            menu.gameObject.SetActive(true);
+
+            menu.Init();
+            menu.Toggle(true);
+        }
     }
 
     public override void OnUpdate(GameManager _manager)
@@ -28,6 +40,8 @@ public class MenuState : GameState
         if (InputSystem.WasBackPressed)
         {
             //todo go to map exploration
+            _manager.movementState.activateMovement = false;
+            _manager.ChangeState(_manager.movementState);
         }
     }
 
@@ -38,7 +52,7 @@ public class MenuState : GameState
         menu.Toggle(false, -1).setOnComplete(() =>
         {
             menu.gameObject.SetActive(false);
-            InputSystem.EnableInput();
+            InputSystem.EnableGameInput();
         });
     }
 }

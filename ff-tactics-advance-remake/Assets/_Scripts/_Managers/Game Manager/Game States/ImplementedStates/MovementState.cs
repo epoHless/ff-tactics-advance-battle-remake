@@ -5,7 +5,8 @@ using UnityEngine;
 public class MovementState : GameState
 {
     private TileSelector tileSelector;
-
+    public bool activateMovement = false;
+    
     public MovementState(TileSelector _tileSelector)
     {
         tileSelector = _tileSelector;
@@ -15,10 +16,10 @@ public class MovementState : GameState
     {
         base.OnEnter(_manager);
 
-        tileSelector.transform.position = MovementManager.Instance.Character.transform.position + Vector3.up * 0.5f;
+        tileSelector.transform.position = _manager.TurnManager.currentTurn.Character.transform.position + Vector3.up * 0.5f;
+
+        if (activateMovement) MovementManager.Instance.ActivateTilesInRange();
         tileSelector.ToggleSelector(true);
-        
-        MovementManager.Instance.ActivateTilesInRange();
         
         InputSystem.EnableGridMovement();
     }
@@ -27,7 +28,12 @@ public class MovementState : GameState
     {
         base.OnUpdate(_manager);
 
-        if (InputSystem.WasBackPressed)
+        if (_manager.TurnManager.currentTurn.HasMoved)
+        {
+            _manager.ChangeState(_manager.menuState);
+        }
+        
+        if (InputSystem.WasBackPressed && !MovementManager.Instance.IsMoving)
         {
             _manager.ChangeState(_manager.menuState);
         }
@@ -37,10 +43,12 @@ public class MovementState : GameState
     {
         base.OnExit(_manager);
         
-        tileSelector.transform.position = MovementManager.Instance.Character.transform.position + Vector3.up * 0.5f;
+        tileSelector.transform.position = _manager.TurnManager.currentTurn.Character.transform.position + Vector3.up * 0.5f;
         tileSelector.IsCharacterOnTile();
         
         tileSelector.ToggleSelector(false);
+        
+        MovementManager.Instance.DeactivateTilesInRange();
         
         InputSystem.DisableGridMovement();
     }

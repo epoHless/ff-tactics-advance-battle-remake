@@ -24,4 +24,10 @@ public static class EventManager
     public static Evt<Vector3> OnDirectionSelect;
 
     #endregion
+
+    #region Turn Events
+
+    public static Evt<TurnInformation> OnTurnChanged;
+
+    #endregion
 }

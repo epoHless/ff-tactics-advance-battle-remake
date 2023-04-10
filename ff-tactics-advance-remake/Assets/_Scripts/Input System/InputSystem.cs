@@ -41,14 +41,16 @@ namespace FinalFantasy
 
         #region Inputs
 
-        public static void EnableInput()
+        public static void EnableGameInput()
         {
-            Actions.Enable();
+            Actions.Movement.Enable();
+            Actions.FaceDirection.Enable();
         }
         
-        public static void DisableInput()
+        public static void DisableGameInput()
         {
-            Actions.Disable();
+            Actions.Movement.Disable();
+            Actions.FaceDirection.Disable();
         }
 
         #endregion

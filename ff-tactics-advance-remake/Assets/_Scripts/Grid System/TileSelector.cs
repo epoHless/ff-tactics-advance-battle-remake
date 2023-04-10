@@ -44,28 +44,34 @@ namespace GridSystem
 
         private void ConfirmMovement(InputAction.CallbackContext obj)
         {
-            if(CurrentTile) EventManager.OnMovement?.Invoke(CurrentTile);
+            if(CurrentTile && !IsCharacterOnTile()) EventManager.OnMovement?.Invoke(CurrentTile);
         }
 
         private void SelectTile(InputAction.CallbackContext obj)
         {
             var axis = InputSystem.GridAxis;
             var adjustedPosition = new Vector3(transform.position.x, 0.5f, transform.position.z);
-        
+    
             var tile = PathFinder.GetTileAtPosition(adjustedPosition, new Vector3(axis.x, 0, axis.y));
             CurrentTile = tile ? tile : CurrentTile;
 
             if(CurrentTile) transform.position = CurrentTile.ArrivalTransform.position;
-            
+
             IsCharacterOnTile();
         }
 
-        public void IsCharacterOnTile()
+        public bool IsCharacterOnTile()
         {
             if (CharacterOnTile(out Character character))
+            {
                 EventManager.OnCharacterHovered?.Invoke(character);
+                return true;
+            }
             else
+            {
                 EventManager.OnCharacterUnhovered?.Invoke();
+                return false;
+            }
         }
 
         /// <summary>

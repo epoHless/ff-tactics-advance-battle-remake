@@ -18,7 +18,7 @@ public class FacingDirectionState : GameState
         InputSystem.EnableFacingDirection();
         
         facingDirectionHolder.gameObject.SetActive(true);
-        facingDirectionHolder.Init(MovementManager.Instance.Character.transform.position + Vector3.up * 1.4f);
+        facingDirectionHolder.Init(_manager.TurnManager.currentTurn.Character.transform.position + Vector3.up * 1.4f);
     }
 
     public override void OnUpdate(GameManager _manager)
@@ -37,6 +37,8 @@ public class FacingDirectionState : GameState
         
         InputSystem.DisableFacingDirection();
 
+        _manager.TurnManager.StartTurn();
+        
         facingDirectionHolder.gameObject.SetActive(false);
     }
 }

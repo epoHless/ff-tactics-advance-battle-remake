@@ -2,18 +2,21 @@
 using System.Collections;
 using GridSystem;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class MovementManager : Singleton<MovementManager>
 {
+    [SerializeField] private TurnInformation characterTurn;
+
+    
     #region Properties
 
-    [field: SerializeField] public Character Character { get; private set; }
-
-    #endregion
-
-    #region Events
-
+    public bool IsMoving { get; private set; }
+    
+    public TurnInformation CharacterTurn
+    {
+        get => TurnManager.Instance.currentTurn;
+        private set => characterTurn = value;
+    }
 
     #endregion
 
@@ -25,12 +28,14 @@ public class MovementManager : Singleton<MovementManager>
         
         EventManager.OnMovement += CallMoveCharacter;
         EventManager.OnDirectionSelect += SelectDirection;
+        EventManager.OnTurnChanged += SetCharacter;
     }
 
     private void OnDisable()
     {
         EventManager.OnMovement -= CallMoveCharacter;
         EventManager.OnDirectionSelect -= SelectDirection;
+        EventManager.OnTurnChanged -= SetCharacter;
     }
 
     #endregion
@@ -39,15 +44,15 @@ public class MovementManager : Singleton<MovementManager>
 
     public void ActivateTilesInRange()
     {
-        foreach (var tile in PathFinder.GetTilesInRange(Character))
+        foreach (var tile in PathFinder.GetTilesInRange(CharacterTurn.Character))
         {
             tile.SelectionBox.SetActive(true);
         }
     }
     
-    private void DeactivateTilesInRange()
+    public void DeactivateTilesInRange()
     {
-        foreach (var tile in PathFinder.GetTilesInRange(Character))
+        foreach (var tile in PathFinder.GetTilesInRange(CharacterTurn.Character))
         {
             tile.SelectionBox.SetActive(false);
         }
@@ -59,7 +64,7 @@ public class MovementManager : Singleton<MovementManager>
 
     private void CallMoveCharacter(Tile _endTile)
     {
-        if (!PathFinder.GetTilesInRange(Character).Contains(_endTile) || Character.Movement.OccupiedTile == _endTile) return;
+        if (!PathFinder.GetTilesInRange(CharacterTurn.Character).Contains(_endTile) || CharacterTurn.Character.Movement.OccupiedTile == _endTile) return;
         
         StartCoroutine(nameof(MoveCharacter), _endTile);
         DeactivateTilesInRange();
@@ -67,23 +72,40 @@ public class MovementManager : Singleton<MovementManager>
 
     IEnumerator MoveCharacter(Tile _endTile)
     {
-        var path = PathFinder.CalculatePath(Character, _endTile);
+        var path = PathFinder.CalculatePath(CharacterTurn.Character, _endTile);
 
+        IsMoving = true;
+        
         foreach (var tile in path)
         {
-            yield return Character.Movement.Move(tile);
+            yield return CharacterTurn.Character.Movement.Move(tile);
         }
         
-        EventManager.OnCharacterHovered?.Invoke(Character);
-        GameManager.Instance.ChangeState(GameManager.Instance.facingDirectionState);
+        EventManager.OnCharacterHovered?.Invoke(CharacterTurn.Character); //reselect character when the movement is done
+        CharacterTurn.HasMoved = true;
+
+        IsMoving = false;
     }
+
+    #endregion
     
+    #region Facing Direction Methods
+
     private void SelectDirection(Vector3 _direction)
     {
-        var targetRot = Character.transform.position + _direction;
-        targetRot.y = Character.transform.position.y;
+        var targetRot = CharacterTurn.Character.transform.position + _direction;
+        targetRot.y = CharacterTurn.Character.transform.position.y;
         
-        Character.transform.LookAt(targetRot);
+        CharacterTurn.Character.transform.LookAt(targetRot);
+    }
+
+    #endregion
+
+    #region Turn Methods
+
+    private void SetCharacter(TurnInformation _turnInformation)
+    {
+        CharacterTurn = _turnInformation;
     }
 
     #endregion
