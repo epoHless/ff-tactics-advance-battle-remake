@@ -10,7 +10,7 @@ scopes = {
 	"last_search.DA949528" = "h: character"
 	"OpenInspectorPreview.DA949528" = "1"
 	"currentGroup.DA949528" = "all"
-	"last_search.DA949520" = "h: character"
+	"last_search.DA949520" = "h: character_"
 	"OpenInspectorPreview.DA949520" = "1"
 	"currentGroup.DA949520" = "all"
 }
@@ -84,6 +84,8 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"h"
+	"?"
 ]
 searchItemFavorites = [
 ]

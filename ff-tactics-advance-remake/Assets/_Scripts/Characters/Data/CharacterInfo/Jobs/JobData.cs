@@ -8,8 +8,8 @@ public class JobData : ScriptableObject
 
     [field: SerializeField] public string Name { get; private set; }
     [field: SerializeField] public List<JobRequirement> Branches { get; private set; }
-    
     [field: SerializeField] public StatisticsData BaseStatistics { get; private set; }
+    [field: SerializeField] public List<EquipmentCategoryData> EquippableCategories { get; private set; }
 
     #endregion
 
@@ -32,6 +32,4 @@ public class JobData : ScriptableObject
     }
 
     #endregion
-
-    
 }

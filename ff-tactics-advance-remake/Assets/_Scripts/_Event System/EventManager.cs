@@ -30,4 +30,14 @@ public static class EventManager
     public static Evt<TurnInformation> OnTurnChanged;
 
     #endregion
+
+    #region Equipment Events
+
+    public static Evt<EquipmentData> OnItemEquipped;
+    public static Evt<EquipmentData> OnItemUnequipped;
+    
+    public static Evt<AbilityData> OnAbilityEquipped;
+    public static Evt<AbilityData> OnAbilityUnequipped;
+
+    #endregion
 }
