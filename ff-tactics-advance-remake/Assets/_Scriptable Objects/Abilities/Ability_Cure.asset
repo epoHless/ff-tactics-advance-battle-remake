@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d6e57f13abe487e8868821a1afdcf4c, type: 3}
+  m_Name: Ability_Cure
+  m_EditorClassIdentifier: 
+  <Icon>k__BackingField: {fileID: 0}
+  <Name>k__BackingField: Cure
+  <Description>k__BackingField: Heals low HP
+  <AbilityPower>k__BackingField: 10
+  <ManaCost>k__BackingField: 6
+  <AbilityType>k__BackingField: 1
+  <AbilityRange>k__BackingField: 2
+  AbilityEffects:
+  - rid: 3409393425706647552
+  references:
+    version: 2
+    RefIds:
+    - rid: 3409393425706647552
+      type: {class: ParticleEffect, ns: , asm: Assembly-CSharp}
+      data:
+        name: ParticleEffect
+        <ParticlePosition>k__BackingField: 0
+        <Particle>k__BackingField: {fileID: 7036817304203522129, guid: 3cefa829969829542bf182f16e268213,
+          type: 3}

@@ -1,15 +1,21 @@
-﻿using GridSystem;
+﻿using System.Collections;
+using GridSystem;
 using UnityEngine;
 
 public static class EventManager
 {
     public delegate void Evt();
-    public delegate void Evt<T>(T item);
+    public delegate void Evt<T>(T _item);
+    public delegate void Evt<T1, T2>(T1 _item1, T2 _item2);
+    public delegate void Evt<T1, T2, T3>(T1 _item1, T2 _item2, T3 _item3);
 
     #region Tile Selector Events
 
     public static Evt<Character> OnCharacterHovered;
     public static Evt<Character> OnCharacterUnhovered;
+
+    public static Evt<bool> OnSelectionTypeChanged; //todo bool is temporary, to replace with a more appropriate type
+    public static Evt<SelectionCommand> OnCommandSent;
 
     #endregion
 
@@ -38,6 +44,13 @@ public static class EventManager
     
     public static Evt<AbilityData> OnAbilityEquipped;
     public static Evt<AbilityData> OnAbilityUnequipped;
+
+    #endregion
+
+    #region Abilities Events
+
+    public static Evt<IEnumerable> OnAbilityUsed;
+    public static Evt OnAbilityFinished;
 
     #endregion
 }

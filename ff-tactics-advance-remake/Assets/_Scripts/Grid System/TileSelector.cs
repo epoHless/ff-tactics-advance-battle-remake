@@ -8,9 +8,21 @@ namespace GridSystem
 {
     public class TileSelector : MonoBehaviour
     {
+        private SelectionCommand selectionCommand;
+
         #region Properties
 
         [field: SerializeField] public Tile CurrentTile { get; private set; }
+
+        public SelectionCommand SelectionCommand
+        {
+            get => selectionCommand;
+            set
+            {
+                selectionCommand = value;
+                EventManager.OnSelectionTypeChanged?.Invoke(selectionCommand is MovementCommand);
+            }
+        }
 
         #endregion
 
@@ -29,22 +41,26 @@ namespace GridSystem
         private void OnEnable()
         {
             InputSystem.AddGridMovementListener(SelectTile);
-            InputSystem.AddConfirmListener(ConfirmMovement);
+            InputSystem.AddConfirmListener(ConfirmSelection);
+            
+            EventManager.OnCommandSent += SetCommand;
         }
 
         private void OnDisable()
         {
             InputSystem.RemoveGridMovementListener(SelectTile);
-            InputSystem.RemoveConfirmListener(ConfirmMovement);
+            InputSystem.RemoveConfirmListener(ConfirmSelection);
+            
+            EventManager.OnCommandSent -= SetCommand;
         }
 
         #endregion
 
         #region Input Event Methods
 
-        private void ConfirmMovement(InputAction.CallbackContext obj)
+        private void ConfirmSelection(InputAction.CallbackContext obj)
         {
-            if(CurrentTile && !IsCharacterOnTile()) EventManager.OnMovement?.Invoke(CurrentTile);
+            if(CurrentTile) SelectionCommand.Execute(this);
         }
 
         private void SelectTile(InputAction.CallbackContext obj)
@@ -79,7 +95,7 @@ namespace GridSystem
         /// </summary>
         /// <param name="_character"></param>
         /// <returns></returns>
-        private bool CharacterOnTile(out Character _character)
+        public bool CharacterOnTile(out Character _character)
         {
             var rayOrigin = transform.position + (Vector3.up * 2f);
             Ray ray = new Ray(rayOrigin, Vector3.down);
@@ -99,6 +115,15 @@ namespace GridSystem
 
         #endregion
 
+        #region Command Events
+
+        private void SetCommand(SelectionCommand _command)
+        {
+            SelectionCommand = _command;
+        }
+
+        #endregion
+        
         #region Methods
 
         public void ToggleSelector(bool _toggle)

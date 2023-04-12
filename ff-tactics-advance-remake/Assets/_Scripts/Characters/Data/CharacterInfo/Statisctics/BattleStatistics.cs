@@ -21,6 +21,8 @@ public class BattleStatistics
 
     #region Constructor
 
+    public BattleStatistics(){}
+    
     public BattleStatistics(StatisticsData _statistics)
     {
         HP = _statistics.HP;
@@ -34,6 +36,46 @@ public class BattleStatistics
         CurrentHP = HP;
         CurrentMP = MP;
     }
+
+    #endregion
+
+    #region Overloads
+
+    public static BattleStatistics operator + (BattleStatistics _left, BattleStatistics _right)
+    {
+        var stats = new BattleStatistics
+        {
+            Attack = _left.Attack + _right.Attack,
+            Defense = _left.Defense + _right.Defense,
+            HP = _left.HP + _right.HP,
+            MP = _left.MP + _right.MP,
+            Resist = _left.Resist + _right.Resist,
+            Speed = _left.Speed + _right.Speed,
+            Magic = _left.Magic + _right.Magic,
+        };
+
+        stats.CurrentHP = stats.HP;
+
+        return stats;
+    } 
+    
+    public static BattleStatistics operator - (BattleStatistics _left, BattleStatistics _right)
+    {
+        var stats = new BattleStatistics
+        {
+            Attack = _left.Attack - _right.Attack,
+            Defense = _left.Defense - _right.Defense,
+            HP = _left.HP - _right.HP,
+            MP = _left.MP - _right.MP,
+            Resist = _left.Resist - _right.Resist,
+            Speed = _left.Speed - _right.Speed,
+            Magic = _left.Magic - _right.Magic,
+        };
+
+        stats.CurrentHP = stats.HP;
+
+        return stats;
+    } 
 
     #endregion
 }

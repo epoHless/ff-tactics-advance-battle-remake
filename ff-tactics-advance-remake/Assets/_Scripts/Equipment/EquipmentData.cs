@@ -31,4 +31,9 @@ public class EquipmentData : ScriptableObject
             return true;
         }
     }
+
+    public void Init(BattleStatistics _statistics)
+    {
+        
+    }
 }

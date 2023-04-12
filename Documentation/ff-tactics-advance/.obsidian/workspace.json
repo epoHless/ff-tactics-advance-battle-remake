@@ -37,16 +37,24 @@
             "id": "a2a0086bade5c45d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "kanban",
               "state": {
-                "file": "TDD/Technical Requirements/Game Mechanics/Fighting System.md",
-                "mode": "source",
-                "source": false
+                "file": "TDD/Project Kanban.md"
+              }
+            }
+          },
+          {
+            "id": "edb91409cf70230a",
+            "type": "leaf",
+            "state": {
+              "type": "kanban",
+              "state": {
+                "file": "TDD/Sub Kanbans/Abilities.md"
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -112,7 +120,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "TDD/Technical Requirements/Game Mechanics/Fighting System.md",
+                "file": "TDD/Sub Kanbans/Abilities.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -129,7 +137,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "TDD/Technical Requirements/Game Mechanics/Fighting System.md",
+                "file": "TDD/Sub Kanbans/Abilities.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -152,7 +160,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "TDD/Technical Requirements/Game Mechanics/Fighting System.md"
+                "file": "TDD/Sub Kanbans/Abilities.md"
               }
             }
           },
@@ -192,18 +200,19 @@
       "obsidian-markdown-formatting-assistant-plugin:Open Markdown Formatting Assistant": false
     }
   },
-  "active": "a2a0086bade5c45d",
+  "active": "edb91409cf70230a",
   "lastOpenFiles": [
-    "TDD/Analisys.md",
-    "TDD/Project Kanban.md",
-    "TDD/Technical Requirements/Jobs & Race/Job.md",
     "TDD/Sub Kanbans/Grid System - Movement.md",
+    "TDD/Sub Kanbans/Abilities.md",
+    "TDD/Project Kanban.md",
+    "TDD/Technical Requirements/Game Mechanics/Fighting System.md",
+    "TDD/Analisys.md",
+    "TDD/Technical Requirements/Jobs & Race/Job.md",
     "TDD/Sub Kanbans/Characters.md",
     "UML.md",
     "TDD/Sub Kanbans/Input System.md",
     "TDD/Technical Requirements/Jobs & Race/Race.md",
     "TDD/Technical Requirements/Game Mechanics/Characters, Statistics & Jobs.md",
-    "TDD/Technical Requirements/Game Mechanics/Fighting System.md",
     "TDD/Technical Requirements/Fighting System/Move.md",
     "TDD/Technical Requirements/Game Mechanics/Items, Abilities & Equipment.md",
     "TDD/UML/Diagrams/JobsMock.svg",

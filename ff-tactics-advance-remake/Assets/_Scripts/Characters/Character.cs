@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Character : MonoBehaviour
@@ -20,6 +21,14 @@ public class Character : MonoBehaviour
     private void Awake()
     {
         BattleStatistics = CurrentJob.BaseStatistics.Clone;
+    }
+
+    private void Start()
+    {
+        foreach (var data in Equipment)
+        {
+            BattleStatistics += data.Statistics;
+        }
     }
 
     #endregion
