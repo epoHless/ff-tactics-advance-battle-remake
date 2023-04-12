@@ -42,17 +42,17 @@ public class MovementManager : Singleton<MovementManager>
 
     #region Methods
 
-    public void ActivateTilesInRange()
+    public void ActivateTilesInRange(int _range)
     {
-        foreach (var tile in PathFinder.GetTilesInRange(CharacterTurn.Character))
+        foreach (var tile in PathFinder.GetTilesInRange(CharacterTurn.Character, _range))
         {
             tile.SelectionBox.SetActive(true);
         }
     }
     
-    public void DeactivateTilesInRange()
+    public void DeactivateTilesInRange(int _range)
     {
-        foreach (var tile in PathFinder.GetTilesInRange(CharacterTurn.Character))
+        foreach (var tile in PathFinder.GetTilesInRange(CharacterTurn.Character, _range))
         {
             tile.SelectionBox.SetActive(false);
         }
@@ -64,10 +64,11 @@ public class MovementManager : Singleton<MovementManager>
 
     private void CallMoveCharacter(Tile _endTile)
     {
-        if (!PathFinder.GetTilesInRange(CharacterTurn.Character).Contains(_endTile) || CharacterTurn.Character.Movement.OccupiedTile == _endTile) return;
+        if (!PathFinder.GetTilesInRange(CharacterTurn.Character, CharacterTurn.Character.Movement.MovementData.Range).Contains(_endTile) ||
+            CharacterTurn.Character.Movement.OccupiedTile == _endTile) return;
         
         StartCoroutine(nameof(MoveCharacter), _endTile);
-        DeactivateTilesInRange();
+        DeactivateTilesInRange(CharacterTurn.Character.Movement.MovementData.Range);
     }
 
     IEnumerator MoveCharacter(Tile _endTile)

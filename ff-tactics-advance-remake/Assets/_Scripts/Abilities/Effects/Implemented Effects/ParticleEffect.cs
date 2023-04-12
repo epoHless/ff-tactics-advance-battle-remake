@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Unity.Mathematics;
 using UnityEngine;
 
 [System.Serializable]
@@ -8,13 +9,16 @@ public class ParticleEffect : AbilityEffect
 
     [field: SerializeField] public EParticlePosition ParticlePosition { get; private set; }
     [field: SerializeField] public AbilityParticle Particle { get; private set; }
+    [field: SerializeField] public Vector3 Offset { get; private set; }
     
     #endregion
 
-    public override IEnumerable Execute(AbilityData abilityData, Character _caster, Character _target)
+    public override IEnumerator Execute(AbilityData abilityData, Character _caster, Character _target)
     {
-        var particleCopy = GameObject.Instantiate(Particle.gameObject).GetComponent<AbilityParticle>();
-        yield return particleCopy.PlayParticles(ParticlePosition == EParticlePosition.CASTER ? _caster.transform.position : _target.transform.position);
+        var particleCopy = GameObject.Instantiate(Particle.gameObject, ParticlePosition == EParticlePosition.CASTER ? _caster.transform.position + Offset : _target.transform.position + Offset, quaternion.identity).GetComponent<AbilityParticle>();
+        // yield return particleCopy.PlayParticles(ParticlePosition == EParticlePosition.CASTER ? _caster.transform.position : _target.transform.position);
+        particleCopy.IsPlaying = true;
+        yield return new WaitUntil(() => !particleCopy.IsPlaying);
     }
 }
 

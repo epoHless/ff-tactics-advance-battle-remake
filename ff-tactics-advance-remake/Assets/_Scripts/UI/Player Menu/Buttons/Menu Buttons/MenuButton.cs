@@ -4,18 +4,17 @@ using UnityEngine.UI;
 
 public abstract class MenuButton : MonoBehaviour, ISubmitHandler
 {
-    private Button button;
+    protected Button button;
 
-    public bool Enabled => button.enabled;
+    public bool Enabled
+    {
+        get => button.interactable;
+        set => button.interactable = value;
+    }
     
     private void Awake()
     {
         button = GetComponent<Button>();
-    }
-
-    private void OnEnable()
-    {
-        // button.onClick.AddListener(ExecuteAction);
     }
 
     protected virtual void ExecuteAction() { }

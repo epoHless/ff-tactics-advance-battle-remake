@@ -19,7 +19,7 @@ public class MovementState : GameState
 
         tileSelector.transform.position = _manager.TurnManager.currentTurn.Character.transform.position + Vector3.up * 0.5f;
 
-        if (activateMovement) MovementManager.Instance.ActivateTilesInRange();
+        if (activateMovement) MovementManager.Instance.ActivateTilesInRange(_manager.TurnManager.currentTurn.Character.Movement.MovementData.Range);
         tileSelector.ToggleSelector(true);
         
         InputSystem.EnableGridMovement();
@@ -51,7 +51,7 @@ public class MovementState : GameState
         
         tileSelector.ToggleSelector(false);
         
-        MovementManager.Instance.DeactivateTilesInRange();
+        MovementManager.Instance.DeactivateTilesInRange(_manager.TurnManager.currentTurn.Character.Movement.MovementData.Range);
         
         InputSystem.DisableGridMovement();
     }

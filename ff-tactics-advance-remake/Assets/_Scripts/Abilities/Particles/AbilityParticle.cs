@@ -9,14 +9,12 @@ public class AbilityParticle : MonoBehaviour
     private ParticleSystem ParticleSystem;
     private ParticleSystem.MainModule emittersModule;
 
-    private bool IsPlaying = false;
+    public bool IsPlaying = false;
     private WaitUntil WaitUntil;
 
     #endregion
 
     #region Properties
-
-    [field: SerializeField] public int ID { get; private set; }
 
     #endregion
 
@@ -28,6 +26,18 @@ public class AbilityParticle : MonoBehaviour
         emittersModule = ParticleSystem.main;
         
         WaitUntil = new WaitUntil(() => !IsPlaying);
+    }
+    
+    protected virtual void OnEnable()
+    {
+        emittersModule.stopAction = ParticleSystemStopAction.Callback;
+
+        IsPlaying = true;
+    }
+
+    protected virtual void OnDisable()
+    {
+        emittersModule.stopAction = ParticleSystemStopAction.None;
     }
 
     private void OnParticleSystemStopped()
@@ -52,8 +62,6 @@ public class AbilityParticle : MonoBehaviour
     
     public IEnumerable PlayParticles(Vector3 _position)
     {
-        gameObject.SetActive(true);
-        
         transform.position = _position;
         yield return PlayParticles();
     }
@@ -62,7 +70,7 @@ public class AbilityParticle : MonoBehaviour
     {
         IsPlaying = true;
         ParticleSystem.Play(true);
-        yield return WaitUntil;
+        yield return new WaitUntil(() => !IsPlaying);
     }
 
     #endregion

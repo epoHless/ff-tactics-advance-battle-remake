@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AbilitiesProcessor : MonoBehaviour
 {
+    public static bool IsCasting = false;
+    
     #region Unity Methods
 
     private void OnEnable()
@@ -20,15 +23,19 @@ public class AbilitiesProcessor : MonoBehaviour
 
     #region Methods
 
-    private void UseAbility(IEnumerable _ability)
+    private void UseAbility(IEnumerator _ability)
     {
-        StartCoroutine(nameof(ExecuteAbility), _ability);
+        StartCoroutine(ExecuteAbility(_ability));
     }
 
-    public IEnumerable ExecuteAbility(IEnumerable _ability)
+    IEnumerator ExecuteAbility(IEnumerator _ability)
     {
+        IsCasting = true;
+        
         yield return _ability;
         EventManager.OnAbilityFinished?.Invoke();
+
+        IsCasting = false;
     }
 
     #endregion

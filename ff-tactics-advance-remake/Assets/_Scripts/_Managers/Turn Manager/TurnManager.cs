@@ -4,16 +4,37 @@ using UnityEngine;
 
 public class TurnManager : Singleton<TurnManager>
 {
+    #region Fields
+
+    private Queue<Character> turnOrder = new Queue<Character>();
+
+    #endregion
+
+    #region Properties
+
     [field: SerializeField] public List<Character> Characters { get; private set; }
     [field: SerializeField] public TurnInformation currentTurn { get; set; }
 
-    private Queue<Character> turnOrder = new Queue<Character>();
+    #endregion
+
+    #region Unity Methods
 
     private void Start()
     {
         StartTurn();
         EventManager.OnTurnChanged?.Invoke(currentTurn);
     }
+
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        
+        EventManager.OnAbilityFinished += CheckAbilityAsUsed;
+    }
+
+    #endregion
+
+    #region Methods
 
     public TurnInformation StartTurn()
     {
@@ -46,4 +67,15 @@ public class TurnManager : Singleton<TurnManager>
             return false;
         }
     }
+
+    #endregion
+
+    #region Ability Event Methods
+
+    private void CheckAbilityAsUsed()
+    {
+        currentTurn.HasUsedAbilities = true;
+    }
+
+    #endregion
 }

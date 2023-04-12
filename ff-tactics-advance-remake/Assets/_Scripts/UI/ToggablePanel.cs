@@ -7,6 +7,8 @@ public class ToggablePanel : MonoBehaviour
 
     private RectTransform rectTransform;
 
+    protected Action OnComplete = null;
+    
     #endregion
 
     #region Unity Methods
@@ -20,10 +22,22 @@ public class ToggablePanel : MonoBehaviour
 
     #region Methods
 
-    public virtual LTDescr Toggle(bool _toggle, int _direction = 1)
+    public virtual LTDescr Toggle(bool _toggle, int _direction = 1) //if _direction == 1 = move left
     {
         var multiplier = _toggle ? 1 : -1;
         return rectTransform.LeanMoveX(_toggle ? 0 : rectTransform.rect.width * multiplier * _direction, .15f);
+    }
+
+    public virtual void SwitchPanel(ToggablePanel _next)
+    {
+        if (!_next) return;
+        
+        Toggle(false, -1).setOnComplete((() =>
+        {
+            OnComplete?.Invoke();
+            _next.gameObject.SetActive(true);
+            _next.Toggle(true);
+        }));
     }
 
     #endregion

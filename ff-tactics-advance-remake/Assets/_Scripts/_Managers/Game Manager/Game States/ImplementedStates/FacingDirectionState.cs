@@ -46,7 +46,7 @@ public class FacingDirectionState : GameState
         
         InputSystem.DisableFacingDirection();
 
-        _manager.TurnManager.StartTurn();
+        if(_manager.TurnManager.currentTurn.HasMoved) _manager.TurnManager.StartTurn();
         
         facingDirectionHolder.gameObject.SetActive(false);
     }

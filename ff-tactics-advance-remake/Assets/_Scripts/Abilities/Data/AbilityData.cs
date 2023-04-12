@@ -37,7 +37,7 @@ public class AbilityData : ScriptableObject
 
     #region Methods
 
-    public IEnumerable Execute(Character _caster, Character _target)
+    public IEnumerator Execute(Character _caster, Character _target)
     {
         foreach (var effect in AbilityEffects)
         {
@@ -53,6 +53,12 @@ public class AbilityData : ScriptableObject
     public void AddParticle()
     {
         AbilityEffects.Add(new ParticleEffect());
+    }
+    
+    [ContextMenu("Add Debug")]
+    public void AddDebug()
+    {
+        AbilityEffects.Add(new DebugEffect());
     }
     
     #endregion

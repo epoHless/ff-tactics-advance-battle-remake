@@ -12,7 +12,7 @@ public class Character : MonoBehaviour
     [field: SerializeField] public BattleStatistics BattleStatistics { get; set; }
     [field: SerializeField] public List<EquipmentData> Equipment { get; private set; }
 
-    public List<AbilityData> EquippedAbilities { get; private set; }
+    public List<AbilityData> EquippedAbilities { get; private set; } = new List<AbilityData>();
 
     #endregion
 
@@ -28,6 +28,11 @@ public class Character : MonoBehaviour
         foreach (var data in Equipment)
         {
             BattleStatistics += data.Statistics;
+        }
+
+        foreach (var data in Equipment)
+        {
+            EquippedAbilities.Add(data.Ability);
         }
     }
 

@@ -16,8 +16,9 @@ public class MenuState : GameState
         base.OnEnter(_manager);
         
         InputSystem.DisableGameInput();
+        InputSystem.DisableConfirm();
 
-        if (_manager.TurnManager.currentTurn.HasMoved) //todo add ability check
+        if (_manager.TurnManager.currentTurn.HasMoved && _manager.TurnManager.currentTurn.HasUsedAbilities)
         {
             _manager.ChangeState(_manager.facingDirectionState);
         }
@@ -38,7 +39,12 @@ public class MenuState : GameState
     {
         base.OnUpdate(_manager);
 
-        if (InputSystem.WasBackPressed)
+        if (InputSystem.WasBackPressed && PlayerMenu.ActiveMenu.PreviousPanel)
+        {
+            PlayerMenu.ActiveMenu.SwitchPanel(PlayerMenu.ActiveMenu.PreviousPanel);
+            PlayerMenu.ActiveMenu.PreviousPanel.Init();
+        }
+        else if (InputSystem.WasBackPressed)
         {
             //goes to map exploration
             _manager.movementState.activateMovement = false;
@@ -56,6 +62,7 @@ public class MenuState : GameState
         menu.Toggle(false, -1).setOnComplete(() =>
         {
             menu.gameObject.SetActive(false);
+            InputSystem.EnableConfirm();
         });
     }
 }

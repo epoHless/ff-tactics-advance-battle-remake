@@ -18,7 +18,7 @@ MonoBehaviour:
   <AbilityPower>k__BackingField: 10
   <ManaCost>k__BackingField: 6
   <AbilityType>k__BackingField: 1
-  <AbilityRange>k__BackingField: 2
+  <AbilityRange>k__BackingField: 1
   AbilityEffects:
   - rid: 3409393425706647552
   references:
@@ -28,6 +28,6 @@ MonoBehaviour:
       type: {class: ParticleEffect, ns: , asm: Assembly-CSharp}
       data:
         name: ParticleEffect
-        <ParticlePosition>k__BackingField: 0
+        <ParticlePosition>k__BackingField: 1
         <Particle>k__BackingField: {fileID: 7036817304203522129, guid: 3cefa829969829542bf182f16e268213,
           type: 3}

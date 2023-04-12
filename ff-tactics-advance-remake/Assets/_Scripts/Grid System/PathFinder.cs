@@ -3,7 +3,7 @@ using System.Linq;
 using GridSystem;
 using UnityEngine;
 
-public class PathFinder
+public static class PathFinder
 {
     public static List<Tile> CalculatePath(Character _character, Tile _endTile)
     {
@@ -48,7 +48,7 @@ public class PathFinder
         return new List<Tile>();
     }
     
-    public static List<Tile> GetTilesInRange(Character _character)
+    public static List<Tile> GetTilesInRange(Character _character, int _range)
     {
         var startingTile = _character.Movement.OccupiedTile;
         var inRangeTiles = new List<Tile>();
@@ -59,7 +59,7 @@ public class PathFinder
         var tilesForPreviousStep = new List<Tile>();
         tilesForPreviousStep.Add(startingTile);
         
-        while (stepCount < _character.Movement.MovementData.Range)
+        while (stepCount < _range)
         {
             var surroundingTiles = new List<Tile>();
 

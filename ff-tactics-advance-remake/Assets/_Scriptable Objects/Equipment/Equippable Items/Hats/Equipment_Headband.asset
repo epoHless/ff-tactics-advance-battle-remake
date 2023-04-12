@@ -19,7 +19,8 @@ MonoBehaviour:
   <Name>k__BackingField: Headband
   <Description>k__BackingField: This headband serves to focus the spirit.
   <Element>k__BackingField: {fileID: 0}
-  <Ability>k__BackingField: {fileID: 0}
+  <Ability>k__BackingField: {fileID: 11400000, guid: dde3a7759da951a4096a0960fcf7edd1,
+    type: 2}
   <Effect>k__BackingField: {fileID: 0}
   <Statistics>k__BackingField:
     <HP>k__BackingField: 0

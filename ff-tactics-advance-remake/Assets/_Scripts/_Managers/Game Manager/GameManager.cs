@@ -11,6 +11,7 @@ public class GameManager : Singleton<GameManager>
     private GameState currentState;
     public MenuState menuState;
     public MovementState movementState;
+    public TargetSelectionState targetSelectionState;
     public FacingDirectionState facingDirectionState;
     
     #endregion
@@ -29,6 +30,7 @@ public class GameManager : Singleton<GameManager>
         menuState = new MenuState(playerMenu);
         movementState = new MovementState(tileSelector);
         facingDirectionState = new FacingDirectionState(facingDirectionHolder);
+        targetSelectionState = new TargetSelectionState(tileSelector);
     }
 
     private void Start()

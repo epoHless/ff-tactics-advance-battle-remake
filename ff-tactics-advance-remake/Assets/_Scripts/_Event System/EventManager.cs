@@ -49,7 +49,7 @@ public static class EventManager
 
     #region Abilities Events
 
-    public static Evt<IEnumerable> OnAbilityUsed;
+    public static Evt<IEnumerator> OnAbilityUsed;
     public static Evt OnAbilityFinished;
 
     #endregion
