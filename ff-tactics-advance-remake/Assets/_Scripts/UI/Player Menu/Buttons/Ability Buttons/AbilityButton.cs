@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class AbilityButton : MenuButton
 {
-    [SerializeField] private TMP_Text abilityName;
-    [SerializeField] private TMP_Text abilityCost;
+    [SerializeField] protected TMP_Text abilityName;
+    [SerializeField] protected TMP_Text abilityCost;
     
-    private AbilityData associatedAbility;
+    protected virtual AbilityData associatedAbility { get; set; }
 
-    public void Init(AbilityData _ability)
+    public virtual void Init(AbilityData _ability)
     {
         button = GetComponent<Button>();
         

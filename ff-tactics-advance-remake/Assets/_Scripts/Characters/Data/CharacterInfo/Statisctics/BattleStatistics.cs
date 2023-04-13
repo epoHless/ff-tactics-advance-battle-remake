@@ -55,6 +55,7 @@ public class BattleStatistics
         };
 
         stats.CurrentHP = stats.HP;
+        stats.CurrentMP = stats.MP;
 
         return stats;
     } 
@@ -73,6 +74,7 @@ public class BattleStatistics
         };
 
         stats.CurrentHP = stats.HP;
+        stats.CurrentMP = stats.MP;
 
         return stats;
     } 

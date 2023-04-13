@@ -19,7 +19,7 @@ MonoBehaviour:
   <Name>k__BackingField: Bronze Helm
   <Description>k__BackingField: Helm of copper and leather.
   <Element>k__BackingField: {fileID: 0}
-  <Ability>k__BackingField: {fileID: 11400000, guid: dde3a7759da951a4096a0960fcf7edd1,
+  <Ability>k__BackingField: {fileID: 11400000, guid: 327281a7affcc6b4bbde99f5f3dd1368,
     type: 2}
   <Effect>k__BackingField: {fileID: 0}
   <Statistics>k__BackingField:

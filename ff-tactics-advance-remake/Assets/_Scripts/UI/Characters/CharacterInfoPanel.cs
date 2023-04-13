@@ -26,11 +26,16 @@ public class CharacterInfoPanel : ToggablePanel
         foreach (var character in TurnManager.Instance.Characters)
         {
             var charModel = Instantiate(character.Data.Model, ModelParent.transform);
+
+            charModel.name = character.Data.Name;
+            
             charModel.transform.localScale = Vector3.one * 300f;
 
             charModel.layer = 7;
             charModel.transform.GetChild(1).GetChild(0).gameObject.layer = 7;
-            charModel.transform.GetChild(1).GetChild(1).gameObject.layer = 7;
+            var body = charModel.transform.GetChild(1).GetChild(1).gameObject;
+            body.GetComponent<SkinnedMeshRenderer>().material = character.Data.CharacterMaterial;
+            body.layer = 7;
             
             charModel.SetActive(false);
             charModels.Add(charModel);
@@ -68,7 +73,7 @@ public class CharacterInfoPanel : ToggablePanel
         
         activeModel = charModels.Find(o =>
         {
-            if (o.name == _character.Data.Model.name + "(Clone)")
+            if (o.name == _character.Data.Name)
             {
                 o.SetActive(true);
                 return true;
@@ -88,7 +93,4 @@ public class CharacterInfoPanel : ToggablePanel
     }
 
     #endregion
-    
-
-    
 }

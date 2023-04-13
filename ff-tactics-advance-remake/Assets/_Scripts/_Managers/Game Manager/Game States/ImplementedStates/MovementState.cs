@@ -17,7 +17,7 @@ public class MovementState : GameState
     {
         base.OnEnter(_manager);
 
-        tileSelector.transform.position = _manager.TurnManager.currentTurn.Character.transform.position + Vector3.up * 0.5f;
+        tileSelector.transform.position = _manager.TurnManager.currentTurn.Character.transform.position;
 
         if (activateMovement) MovementManager.Instance.ActivateTilesInRange(_manager.TurnManager.currentTurn.Character.Movement.MovementData.Range);
         tileSelector.ToggleSelector(true);

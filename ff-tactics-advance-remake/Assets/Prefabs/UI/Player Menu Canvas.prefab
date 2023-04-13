@@ -421,7 +421,7 @@ GameObject:
   - component: {fileID: 1018763806}
   - component: {fileID: 1018763809}
   - component: {fileID: 1018763808}
-  - component: {fileID: 1018763810}
+  - component: {fileID: 892266945}
   m_Layer: 5
   m_Name: BTN_Fight
   m_TagString: Untagged
@@ -502,7 +502,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &1018763810
+--- !u!114 &892266945
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -511,9 +511,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1018763805}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa81a4be7fe1428f8cfac906510d6436, type: 3}
+  m_Script: {fileID: 11500000, guid: 00738e58f12449c29212c3128d735927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  abilityName: {fileID: 0}
+  abilityCost: {fileID: 0}
+  <associatedAbility>k__BackingField: {fileID: 11400000, guid: 327281a7affcc6b4bbde99f5f3dd1368,
+    type: 2}
 --- !u!1 &1052919009
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +781,7 @@ MonoBehaviour:
   toggleOnStart: 0
   <PreviousPanel>k__BackingField: {fileID: 8024906721607595170}
   <menuButtons>k__BackingField:
-  - {fileID: 1018763810}
+  - {fileID: 892266945}
   - {fileID: 1181380019}
 --- !u!222 &1256184027
 CanvasRenderer:

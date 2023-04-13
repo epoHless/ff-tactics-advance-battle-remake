@@ -11,6 +11,7 @@ public class AbilityData : ScriptableObject
     [field: SerializeField] public Sprite Icon { get; private set; }
     [field: SerializeField] public string Name { get; private set; }
     [field: SerializeField] public string Description { get; private set; }
+    [field: SerializeField] public bool IsMultiTarget { get; private set; }
     [field: SerializeField] public float AbilityPower { get; private set; }
     [field: SerializeField] public float ManaCost { private set; get; }
     [field: SerializeField] public EAbilityType AbilityType { get; private set; }
@@ -39,9 +40,31 @@ public class AbilityData : ScriptableObject
 
     public IEnumerator Execute(Character _caster, Character _target)
     {
-        foreach (var effect in AbilityEffects)
+        _caster.BattleStatistics.CurrentMP -= ManaCost;
+        
+        if (IsMultiTarget)
         {
-            yield return effect.Execute(this, _caster, _target);
+            if (_target.HasNeighbors(out List<Character> _neighbors))
+            {
+                _neighbors.Add(_target);
+                _neighbors.Reverse();
+                
+                foreach (var neighbor in _neighbors)
+                {
+                    foreach (var effect in AbilityEffects)
+                    {
+                        yield return effect.Execute(this, _caster, neighbor);
+                    }
+                }
+            }
+        }
+        else
+        {
+            foreach (var effect in AbilityEffects)
+            {
+                yield return effect.Execute(this, _caster, _target);
+                
+            }
         }
     }
 
@@ -59,6 +82,12 @@ public class AbilityData : ScriptableObject
     public void AddDebug()
     {
         AbilityEffects.Add(new DebugEffect());
+    }
+    
+    [ContextMenu("Add Damage")]
+    public void AddDamage()
+    {
+        AbilityEffects.Add(new DamageEffect());
     }
     
     #endregion

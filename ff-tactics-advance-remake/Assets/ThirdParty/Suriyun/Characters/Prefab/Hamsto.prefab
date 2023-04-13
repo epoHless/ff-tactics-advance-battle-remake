@@ -912,7 +912,7 @@ GameObject:
   - component: {fileID: 4045942007826180}
   - component: {fileID: 95908413053706608}
   m_Layer: 0
-  m_Name: Hamsto00
+  m_Name: Hamsto
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

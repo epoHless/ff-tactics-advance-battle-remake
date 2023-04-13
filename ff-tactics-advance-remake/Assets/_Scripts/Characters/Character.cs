@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,6 +15,8 @@ public class Character : MonoBehaviour
 
     public List<AbilityData> EquippedAbilities { get; private set; } = new List<AbilityData>();
 
+    public bool IsDead => BattleStatistics.CurrentHP <= 0;
+    
     #endregion
 
     #region Unity Methods
@@ -62,22 +65,27 @@ public class Character : MonoBehaviour
 
     private bool GetNeighbor(Vector3 direction, out Character _neighbor)
     {
-        var position = transform.position;
+        var position = transform.position + Vector3.up * 0.5f;
             
         Ray ray = new Ray(position, direction);
             
         if (Physics.Raycast(ray, out RaycastHit hit, 1f))
         {
+            Debug.Log($"{hit.transform.gameObject.name}");
+            
             if (hit.transform.TryGetComponent(out Character _character))
             {
-                _neighbor = _character;
-                return true;
+                if (!_character.IsDead)
+                {
+                    _neighbor = _character;
+                    return true;
+                }
             }
         }
 
         _neighbor = null;
         return false;
     }
-    
+
     #endregion
 }

@@ -1,7 +1,7 @@
 ﻿public class ActionButton : MenuButton
 {
-    protected override void ExecuteAction()
+    public override bool CanBeEnabled()
     {
-        //todo add action panel and abilities
+        return !TurnManager.Instance.currentTurn.HasUsedAbilities;
     }
 }

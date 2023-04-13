@@ -13,6 +13,8 @@ public class PlayerMenu : ToggablePanel
     private void Start()
     {
         gameObject.SetActive(toggleOnStart);
+        
+        if(toggleOnStart) Init();
     }
 
     public virtual void Init()
@@ -21,7 +23,7 @@ public class PlayerMenu : ToggablePanel
         {
             foreach (var button in menuButtons)
             {
-                button.Enabled = true;
+                button.Enabled = button.CanBeEnabled();
             }
         }
         

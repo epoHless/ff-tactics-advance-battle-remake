@@ -4,10 +4,20 @@ using UnityEngine;
 
 public static class EventManager
 {
+    #region Delegates
+
     public delegate void Evt();
     public delegate void Evt<T>(T _item);
     public delegate void Evt<T1, T2>(T1 _item1, T2 _item2);
     public delegate void Evt<T1, T2, T3>(T1 _item1, T2 _item2, T3 _item3);
+
+    #endregion
+
+    #region Characters Events
+
+    public static Evt<Character> OnCharacterDeath;
+
+    #endregion
 
     #region Tile Selector Events
 
@@ -21,7 +31,7 @@ public static class EventManager
 
     #region Movement Events
 
-    public static Evt<Tile> OnMovement;
+    public static Evt<Tile> OnMovementStarted;
 
     #endregion
 

@@ -1,85 +1,218 @@
 fileFormatVersion: 2
 guid: 2a18d496b15d144478bab45aaabbb629
-timeCreated: 1499512777
-licenseType: Store
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: Ankle_L
-    100002: Ankle_R
-    100004: Chest_M
-    100006: ear1
-    100008: ear2
-    100010: ear3
-    100012: ear4
-    100014: ear5
-    100016: ear6
-    100018: ear_root
-    100020: Elbow_L
-    100022: Elbow_R
-    100024: //RootNode
-    100026: Head_M
-    100028: HeadEnd_M
-    100030: Hip_L
-    100032: Hip_R
-    100034: Knee_L
-    100036: Knee_R
-    100038: Neck_M
-    100040: Root_M
-    100042: Scapula_L
-    100044: Scapula_R
-    100046: Shoulder_L
-    100048: Shoulder_R
-    100050: Spine1_M
-    100052: Toes_L
-    100054: Toes_R
-    100056: ToesEnd_L
-    100058: ToesEnd_R
-    100060: Wrist_L
-    100062: Wrist_R
-    400000: Ankle_L
-    400002: Ankle_R
-    400004: Chest_M
-    400006: ear1
-    400008: ear2
-    400010: ear3
-    400012: ear4
-    400014: ear5
-    400016: ear6
-    400018: ear_root
-    400020: Elbow_L
-    400022: Elbow_R
-    400024: //RootNode
-    400026: Head_M
-    400028: HeadEnd_M
-    400030: Hip_L
-    400032: Hip_R
-    400034: Knee_L
-    400036: Knee_R
-    400038: Neck_M
-    400040: Root_M
-    400042: Scapula_L
-    400044: Scapula_R
-    400046: Shoulder_L
-    400048: Shoulder_R
-    400050: Spine1_M
-    400052: Toes_L
-    400054: Toes_R
-    400056: ToesEnd_L
-    400058: ToesEnd_R
-    400060: Wrist_L
-    400062: Wrist_R
-    7400000: Die
-    9500000: //RootNode
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Ankle_L
+  - first:
+      1: 100002
+    second: Ankle_R
+  - first:
+      1: 100004
+    second: Chest_M
+  - first:
+      1: 100006
+    second: ear1
+  - first:
+      1: 100008
+    second: ear2
+  - first:
+      1: 100010
+    second: ear3
+  - first:
+      1: 100012
+    second: ear4
+  - first:
+      1: 100014
+    second: ear5
+  - first:
+      1: 100016
+    second: ear6
+  - first:
+      1: 100018
+    second: ear_root
+  - first:
+      1: 100020
+    second: Elbow_L
+  - first:
+      1: 100022
+    second: Elbow_R
+  - first:
+      1: 100024
+    second: //RootNode
+  - first:
+      1: 100026
+    second: Head_M
+  - first:
+      1: 100028
+    second: HeadEnd_M
+  - first:
+      1: 100030
+    second: Hip_L
+  - first:
+      1: 100032
+    second: Hip_R
+  - first:
+      1: 100034
+    second: Knee_L
+  - first:
+      1: 100036
+    second: Knee_R
+  - first:
+      1: 100038
+    second: Neck_M
+  - first:
+      1: 100040
+    second: Root_M
+  - first:
+      1: 100042
+    second: Scapula_L
+  - first:
+      1: 100044
+    second: Scapula_R
+  - first:
+      1: 100046
+    second: Shoulder_L
+  - first:
+      1: 100048
+    second: Shoulder_R
+  - first:
+      1: 100050
+    second: Spine1_M
+  - first:
+      1: 100052
+    second: Toes_L
+  - first:
+      1: 100054
+    second: Toes_R
+  - first:
+      1: 100056
+    second: ToesEnd_L
+  - first:
+      1: 100058
+    second: ToesEnd_R
+  - first:
+      1: 100060
+    second: Wrist_L
+  - first:
+      1: 100062
+    second: Wrist_R
+  - first:
+      4: 400000
+    second: Ankle_L
+  - first:
+      4: 400002
+    second: Ankle_R
+  - first:
+      4: 400004
+    second: Chest_M
+  - first:
+      4: 400006
+    second: ear1
+  - first:
+      4: 400008
+    second: ear2
+  - first:
+      4: 400010
+    second: ear3
+  - first:
+      4: 400012
+    second: ear4
+  - first:
+      4: 400014
+    second: ear5
+  - first:
+      4: 400016
+    second: ear6
+  - first:
+      4: 400018
+    second: ear_root
+  - first:
+      4: 400020
+    second: Elbow_L
+  - first:
+      4: 400022
+    second: Elbow_R
+  - first:
+      4: 400024
+    second: //RootNode
+  - first:
+      4: 400026
+    second: Head_M
+  - first:
+      4: 400028
+    second: HeadEnd_M
+  - first:
+      4: 400030
+    second: Hip_L
+  - first:
+      4: 400032
+    second: Hip_R
+  - first:
+      4: 400034
+    second: Knee_L
+  - first:
+      4: 400036
+    second: Knee_R
+  - first:
+      4: 400038
+    second: Neck_M
+  - first:
+      4: 400040
+    second: Root_M
+  - first:
+      4: 400042
+    second: Scapula_L
+  - first:
+      4: 400044
+    second: Scapula_R
+  - first:
+      4: 400046
+    second: Shoulder_L
+  - first:
+      4: 400048
+    second: Shoulder_R
+  - first:
+      4: 400050
+    second: Spine1_M
+  - first:
+      4: 400052
+    second: Toes_L
+  - first:
+      4: 400054
+    second: Toes_R
+  - first:
+      4: 400056
+    second: ToesEnd_L
+  - first:
+      4: 400058
+    second: ToesEnd_R
+  - first:
+      4: 400060
+    second: Wrist_L
+  - first:
+      4: 400062
+    second: Wrist_R
+  - first:
+      74: 7400000
+    second: Die
+  - first:
+      95: 9500000
+    second: //RootNode
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -87,16 +220,20 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: Die
       takeName: Ham@Die
+      internalID: 0
       firstFrame: 240
       lastFrame: 260
       wrapMode: 0
@@ -251,33 +388,54 @@ ModelImporter:
         weight: 1
       maskType: 1
       maskSource: {fileID: 31900000, guid: c81e959f6e35f044a9a0172378268e49, type: 2}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 240
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 1
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human:
     - boneName: Root_M
       humanName: Hips
@@ -780,15 +938,19 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 74b2d35640879da43afa61140171c32a,
     type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

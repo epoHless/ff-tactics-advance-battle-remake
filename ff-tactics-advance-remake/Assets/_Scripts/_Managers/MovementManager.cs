@@ -26,14 +26,14 @@ public class MovementManager : Singleton<MovementManager>
     {
         base.OnEnable();
         
-        EventManager.OnMovement += CallMoveCharacter;
+        EventManager.OnMovementStarted += CallMoveCharacter;
         EventManager.OnDirectionSelect += SelectDirection;
         EventManager.OnTurnChanged += SetCharacter;
     }
 
     private void OnDisable()
     {
-        EventManager.OnMovement -= CallMoveCharacter;
+        EventManager.OnMovementStarted -= CallMoveCharacter;
         EventManager.OnDirectionSelect -= SelectDirection;
         EventManager.OnTurnChanged -= SetCharacter;
     }

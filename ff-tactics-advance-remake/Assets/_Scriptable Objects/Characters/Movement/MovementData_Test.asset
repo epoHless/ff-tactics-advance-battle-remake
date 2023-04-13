@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: MovementData_Test
   m_EditorClassIdentifier: 
   <Range>k__BackingField: 5
-  <JumpHeight>k__BackingField: 1
+  <JumpHeight>k__BackingField: 2

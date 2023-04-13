@@ -24,7 +24,7 @@ public class MenuState : GameState
         }
         else
         {
-            _manager.tileSelector.transform.position = _manager.TurnManager.currentTurn.Character.transform.position + Vector3.up * 0.5f;
+            _manager.tileSelector.transform.position = _manager.TurnManager.currentTurn.Character.transform.position;
             _manager.tileSelector.IsCharacterOnTile();
             _manager.tileSelector.ToggleSelector(true);
         

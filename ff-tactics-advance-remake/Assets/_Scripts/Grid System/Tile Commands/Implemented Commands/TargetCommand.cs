@@ -17,10 +17,16 @@ public class TargetCommand : SelectionCommand
     {
         if (_tileSelector.CharacterOnTile(out Character _character))
         {
-            EventManager.OnAbilityUsed?.Invoke(ability.Execute(caster, _character));
+            if (!_character.IsDead)
+            {
+                if (caster.BattleStatistics.CurrentMP >= ability.ManaCost)
+                {
+                    EventManager.OnAbilityUsed?.Invoke(ability.Execute(caster, _character));
+                }
             
-            InputSystem.DisableGameInput();
-            InputSystem.DisableConfirm();
+                InputSystem.DisableGameInput();
+                InputSystem.DisableConfirm();
+            }
         }
     }
 }

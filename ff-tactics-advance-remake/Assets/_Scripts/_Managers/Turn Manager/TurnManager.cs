@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -22,7 +23,6 @@ public class TurnManager : Singleton<TurnManager>
     private void Start()
     {
         StartTurn();
-        EventManager.OnTurnChanged?.Invoke(currentTurn);
     }
 
     protected override void OnEnable()
@@ -30,6 +30,13 @@ public class TurnManager : Singleton<TurnManager>
         base.OnEnable();
         
         EventManager.OnAbilityFinished += CheckAbilityAsUsed;
+        EventManager.OnCharacterDeath += RemoveCharacterFromTurns;
+    }
+
+    private void OnDisable()
+    {
+        EventManager.OnAbilityFinished -= CheckAbilityAsUsed;
+        EventManager.OnCharacterDeath -= RemoveCharacterFromTurns;
     }
 
     #endregion
@@ -57,8 +64,6 @@ public class TurnManager : Singleton<TurnManager>
             
             _nextTurnCharacter = currentTurn.Character;
             
-            Debug.Log($"finished");
-            
             return true;
         }
         else
@@ -75,6 +80,20 @@ public class TurnManager : Singleton<TurnManager>
     private void CheckAbilityAsUsed()
     {
         currentTurn.HasUsedAbilities = true;
+    }
+
+    #endregion
+
+    #region Character Events
+
+    private void RemoveCharacterFromTurns(Character _character)
+    {
+        Characters.Remove(_character);
+        
+        if (turnOrder.Contains(_character))
+        {
+            turnOrder = new Queue<Character>(turnOrder.Where(character => character != _character));
+        }
     }
 
     #endregion
