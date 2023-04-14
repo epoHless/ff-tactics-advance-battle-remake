@@ -39,7 +39,7 @@ public class MenuState : GameState
     {
         base.OnUpdate(_manager);
 
-        if (InputSystem.WasBackPressed && PlayerMenu.ActiveMenu.PreviousPanel)
+        if (InputSystem.WasBackPressed && PlayerMenu.ActiveMenu.PreviousPanel && !PlayerMenu.ActiveMenu.toggleOnStart)
         {
             PlayerMenu.ActiveMenu.SwitchPanel(PlayerMenu.ActiveMenu.PreviousPanel);
             PlayerMenu.ActiveMenu.PreviousPanel.Init();
@@ -47,7 +47,7 @@ public class MenuState : GameState
         else if (InputSystem.WasBackPressed)
         {
             //goes to map exploration
-            _manager.movementState.activateMovement = false;
+            _manager.movementState.IsMovementActive = false;
             _manager.ChangeState(_manager.movementState);
             return;
         }

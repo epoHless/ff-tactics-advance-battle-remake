@@ -3,5 +3,5 @@ using UnityEngine.UI;
 
 public class AttackAbilityButton : AbilityButton
 {
-    [field: SerializeField] protected override AbilityData associatedAbility { get; set; }
+    // [field: SerializeField] protected override AbilityData associatedAbility { get; set; }
 }

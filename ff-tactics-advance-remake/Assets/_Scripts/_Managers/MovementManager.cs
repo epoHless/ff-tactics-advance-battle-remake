@@ -84,6 +84,8 @@ public class MovementManager : Singleton<MovementManager>
         
         EventManager.OnCharacterHovered?.Invoke(CharacterTurn.Character); //reselect character when the movement is done
         CharacterTurn.HasMoved = true;
+        
+        GameManager.Instance.ChangeState(GameManager.Instance.menuState);
 
         IsMoving = false;
     }

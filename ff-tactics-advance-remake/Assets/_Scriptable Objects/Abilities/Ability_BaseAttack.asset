@@ -15,13 +15,14 @@ MonoBehaviour:
   <Icon>k__BackingField: {fileID: 0}
   <Name>k__BackingField: Base Attack
   <Description>k__BackingField: Deals Damage
-  <AbilityPower>k__BackingField: 30
+  <IsMultiTarget>k__BackingField: 0
+  <AbilityPower>k__BackingField: 10
   <ManaCost>k__BackingField: 0
   <AbilityType>k__BackingField: 0
   <AbilityRange>k__BackingField: 1
   AbilityEffects:
   - rid: 3409393425706647552
-  - rid: 3409393448723415040
+  - rid: 3409393471625625600
   references:
     version: 2
     RefIds:
@@ -33,8 +34,9 @@ MonoBehaviour:
         <Particle>k__BackingField: {fileID: 7036817304203522129, guid: 3cefa829969829542bf182f16e268213,
           type: 3}
         <Offset>k__BackingField: {x: 0, y: 0, z: 0}
-    - rid: 3409393448723415040
-      type: {class: DamageEffect, ns: , asm: Assembly-CSharp}
+    - rid: 3409393471625625600
+      type: {class: HPEffect, ns: , asm: Assembly-CSharp}
       data:
-        name: DamageEffect
+        name: HPEffect
+        effect: 0
         offset: {x: 0, y: 1, z: 0}

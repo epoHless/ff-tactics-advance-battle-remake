@@ -49,12 +49,17 @@ public class AbilityData : ScriptableObject
                 _neighbors.Add(_target);
                 _neighbors.Reverse();
                 
-                foreach (var neighbor in _neighbors)
+            }
+            else
+            {
+                _neighbors.Add(_target);
+            }
+            
+            foreach (var neighbor in _neighbors)
+            {
+                foreach (var effect in AbilityEffects)
                 {
-                    foreach (var effect in AbilityEffects)
-                    {
-                        yield return effect.Execute(this, _caster, neighbor);
-                    }
+                    yield return effect.Execute(this, _caster, neighbor);
                 }
             }
         }
@@ -87,7 +92,7 @@ public class AbilityData : ScriptableObject
     [ContextMenu("Add Damage")]
     public void AddDamage()
     {
-        AbilityEffects.Add(new DamageEffect());
+        AbilityEffects.Add(new HPEffect());
     }
     
     #endregion

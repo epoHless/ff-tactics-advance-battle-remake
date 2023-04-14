@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe46dfa9454d43b7a70a29f2c17a3ab9, type: 3}
   m_Name: Character_Sergio
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Sergio
+  <Name>k__BackingField: "Serg\xECo"
   <RaceData>k__BackingField: {fileID: 11400000, guid: 6a2c4847610ca50468797dd39a0143c9,
     type: 2}
   <Model>k__BackingField: {fileID: 1393179319945704, guid: ae1ccce995fc8fb498d43082dccc3ef8,

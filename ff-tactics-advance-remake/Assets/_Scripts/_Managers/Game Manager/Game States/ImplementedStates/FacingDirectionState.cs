@@ -26,7 +26,7 @@ public class FacingDirectionState : GameState
     {
         base.OnUpdate(_manager);
 
-        if (InputSystem.WasBackPressed && !_manager.TurnManager.currentTurn.HasMoved)
+        if (InputSystem.WasBackPressed && (!_manager.TurnManager.currentTurn.HasMoved || !_manager.TurnManager.currentTurn.HasUsedAbilities))
         {
             _manager.ChangeState(_manager.menuState);
             return;
@@ -34,7 +34,8 @@ public class FacingDirectionState : GameState
         
         if (InputSystem.WasConfirmPressed)
         {
-            Debug.Log($"PRESSED CONFIRM ON FACING DIRECTION!");
+            _manager.TurnManager.currentTurn.HasMoved = true;
+            _manager.TurnManager.currentTurn.HasUsedAbilities = true;
             _manager.ChangeState(_manager.menuState);
             return;
         }
@@ -46,7 +47,7 @@ public class FacingDirectionState : GameState
         
         InputSystem.DisableFacingDirection();
 
-        if(_manager.TurnManager.currentTurn.HasMoved) _manager.TurnManager.StartTurn();
+        if(_manager.TurnManager.currentTurn.HasMoved && _manager.TurnManager.currentTurn.HasUsedAbilities) _manager.TurnManager.StartTurn();
         
         facingDirectionHolder.gameObject.SetActive(false);
     }

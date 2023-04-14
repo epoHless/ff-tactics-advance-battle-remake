@@ -13,7 +13,7 @@ public class MoveButton : MenuButton
     {
         EventManager.OnCommandSent?.Invoke(new MovementCommand());
         
-        GameManager.Instance.movementState.activateMovement = true;
+        GameManager.Instance.movementState.IsMovementActive = true;
         GameManager.Instance.ChangeState(GameManager.Instance.movementState);
     }
 

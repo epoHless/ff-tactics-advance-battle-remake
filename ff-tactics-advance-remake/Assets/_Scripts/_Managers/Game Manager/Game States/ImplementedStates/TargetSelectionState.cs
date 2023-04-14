@@ -21,7 +21,7 @@ public class TargetSelectionState : GameState
     {
         base.OnEnter(_manager);
         
-        tileSelector.transform.position = _manager.TurnManager.currentTurn.Character.transform.position + Vector3.up * 0.5f;
+        tileSelector.transform.position = _manager.TurnManager.currentTurn.Character.transform.position;
 
         MovementManager.Instance.ActivateTilesInRange(ability.AbilityRange);
         tileSelector.ToggleSelector(true);
@@ -50,7 +50,7 @@ public class TargetSelectionState : GameState
     {
         base.OnExit(_manager);
         
-        tileSelector.transform.position = _manager.TurnManager.currentTurn.Character.transform.position + Vector3.up * 0.5f;
+        tileSelector.transform.position = _manager.TurnManager.currentTurn.Character.transform.position;
         tileSelector.IsCharacterOnTile();
         
         tileSelector.ToggleSelector(false);

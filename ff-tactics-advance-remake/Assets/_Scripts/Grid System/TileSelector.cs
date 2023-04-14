@@ -9,6 +9,7 @@ namespace GridSystem
     public class TileSelector : MonoBehaviour
     {
         private SelectionCommand selectionCommand;
+        [SerializeField] private Transform meshTransform;
 
         #region Properties
 
@@ -36,6 +37,8 @@ namespace GridSystem
         private void Start()
         {
             gameObject.SetActive(false);
+            
+            meshTransform.LeanScale(Vector3.one * 0.85f, 0.5f).setEaseInBounce().setLoopPingPong();
         }
 
         private void OnEnable()
@@ -60,7 +63,7 @@ namespace GridSystem
 
         private void ConfirmSelection(InputAction.CallbackContext obj)
         {
-            if(CurrentTile) SelectionCommand.Execute(this);
+            if(CurrentTile && CurrentTile.CanTravel) SelectionCommand.Execute(this);
         }
 
         private void SelectTile(InputAction.CallbackContext obj)

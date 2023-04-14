@@ -8,7 +8,7 @@ public class AbilityButton : MenuButton
     [SerializeField] protected TMP_Text abilityName;
     [SerializeField] protected TMP_Text abilityCost;
     
-    protected virtual AbilityData associatedAbility { get; set; }
+    [field: SerializeField] protected virtual AbilityData associatedAbility { get; set; }
 
     public virtual void Init(AbilityData _ability)
     {

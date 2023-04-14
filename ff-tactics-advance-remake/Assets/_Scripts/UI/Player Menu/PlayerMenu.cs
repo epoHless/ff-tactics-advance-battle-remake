@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 public class PlayerMenu : ToggablePanel
 {
-    [SerializeField] private bool toggleOnStart;
+    [field: SerializeField] public bool toggleOnStart { get; private set; }
     [field: SerializeField] public PlayerMenu PreviousPanel { get; private set; }
     [field: SerializeField] public List<MenuButton> menuButtons { get; private set; }
 
