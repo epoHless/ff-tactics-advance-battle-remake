@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 
 public class PlayerMenu : ToggablePanel
 {
-    [field: SerializeField] public bool toggleOnStart { get; private set; }
+    [field: SerializeField] public bool ToggleOnStart { get; private set; }
     [field: SerializeField] public PlayerMenu PreviousPanel { get; private set; }
     [field: SerializeField] public List<MenuButton> menuButtons { get; private set; }
 
@@ -12,9 +12,7 @@ public class PlayerMenu : ToggablePanel
     
     private void Start()
     {
-        gameObject.SetActive(toggleOnStart);
-        
-        if(toggleOnStart) Init();
+        gameObject.SetActive(ToggleOnStart);
     }
 
     public virtual void Init()
@@ -30,6 +28,8 @@ public class PlayerMenu : ToggablePanel
         }
         
         ActiveMenu = this;
+        
+        Debug.Log($"{ActiveMenu.name} is Active");
     }
 
     public override void SwitchPanel(ToggablePanel _next)

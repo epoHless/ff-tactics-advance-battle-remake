@@ -6,7 +6,8 @@ public class ToggablePanel : MonoBehaviour
     #region Fields
 
     private RectTransform rectTransform;
-
+    public Vector2 startPosition;
+    
     protected Action OnComplete = null;
     
     #endregion
@@ -18,6 +19,11 @@ public class ToggablePanel : MonoBehaviour
         rectTransform = GetComponent<RectTransform>();
     }
 
+    private void Start()
+    {
+        startPosition = rectTransform.position;
+    }
+
     #endregion
 
     #region Methods
@@ -25,7 +31,7 @@ public class ToggablePanel : MonoBehaviour
     public virtual LTDescr Toggle(bool _toggle, int _direction = 1) //if _direction == 1 = move left
     {
         var multiplier = _toggle ? 1 : -1;
-        return rectTransform.LeanMoveX(_toggle ? 0 : rectTransform.rect.width * multiplier * _direction, .15f);
+        return rectTransform.LeanMoveX(_toggle ? startPosition.x : rectTransform.rect.width * multiplier * _direction, .15f);
     }
 
     public virtual void SwitchPanel(ToggablePanel _next)

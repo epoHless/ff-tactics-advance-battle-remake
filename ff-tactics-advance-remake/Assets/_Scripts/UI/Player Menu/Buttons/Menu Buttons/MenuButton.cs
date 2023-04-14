@@ -33,7 +33,8 @@ public abstract class MenuButton : MonoBehaviour, ISubmitHandler
 
     public virtual bool CanBeEnabled()
     {
-        return true; }
+        return true; 
+    }
     
     protected virtual void ExecuteAction() { }
     

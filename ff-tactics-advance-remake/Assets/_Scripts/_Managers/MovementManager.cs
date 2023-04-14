@@ -30,8 +30,8 @@ public class MovementManager : Singleton<MovementManager>
         EventManager.OnDirectionSelect += SelectDirection;
         EventManager.OnTurnChanged += SetCharacter;
         
-        EventManager.OnCharacterHovered += SetCharacter;
-        EventManager.OnCharacterUnhovered += ResetCharacter;
+        // EventManager.OnCharacterHovered += SetCharacter;
+        // EventManager.OnCharacterUnhovered += ResetCharacter;
     }
 
     private void OnDisable()
@@ -40,8 +40,8 @@ public class MovementManager : Singleton<MovementManager>
         EventManager.OnDirectionSelect -= SelectDirection;
         EventManager.OnTurnChanged -= SetCharacter;
         
-        EventManager.OnCharacterHovered -= SetCharacter;
-        EventManager.OnCharacterUnhovered -= ResetCharacter;
+        // EventManager.OnCharacterHovered -= SetCharacter;
+        // EventManager.OnCharacterUnhovered -= ResetCharacter;
     }
 
     #endregion
@@ -64,15 +64,15 @@ public class MovementManager : Singleton<MovementManager>
         }
     }
     
-    private void ResetCharacter(Character _character)
-    {
-        GameManager.Instance.statusState.character = null;
-    }
-
-    private void SetCharacter(Character _character)
-    {
-        GameManager.Instance.statusState.character = _character;
-    }
+    // private void ResetCharacter(Character _character)
+    // {
+    //     GameManager.Instance.statusState.character = null;
+    // }
+    //
+    // private void SetCharacter(Character _character)
+    // {
+    //     GameManager.Instance.statusState.character = _character;
+    // }
 
     #endregion
 

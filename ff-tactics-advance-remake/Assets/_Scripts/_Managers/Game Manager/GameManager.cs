@@ -6,7 +6,6 @@ public class GameManager : Singleton<GameManager>
     #region Fields
 
     [SerializeField] private FacingDirectionHolder facingDirectionHolder;
-    [SerializeField] private PlayerMenu playerMenu;
 
     private GameState currentState;
     
@@ -20,10 +19,11 @@ public class GameManager : Singleton<GameManager>
     
     #region Properties
 
-    [field: SerializeField] public TileSelector tileSelector { get; private set; }
+    [field: SerializeField] public TileSelector TileSelector { get; private set; }
     [field: SerializeField] public TurnManager TurnManager { get; private set; }
-    
+    [field: SerializeField] public PlayerMenu PlayerMenu { get; private set; }
     [field: SerializeField] public StatisticsPanel StatusPanel { get; private set; }
+    [field: SerializeField] public StatisticsMenu StatusMenu { get; private set; }
     
     #endregion
 
@@ -31,10 +31,10 @@ public class GameManager : Singleton<GameManager>
 
     protected override void Awake()
     {
-        menuState = new MenuState(playerMenu);
-        movementState = new MovementState(tileSelector);
+        menuState = new MenuState(PlayerMenu);
+        movementState = new MovementState(TileSelector);
         facingDirectionState = new FacingDirectionState(facingDirectionHolder);
-        targetSelectionState = new TargetSelectionState(tileSelector);
+        targetSelectionState = new TargetSelectionState(TileSelector);
         statusState = new StatusState();
     }
 

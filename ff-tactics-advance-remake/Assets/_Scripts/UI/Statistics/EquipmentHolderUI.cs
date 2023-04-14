@@ -17,5 +17,6 @@ public class EquipmentHolderUI : MonoBehaviour
     {
         EquipmentName.text = $"-";
         EquipmentIcon.sprite = null;
+        EquipmentIcon.color = Color.clear;
     }
 }

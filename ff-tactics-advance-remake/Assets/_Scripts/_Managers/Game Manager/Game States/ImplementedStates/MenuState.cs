@@ -28,12 +28,11 @@ public class MenuState : GameState
         }
         else
         {
-            _manager.tileSelector.transform.position = _manager.TurnManager.currentTurn.Character.transform.position;
-            _manager.tileSelector.IsCharacterOnTile();
-            _manager.tileSelector.ToggleSelector(true);
+            _manager.TileSelector.transform.position = _manager.TurnManager.currentTurn.Character.transform.position;
+            _manager.TileSelector.IsCharacterOnTile();
+            _manager.TileSelector.ToggleSelector(true);
         
             menu.gameObject.SetActive(true);
-
             menu.Init();
             menu.Toggle(true);
         }
@@ -61,7 +60,7 @@ public class MenuState : GameState
     {
         base.OnExit(_manager);
         
-        _manager.tileSelector.ToggleSelector(false);
+        _manager.TileSelector.ToggleSelector(false);
 
         menu.Toggle(false, -1).setOnComplete(() =>
         {

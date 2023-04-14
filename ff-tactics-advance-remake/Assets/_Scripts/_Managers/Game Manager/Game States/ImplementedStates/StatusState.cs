@@ -1,9 +1,9 @@
 ﻿using FinalFantasy;
-using UnityEngine;
 
 public class StatusState : GameState
 {
     public Character character;
+    public int ID;
     
     public override void OnEnter(GameManager _manager)
     {
@@ -23,7 +23,12 @@ public class StatusState : GameState
     {
         base.OnUpdate(_manager);
 
-        if (InputSystem.WasBackPressed)
+        if (InputSystem.WasBackPressed && ID == 1)
+        {
+            _manager.movementState.IsMovementActive = false;
+            _manager.ChangeState(_manager.movementState);
+        }
+        else if (InputSystem.WasBackPressed && ID == 0)
         {
             _manager.ChangeState(_manager.menuState);
         }
@@ -33,7 +38,18 @@ public class StatusState : GameState
     {
         base.OnExit(_manager);
         
-        PlayerMenu.ActiveMenu.SwitchPanel(_manager.StatusPanel.PreviousPanel);
-        PlayerMenu.ActiveMenu.Init();
+        CameraManager.Instance.ToggleCamera(ECameraType.TOPDOWN);
+
+        if (ID == 0)
+        {
+            _manager.StatusPanel.SwitchPanel(_manager.PlayerMenu);
+            _manager.PlayerMenu.Init();
+        }
+        else
+        {
+            _manager.StatusPanel.SwitchPanel(_manager.StatusMenu);
+            _manager.StatusMenu.Init();
+        }
+        
     }
 }

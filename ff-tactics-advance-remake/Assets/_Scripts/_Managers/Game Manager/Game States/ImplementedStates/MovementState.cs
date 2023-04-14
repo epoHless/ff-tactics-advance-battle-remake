@@ -20,6 +20,12 @@ public class MovementState : GameState
         tileSelector.transform.position = _manager.TurnManager.currentTurn.Character.transform.position;
 
         if (IsMovementActive) MovementManager.Instance.ActivateTilesInRange(_manager.TurnManager.currentTurn.Character.Movement.MovementData.Range);
+        else
+        {
+            _manager.StatusMenu.gameObject.SetActive(true);
+            _manager.PlayerMenu.SwitchPanel(_manager.StatusMenu);
+            _manager.StatusMenu.Init();
+        }
         
         tileSelector.ToggleSelector(true);
         
@@ -29,12 +35,6 @@ public class MovementState : GameState
     public override void OnUpdate(GameManager _manager)
     {
         base.OnUpdate(_manager);
-
-        // if (_manager.TurnManager.currentTurn.HasMoved)
-        // {
-        //     _manager.ChangeState(_manager.menuState);
-        //     return;
-        // }
         
         if (InputSystem.WasBackPressed && !MovementManager.Instance.IsMoving)
         {
@@ -51,6 +51,12 @@ public class MovementState : GameState
         tileSelector.IsCharacterOnTile();
         
         tileSelector.ToggleSelector(false);
+
+        if (PlayerMenu.ActiveMenu == _manager.StatusMenu)
+        {
+            _manager.StatusMenu.gameObject.SetActive(false);
+            // _manager.StatusMenu.SwitchPanel(_manager.PlayerMenu);
+        }
         
         MovementManager.Instance.DeactivateTilesInRange(_manager.TurnManager.currentTurn.Character.Movement.MovementData.Range);
         

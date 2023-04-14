@@ -14,6 +14,8 @@ namespace GridSystem
         #region Properties
 
         [field: SerializeField] public Tile CurrentTile { get; private set; }
+        
+        public static Character CurrentCharacter { get; private set; }
 
         public SelectionCommand SelectionCommand
         {
@@ -84,11 +86,13 @@ namespace GridSystem
             if (CharacterOnTile(out Character character))
             {
                 EventManager.OnCharacterHovered?.Invoke(character);
+                CurrentCharacter = character;
                 return true;
             }
             else
             {
                 EventManager.OnCharacterUnhovered?.Invoke(character);
+                CurrentCharacter = null;
                 return false;
             }
         }
