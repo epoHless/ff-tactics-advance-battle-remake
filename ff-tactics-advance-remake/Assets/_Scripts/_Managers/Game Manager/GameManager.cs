@@ -9,10 +9,12 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private PlayerMenu playerMenu;
 
     private GameState currentState;
+    
     public MenuState menuState;
     public MovementState movementState;
     public TargetSelectionState targetSelectionState;
     public FacingDirectionState facingDirectionState;
+    public StatusState statusState;
     
     #endregion
     
@@ -20,6 +22,8 @@ public class GameManager : Singleton<GameManager>
 
     [field: SerializeField] public TileSelector tileSelector { get; private set; }
     [field: SerializeField] public TurnManager TurnManager { get; private set; }
+    
+    [field: SerializeField] public PlayerMenu StatusPanel { get; private set; }
     
     #endregion
 
@@ -31,6 +35,7 @@ public class GameManager : Singleton<GameManager>
         movementState = new MovementState(tileSelector);
         facingDirectionState = new FacingDirectionState(facingDirectionHolder);
         targetSelectionState = new TargetSelectionState(tileSelector);
+        statusState = new StatusState();
     }
 
     private void Start()

@@ -1,7 +1,9 @@
-﻿public class StatusButton : MenuButton
+﻿using System;
+
+public class StatusButton : MenuButton
 {
     protected override void ExecuteAction()
     {
-        //todo open status panel
+        GameManager.Instance.ChangeState(GameManager.Instance.statusState);
     }
 }

@@ -18,6 +18,10 @@ public class MenuState : GameState
         InputSystem.DisableGameInput();
         InputSystem.DisableConfirm();
 
+        EventManager.OnCharacterHovered?.Invoke(TurnManager.Instance.currentTurn.Character);
+        
+        CameraManager.Instance.ToggleCamera(ECameraType.TOPDOWN);
+
         if (_manager.TurnManager.currentTurn.HasMoved && _manager.TurnManager.currentTurn.HasUsedAbilities)
         {
             _manager.ChangeState(_manager.facingDirectionState);
@@ -39,7 +43,7 @@ public class MenuState : GameState
     {
         base.OnUpdate(_manager);
 
-        if (InputSystem.WasBackPressed && PlayerMenu.ActiveMenu.PreviousPanel && !PlayerMenu.ActiveMenu.toggleOnStart)
+        if (InputSystem.WasBackPressed && PlayerMenu.ActiveMenu.PreviousPanel)
         {
             PlayerMenu.ActiveMenu.SwitchPanel(PlayerMenu.ActiveMenu.PreviousPanel);
             PlayerMenu.ActiveMenu.PreviousPanel.Init();

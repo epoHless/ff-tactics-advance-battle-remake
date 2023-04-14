@@ -25,9 +25,10 @@ public class PlayerMenu : ToggablePanel
             {
                 button.Enabled = button.CanBeEnabled();
             }
+            
+            EventSystem.current.SetSelectedGameObject(menuButtons[0].gameObject);
         }
         
-        EventSystem.current.SetSelectedGameObject(menuButtons[0].gameObject);
         ActiveMenu = this;
     }
 

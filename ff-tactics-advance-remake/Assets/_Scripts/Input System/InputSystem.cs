@@ -14,6 +14,9 @@ namespace FinalFantasy
 
         public static bool WasConfirmPressed => Actions.Menu.Confirm.WasPressedThisFrame();
         public static bool WasBackPressed => Actions.Menu.Back.WasPressedThisFrame();
+
+        public static Vector2 CameraVector => Actions.Camera.Input.ReadValue<Vector2>();
+        
         private static bool IsInit { get; set; } = false;
 
         #endregion
@@ -167,6 +170,52 @@ namespace FinalFantasy
         public static void DisableFacingDirection()
         {
             Actions.FaceDirection.Disable();
+        }
+
+        #endregion
+
+        #region Camera Inputs
+
+        public static void EnableCamera()
+        {
+            Actions.Camera.Enable();
+        }
+        
+        public static void DisableCamera()
+        {
+            Actions.Camera.Disable();
+        }
+        
+        public static void AddCameraListener(Action<InputAction.CallbackContext> context, EInputType _inputType = EInputType.STARTED)
+        {
+            switch (_inputType)
+            {
+                case EInputType.STARTED:
+                    Actions.Camera.Input.started += context;
+                    break;
+                case EInputType.PERFORMED:
+                    Actions.Camera.Input.performed += context;
+                    break;
+                case EInputType.CANCELLED:
+                    Actions.Camera.Input.canceled += context;
+                    break;
+            }
+        }
+        
+        public static void RemoveCameraListener(Action<InputAction.CallbackContext> context, EInputType _inputType = EInputType.STARTED)
+        {
+            switch (_inputType)
+            {
+                case EInputType.STARTED:
+                    Actions.Camera.Input.started -= context;
+                    break;
+                case EInputType.PERFORMED:
+                    Actions.Camera.Input.performed -= context;
+                    break;
+                case EInputType.CANCELLED:
+                    Actions.Camera.Input.canceled -= context;
+                    break;
+            }
         }
 
         #endregion

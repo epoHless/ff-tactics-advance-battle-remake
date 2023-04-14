@@ -56,23 +56,6 @@ public class TurnManager : Singleton<TurnManager>
         return currentTurn;
     }
 
-    public bool IsTurnFinished(out Character _nextTurnCharacter)
-    {
-        if (currentTurn.HasMoved /*&& currentTurn.HasUsedAbilities*/) //todo add ability check
-        {
-            currentTurn = StartTurn();
-            
-            _nextTurnCharacter = currentTurn.Character;
-            
-            return true;
-        }
-        else
-        {
-            _nextTurnCharacter = null;
-            return false;
-        }
-    }
-
     #endregion
 
     #region Ability Event Methods
