@@ -13,6 +13,18 @@ scopes = {
 	"last_search.DA949520" = "h: character"
 	"OpenInspectorPreview.DA949520" = "1"
 	"currentGroup.DA949520" = "all"
+	"last_search.DD5CDD96" = "textmeshpro"
+	"OpenInspectorPreview.DD5CDD96" = "1"
+	"currentGroup.DD5CDD96" = "scene"
+	"last_search.F8949520" = ""
+	"OpenInspectorPreview.F8949520" = "1"
+	"currentGroup.F8949520" = "all"
+	"last_search.DD5CDD9E" = "textmeshpro"
+	"OpenInspectorPreview.DD5CDD9E" = "1"
+	"currentGroup.DD5CDD9E" = "scene"
+	"last_search.21382362" = "textmeshpro"
+	"OpenInspectorPreview.21382362" = "1"
+	"currentGroup.21382362" = "asset"
 }
 providers = {
 	adb = {
@@ -84,6 +96,8 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"te"
+	"textmeshpro - text (ui)"
 	"h:"
 	"h"
 	"?"

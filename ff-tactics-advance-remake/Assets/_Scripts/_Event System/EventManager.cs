@@ -16,7 +16,6 @@ public static class EventManager
     #region Characters Events
 
     public static Evt<Character> OnCharacterDeath;
-    public static Evt<Character> OnCharacterHalfHP;
 
     #endregion
 

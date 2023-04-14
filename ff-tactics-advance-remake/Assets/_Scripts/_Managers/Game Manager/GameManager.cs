@@ -23,7 +23,7 @@ public class GameManager : Singleton<GameManager>
     [field: SerializeField] public TileSelector tileSelector { get; private set; }
     [field: SerializeField] public TurnManager TurnManager { get; private set; }
     
-    [field: SerializeField] public PlayerMenu StatusPanel { get; private set; }
+    [field: SerializeField] public StatisticsPanel StatusPanel { get; private set; }
     
     #endregion
 

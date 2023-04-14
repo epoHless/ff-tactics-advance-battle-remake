@@ -14,9 +14,9 @@ public class StatusState : GameState
         CameraManager.Instance.ActiveCamera.Follow = character.transform;
         
         PlayerMenu.ActiveMenu.SwitchPanel(_manager.StatusPanel);
-        _manager.StatusPanel.Init();
+        _manager.StatusPanel.Init(character);
         
-        Debug.Log($"{PlayerMenu.ActiveMenu.name}");
+        EventManager.OnCharacterUnhovered?.Invoke(character);
     }
 
     public override void OnUpdate(GameManager _manager)
@@ -35,7 +35,5 @@ public class StatusState : GameState
         
         PlayerMenu.ActiveMenu.SwitchPanel(_manager.StatusPanel.PreviousPanel);
         PlayerMenu.ActiveMenu.Init();
-        
-        Debug.Log($"{PlayerMenu.ActiveMenu.name}");
     }
 }

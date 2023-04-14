@@ -23,8 +23,6 @@ public static class CombatSystem
         damage = (abilityData.AbilityPower * damage) * 0.1f;
 
         _target.BattleStatistics.CurrentHP -= damage;
-        
-        if(_target.BattleStatistics.CurrentHP/_target.BattleStatistics.HP <= 0.5f) EventManager.OnCharacterHalfHP?.Invoke(_target);
 
         if (_target.BattleStatistics.CurrentHP <= 0)
         {

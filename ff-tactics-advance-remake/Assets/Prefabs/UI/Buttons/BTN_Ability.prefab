@@ -70,8 +70,9 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ece6a643c9b060747a63fa7b6fe41cbf, type: 2}
+  m_sharedMaterial: {fileID: 8066923289575317588, guid: ece6a643c9b060747a63fa7b6fe41cbf,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -244,6 +245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   abilityName: {fileID: 2471484190628858100}
   abilityCost: {fileID: 2471484189525980845}
+  <associatedAbility>k__BackingField: {fileID: 0}
 --- !u!1 &2471484190628858102
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,8 +314,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u2022 "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: ece6a643c9b060747a63fa7b6fe41cbf, type: 2}
+  m_sharedMaterial: {fileID: 8066923289575317588, guid: ece6a643c9b060747a63fa7b6fe41cbf,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
