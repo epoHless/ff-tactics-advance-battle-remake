@@ -1,8 +1,5 @@
-﻿using System;
-using Cinemachine;
+﻿using Cinemachine;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using InputSystem = FinalFantasy.InputSystem;
 
 public class CameraManager : Singleton<CameraManager>
 {
@@ -17,6 +14,12 @@ public class CameraManager : Singleton<CameraManager>
         ActiveCamera = _type == ECameraType.TOPDOWN ? TopDownCamera : StatusCamera;
 
         ActiveCamera.m_Priority = 20;
+    }
+
+    public void SetFollowObject(Transform _transform)
+    {
+        ActiveCamera.Follow = _transform;
+        ActiveCamera.LookAt = _transform;
     }
 }
 

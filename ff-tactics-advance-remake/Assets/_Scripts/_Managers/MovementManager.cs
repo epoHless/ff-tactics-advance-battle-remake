@@ -83,6 +83,9 @@ public class MovementManager : Singleton<MovementManager>
         if (!PathFinder.GetTilesInRange(CharacterTurn.Character, CharacterTurn.Character.Movement.MovementData.Range).Contains(_endTile) ||
             CharacterTurn.Character.Movement.OccupiedTile == _endTile) return;
         
+        CameraManager.Instance.ToggleCamera(ECameraType.TOPDOWN);
+        CameraManager.Instance.SetFollowObject(CharacterTurn.Character.transform);
+        
         StartCoroutine(nameof(MoveCharacter), _endTile);
         DeactivateTilesInRange(CharacterTurn.Character.Movement.MovementData.Range);
     }

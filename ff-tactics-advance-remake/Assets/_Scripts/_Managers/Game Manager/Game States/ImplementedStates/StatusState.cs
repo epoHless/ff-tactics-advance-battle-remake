@@ -10,9 +10,7 @@ public class StatusState : GameState
         base.OnEnter(_manager);
         
         CameraManager.Instance.ToggleCamera(ECameraType.STATUS);
-        CameraManager.Instance.ActiveCamera.transform.position = character.transform.position;
-        CameraManager.Instance.ActiveCamera.LookAt = character.transform;
-        CameraManager.Instance.ActiveCamera.Follow = character.transform;
+        CameraManager.Instance.SetFollowObject(character.transform);
         
         PlayerMenu.ActiveMenu.SwitchPanel(_manager.StatusPanel);
         _manager.StatusPanel.Init(character);

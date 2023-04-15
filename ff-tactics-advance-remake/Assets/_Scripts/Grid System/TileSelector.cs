@@ -40,7 +40,7 @@ namespace GridSystem
         {
             gameObject.SetActive(false);
             
-            meshTransform.LeanScale(Vector3.one * 0.85f, 0.5f).setEaseInBounce().setLoopPingPong();
+            meshTransform.LeanScale(Vector3.one * 0.85f, 1f).setEaseInOutBack().setLoopPingPong();
         }
 
         private void OnEnable()

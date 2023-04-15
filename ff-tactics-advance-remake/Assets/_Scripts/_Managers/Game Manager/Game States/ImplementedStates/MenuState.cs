@@ -21,6 +21,7 @@ public class MenuState : GameState
         EventManager.OnCharacterHovered?.Invoke(TurnManager.Instance.currentTurn.Character);
         
         CameraManager.Instance.ToggleCamera(ECameraType.TOPDOWN);
+        CameraManager.Instance.SetFollowObject(_manager.TileSelector.transform);
 
         if (_manager.TurnManager.currentTurn.HasMoved && _manager.TurnManager.currentTurn.HasUsedAbilities)
         {
