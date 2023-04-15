@@ -7,10 +7,10 @@ onBoardingDoNotAskAgain = true
 showPackageIndexes = false
 showStatusBar = false
 scopes = {
-	"last_search.DA949528" = ""
+	"last_search.DA949528" = "tx_"
 	"OpenInspectorPreview.DA949528" = "1"
-	"currentGroup.DA949528" = "all"
-	"last_search.DA949520" = "h: character"
+	"currentGroup.DA949528" = "asset"
+	"last_search.DA949520" = ""
 	"OpenInspectorPreview.DA949520" = "1"
 	"currentGroup.DA949520" = "all"
 	"last_search.DD5CDD96" = "textmeshpro"
@@ -96,6 +96,7 @@ providers = {
 objectSelectors = {
 }
 recentSearches = [
+	"t"
 	"te"
 	"textmeshpro - text (ui)"
 	"h:"

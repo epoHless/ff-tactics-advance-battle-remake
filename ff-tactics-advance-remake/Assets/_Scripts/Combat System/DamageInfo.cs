@@ -16,19 +16,20 @@ public class DamageInfo : Singleton<DamageInfo>
         rectTransform.localScale = Vector3.zero;
     }
 
-    public IEnumerator ShowInfo(Vector3 _position, float _data)
+    public IEnumerator ShowInfo(Vector3 _position, float _data, Color color)
     {
         transform.position = _position;
         
         bool isDone = false;
-        
+
+        info.color = color;
         info.text = $"{Mathf.FloorToInt(_data)} HP";
         
-        LeanTween.scale(gameObject, Vector3.one, .5f).setEaseSpring().setOnComplete((() =>
+        LeanTween.scale(gameObject, Vector3.one, .5f).setEaseOutElastic().setOnComplete((() =>
         {
-            LeanTween.delayedCall(1f, () =>
+            LeanTween.delayedCall(0.5f, () =>
             {
-                LeanTween.scale(gameObject, Vector3.zero, .5f).setEaseSpring().setOnComplete(() => isDone = true);
+                LeanTween.scale(gameObject, Vector3.zero, .5f).setEaseOutElastic().setOnComplete(() => isDone = true);
             });
         }));
 

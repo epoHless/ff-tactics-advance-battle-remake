@@ -5,8 +5,6 @@ using UnityEngine.EventSystems;
 public class FacingDirectionHolder : MonoBehaviour
 {
     [SerializeField] private List<FacingDirectionButton> buttons;
-
-    private Camera camera;
     
     public void Init(Vector3 _position)
     {
@@ -16,13 +14,6 @@ public class FacingDirectionHolder : MonoBehaviour
 
     private void Start()
     {
-        camera = Camera.main;
         gameObject.SetActive(false);
-    }
-
-    private void Update()
-    {
-        var direction = camera.transform.position - gameObject.transform.position;
-        transform.rotation = Quaternion.LookRotation(direction);
     }
 }
