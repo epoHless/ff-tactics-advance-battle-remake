@@ -21,8 +21,10 @@ public class CharacterInfoPanel : ToggablePanel
     
     #region Unity Methods
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
+        
         foreach (var character in TurnManager.Instance.Characters)
         {
             var charModel = Instantiate(character.Data.Model, ModelParent.transform);

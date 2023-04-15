@@ -9,9 +9,10 @@ public class PlayerMenu : ToggablePanel
     [field: SerializeField] public List<MenuButton> menuButtons { get; private set; }
 
     public static PlayerMenu ActiveMenu;
-    
-    private void Start()
+
+    protected override void Start()
     {
+        base.Start();
         gameObject.SetActive(ToggleOnStart);
     }
 

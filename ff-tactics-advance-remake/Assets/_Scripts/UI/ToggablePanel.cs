@@ -19,9 +19,9 @@ public class ToggablePanel : MonoBehaviour
         rectTransform = GetComponent<RectTransform>();
     }
 
-    private void Start()
+    protected virtual void Start()
     {
-        startPosition = rectTransform.position;
+        startPosition = rectTransform.anchoredPosition;
     }
 
     #endregion
