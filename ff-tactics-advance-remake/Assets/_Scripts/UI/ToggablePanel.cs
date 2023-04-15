@@ -6,7 +6,7 @@ public class ToggablePanel : MonoBehaviour
     #region Fields
 
     private RectTransform rectTransform;
-    public Vector2 startPosition;
+    private Vector2 startPosition;
     
     protected Action OnComplete = null;
     
