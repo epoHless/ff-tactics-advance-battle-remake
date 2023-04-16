@@ -18,14 +18,14 @@ public class AIDecision : CharacterDecision
         var closestCharacter = characters.OrderBy(character => (character.transform.position - ControlledCharacter.transform.position).magnitude).ToList();
         var filteredClosestCharacters = closestCharacter.Where(character => character != ControlledCharacter).ToList();
         
-        if (ControlledCharacter.BattleStatistics.CurrentHP < ControlledCharacter.BattleStatistics.HP * 0.25f) //if has less than a quarter of HP -> flee to the furthest tile from closest character
+        if (ControlledCharacter.BattleStatistics.CurrentHP.Value < ControlledCharacter.BattleStatistics.HP.Value * 0.25f) //if has less than a quarter of HP -> flee to the furthest tile from closest character
         {
             var chosenTile = filteredTiles.OrderBy(tile => Vector3.Distance(tile.transform.position, filteredClosestCharacters[0].transform.position)).ToList();
 
             EventManager.OnMovementStarted?.Invoke(chosenTile[0]);
             TurnManager.Instance.currentTurn.HasMoved = true;
         }
-        else if (ControlledCharacter.BattleStatistics.CurrentHP > ControlledCharacter.BattleStatistics.HP * 0.25f)
+        else if (ControlledCharacter.BattleStatistics.CurrentHP.Value > ControlledCharacter.BattleStatistics.HP.Value * 0.25f)
         {
             var chosenTile = filteredTiles.OrderBy(tile => (tile.transform.position - filteredClosestCharacters[0].transform.position).magnitude).ToList();
             

@@ -7,5 +7,9 @@ AnimatorOverrideController:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: AC_Dino
-  m_Controller: {fileID: 0}
-  m_Clips: []
+  m_Controller: {fileID: 9100000, guid: 90e6b583b25afc64a8bc7c4757a24cf9, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 1e578e45055290047af5e42aa54765f2, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: a8503778c223fed4b97038966e33244b, type: 3}
+  - m_OriginalClip: {fileID: 7400000, guid: 4354dcba730e4294ca453c1808b107ca, type: 3}
+    m_OverrideClip: {fileID: 7400000, guid: f9b3be355527c784fb6a978429ef4ef0, type: 3}

@@ -49,6 +49,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Visited: 0
+  <TraversabilityLayer>k__BackingField:
+    serializedVersion: 2
+    m_Bits: 256
   <Neighbors>k__BackingField: []
   <ArrivalTransform>k__BackingField: {fileID: 4855582696597573243}
   <Height>k__BackingField: 0

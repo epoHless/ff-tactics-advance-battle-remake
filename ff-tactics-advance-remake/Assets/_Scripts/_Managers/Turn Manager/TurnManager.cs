@@ -47,7 +47,7 @@ public class TurnManager : Singleton<TurnManager>
     {
         if (turnOrder.Count <= 0)
         {
-            turnOrder = new Queue<Character>(Characters.OrderBy(character => character.BattleStatistics.Speed).ToList()); //todo add Wait priority
+            turnOrder = new Queue<Character>(Characters.OrderBy(character => character.BattleStatistics.Speed.Value).ToList()); //todo add Wait priority
         }
         
         EventManager.OnTurnChanged?.Invoke(currentTurn);

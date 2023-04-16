@@ -5,5 +5,6 @@ using UnityEngine;
 public class RaceData : ScriptableObject
 {
     [field: SerializeField] public string Name { get; private set; }
+    [field: SerializeField] public LayerMask Traversability { get; private set; }
     [field: SerializeField] public List<JobData> BaseJobs;
 }

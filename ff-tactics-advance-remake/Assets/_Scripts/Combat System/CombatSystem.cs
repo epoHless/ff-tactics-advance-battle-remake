@@ -6,15 +6,15 @@ public static class CombatSystem
     {
         float baseAttack = (abilityData.AbilityType) switch 
         {
-            EAbilityType.PHYSICAL => _caster.BattleStatistics.Attack,
-            EAbilityType.MAGICAL => _caster.BattleStatistics.Defense,
+            EAbilityType.PHYSICAL => _caster.BattleStatistics.Attack.Value,
+            EAbilityType.MAGICAL => _caster.BattleStatistics.Defense.Value,
             _ => throw new ArgumentOutOfRangeException()
         };
 
         float baseDefense = (abilityData.AbilityType) switch
         {
-            EAbilityType.PHYSICAL => _target.BattleStatistics.Defense,
-            EAbilityType.MAGICAL => _target.BattleStatistics.Resist,
+            EAbilityType.PHYSICAL => _target.BattleStatistics.Defense.Value,
+            EAbilityType.MAGICAL => _target.BattleStatistics.Resist.Value,
             _ => throw new ArgumentOutOfRangeException()
         };
 
@@ -22,11 +22,11 @@ public static class CombatSystem
 
         damage = (abilityData.AbilityPower * damage) * 0.1f;
 
-        _target.BattleStatistics.CurrentHP -= damage;
+        _target.BattleStatistics.CurrentHP.Value -= damage;
 
-        if (_target.BattleStatistics.CurrentHP <= 0)
+        if (_target.BattleStatistics.CurrentHP.Value <= 0)
         {
-            _target.BattleStatistics.CurrentHP = 0;
+            _target.BattleStatistics.CurrentHP.Value = 0;
             EventManager.OnCharacterDeath?.Invoke(_target);
         }
         
@@ -37,15 +37,15 @@ public static class CombatSystem
     {
         float baseAttack = (abilityData.AbilityType) switch 
         {
-            EAbilityType.PHYSICAL => _caster.BattleStatistics.Attack,
-            EAbilityType.MAGICAL => _caster.BattleStatistics.Defense,
+            EAbilityType.PHYSICAL => _caster.BattleStatistics.Attack.Value,
+            EAbilityType.MAGICAL => _caster.BattleStatistics.Defense.Value,
             _ => throw new ArgumentOutOfRangeException()
         };
 
         float baseDefense = (abilityData.AbilityType) switch
         {
-            EAbilityType.PHYSICAL => _target.BattleStatistics.Defense,
-            EAbilityType.MAGICAL => _target.BattleStatistics.Resist,
+            EAbilityType.PHYSICAL => _target.BattleStatistics.Defense.Value,
+            EAbilityType.MAGICAL => _target.BattleStatistics.Resist.Value,
             _ => throw new ArgumentOutOfRangeException()
         };
 
@@ -53,9 +53,9 @@ public static class CombatSystem
 
         heal = (abilityData.AbilityPower * heal) * 0.1f;
 
-        _target.BattleStatistics.CurrentHP += heal;
+        _target.BattleStatistics.CurrentHP.Value += heal;
 
-        if (_target.BattleStatistics.CurrentHP >= _target.BattleStatistics.HP)
+        if (_target.BattleStatistics.CurrentHP.Value >= _target.BattleStatistics.HP.Value)
         {
             _target.BattleStatistics.CurrentHP = _target.BattleStatistics.HP;
         }

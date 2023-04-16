@@ -15,7 +15,6 @@ MonoBehaviour:
   <Name>k__BackingField: Fighter
   <Branches>k__BackingField: []
   <BaseStatistics>k__BackingField: {fileID: 0}
-  <EquippableCategories>k__BackingField:
-  - {fileID: 0}
+  <EquippableCategories>k__BackingField: []
   <BaseAttack>k__BackingField: {fileID: 11400000, guid: 327281a7affcc6b4bbde99f5f3dd1368,
     type: 2}

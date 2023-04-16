@@ -63,4 +63,10 @@ public static class EventManager
     public static Evt OnAbilityFinished;
 
     #endregion
+
+    #region Statistics Events
+
+    public static Evt<StatisticValue> OnStatisticChanged;
+
+    #endregion
 }

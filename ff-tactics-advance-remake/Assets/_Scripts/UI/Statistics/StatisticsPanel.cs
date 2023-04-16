@@ -18,10 +18,10 @@ public class StatisticsPanel : PlayerMenu
 
     public void Init(Character _character)
     {
-        wAtk.text = $"Weapon ATK {_character.BattleStatistics.Attack}";
-        wDef.text = $"Weapon DEF {_character.BattleStatistics.Defense}";
-        mAtk.text = $"Magic ATK {_character.BattleStatistics.Magic}";
-        mDef.text = $"Magic DEF {_character.BattleStatistics.Resist}";
+        wAtk.text = $"Weapon ATK {_character.BattleStatistics.Attack.Value}";
+        wDef.text = $"Weapon DEF {_character.BattleStatistics.Defense.Value}";
+        mAtk.text = $"Magic ATK {_character.BattleStatistics.Magic.Value}";
+        mDef.text = $"Magic DEF {_character.BattleStatistics.Resist.Value}";
         move.text = $"Move {_character.Movement.MovementData.Range}";
         jump.text = $"Jump {_character.Movement.MovementData.JumpHeight}";
 

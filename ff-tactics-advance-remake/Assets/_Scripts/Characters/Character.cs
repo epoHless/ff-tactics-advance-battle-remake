@@ -15,7 +15,7 @@ public class Character : MonoBehaviour
 
     [field: SerializeField] public AIDecision AIDecision { get; private set; }
     
-    public bool IsDead => BattleStatistics.CurrentHP <= 0;
+    public bool IsDead => BattleStatistics.CurrentHP.Value <= 0;
     
     #endregion
 

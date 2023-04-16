@@ -40,7 +40,7 @@ public class AbilityData : ScriptableObject
 
     public IEnumerator Execute(Character _caster, Character _target)
     {
-        _caster.BattleStatistics.CurrentMP -= ManaCost;
+        _caster.BattleStatistics.CurrentMP.Value -= ManaCost;
         
         if (IsMultiTarget)
         {

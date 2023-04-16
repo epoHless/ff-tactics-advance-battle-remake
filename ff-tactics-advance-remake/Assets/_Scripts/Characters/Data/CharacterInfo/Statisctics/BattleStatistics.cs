@@ -5,17 +5,19 @@ public class BattleStatistics
 {
     #region Properties
 
-    [field: SerializeField] public float HP { get; private set; }
+    [field: SerializeField] public StatisticValue HP { get; private set; } = new StatisticValue();
+    [field: SerializeField] public StatisticValue CurrentHP { get; set; } = new StatisticValue();
     
-    [field: SerializeField] public float CurrentHP { get; set; }
-    [field: SerializeField] public float MP { get; private set; }
+    [field: SerializeField] public StatisticValue MP { get; private set; } = new StatisticValue();
+    [field: SerializeField] public StatisticValue CurrentMP { get; set; } = new StatisticValue();
     
-    [field: SerializeField] public float CurrentMP { get; set; }
-    [field: SerializeField] public float Attack { get; private set; }
-    [field: SerializeField] public float Defense { get; private set; }
-    [field: SerializeField] public float Magic { get; private set; }
-    [field: SerializeField] public float Resist { get; private set; }
-    [field: SerializeField] public float Speed { get; private set; }
+    [field: SerializeField] public StatisticValue Attack { get; private set; } = new StatisticValue();
+    [field: SerializeField] public StatisticValue Defense { get; private set; } = new StatisticValue();
+    
+    [field: SerializeField] public StatisticValue Magic { get; private set; } = new StatisticValue();
+    [field: SerializeField] public StatisticValue Resist { get; private set; } = new StatisticValue();
+    
+    [field: SerializeField] public StatisticValue Speed { get; private set; } = new StatisticValue();
     
     #endregion
 
@@ -25,13 +27,13 @@ public class BattleStatistics
     
     public BattleStatistics(StatisticsData _statistics)
     {
-        HP = _statistics.HP;
-        MP = _statistics.MP;
-        Attack = _statistics.Attack;
-        Defense = _statistics.Defense;
-        Magic = _statistics.Magic;
-        Resist = _statistics.Resist;
-        Speed = _statistics.Speed;
+        HP.Value = _statistics.HP;
+        MP.Value = _statistics.MP;
+        Attack.Value = _statistics.Attack;
+        Defense.Value = _statistics.Defense;
+        Magic.Value = _statistics.Magic;
+        Resist.Value = _statistics.Resist;
+        Speed.Value = _statistics.Speed;
 
         CurrentHP = HP;
         CurrentMP = MP;

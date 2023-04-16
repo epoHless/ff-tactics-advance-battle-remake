@@ -19,7 +19,7 @@ public class TargetCommand : SelectionCommand
         {
             if (!_character.IsDead)
             {
-                if (caster.BattleStatistics.CurrentMP >= ability.ManaCost)
+                if (caster.BattleStatistics.CurrentMP.Value >= ability.ManaCost)
                 {
                     EventManager.OnAbilityUsed?.Invoke(ability.Execute(caster, _character));
                 }

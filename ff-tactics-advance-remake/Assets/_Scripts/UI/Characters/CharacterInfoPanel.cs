@@ -91,8 +91,8 @@ public class CharacterInfoPanel : ToggablePanel
         });
         
         Name.text = _character.Data.Name;
-        HP.text = $"{_character.BattleStatistics.CurrentHP}/ {_character.BattleStatistics.HP}";
-        MP.text = $"{_character.BattleStatistics.CurrentMP}/ {_character.BattleStatistics.MP}";
+        HP.text = $"{_character.BattleStatistics.CurrentHP.Value}/ {_character.BattleStatistics.HP.Value}";
+        MP.text = $"{_character.BattleStatistics.CurrentMP.Value}/ {_character.BattleStatistics.MP.Value}";
         
         Toggle(true);
     }
