@@ -94,6 +94,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7580519438801606966, guid: cfbf70af948962c4c8e68940aa598f2e,
         type: 3}
+      propertyPath: <TileType>k__BackingField
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7580519438801606966, guid: cfbf70af948962c4c8e68940aa598f2e,
+        type: 3}
       propertyPath: <TraversabilityLayer>k__BackingField.m_Bits
       value: 512
       objectReference: {fileID: 0}

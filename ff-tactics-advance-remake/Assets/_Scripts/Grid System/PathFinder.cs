@@ -147,7 +147,10 @@ public static class PathFinder
         {
             if (neighbor.HeightDifference <= _character.Movement.MovementData.JumpHeight)
             {
-                neighbors.Add(neighbor.Tile);
+                if (_character.Data.RaceData.Traversability.Contains(neighbor.Tile.TileType))
+                {
+                    neighbors.Add(neighbor.Tile);
+                }
             }
         }
 

@@ -13,8 +13,6 @@ MonoBehaviour:
   m_Name: Race_Human
   m_EditorClassIdentifier: 
   <Name>k__BackingField: Human
-  <Traversability>k__BackingField:
-    serializedVersion: 2
-    m_Bits: 256
+  <Traversability>k__BackingField: 0000000001000000
   BaseJobs:
   - {fileID: 11400000, guid: d2339a9dba9a9da408b22feb1868649a, type: 2}

@@ -11,7 +11,7 @@ namespace GridSystem
         
         #region Properties
 
-        [field: SerializeField] public LayerMask TraversabilityLayer { get; private set; }
+        [field: SerializeField] public ETileType TileType { get; private set; }
         
         [field: SerializeField] public List<NeighborTile> Neighbors { get; private set; }
         [field: SerializeField] public Transform ArrivalTransform { get; private set; }
@@ -86,5 +86,12 @@ namespace GridSystem
         }
 
         #endregion
+    }
+
+    public enum ETileType
+    {
+        GRASS,
+        WATER,
+        FIRE
     }
 }
