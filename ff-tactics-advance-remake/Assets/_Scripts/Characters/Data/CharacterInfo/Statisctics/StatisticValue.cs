@@ -13,15 +13,31 @@ public class StatisticValue
 
     #region Properties
 
+    public int ID;
+    
     public float Value
     {
         get => value;
         
         set
         {
+            var previousID = ID;
             this.value = value;
+            ID = previousID;
+            
             EventManager.OnStatisticChanged?.Invoke(this);
         }
+    }
+
+    #endregion
+
+    #region Constructor
+
+    public StatisticValue() { }
+    
+    public StatisticValue(int _id)
+    {
+        ID = _id;
     }
 
     #endregion

@@ -91,7 +91,10 @@ public class CharacterInfoPanel : ToggablePanel
         });
         
         Name.text = _character.Data.Name;
+        
         HP.text = $"{_character.BattleStatistics.CurrentHP.Value}/ {_character.BattleStatistics.HP.Value}";
+        HP.color = _character.BattleStatistics.CurrentHP.Value <= 0 ? new Color(255f/255f, 117f/255f, 108f/255f, 1f) : Color.white;
+        
         MP.text = $"{_character.BattleStatistics.CurrentMP.Value}/ {_character.BattleStatistics.MP.Value}";
         
         Toggle(true);

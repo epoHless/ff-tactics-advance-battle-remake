@@ -22,6 +22,11 @@ public class TargetCommand : SelectionCommand
                 if (caster.BattleStatistics.CurrentMP.Value >= ability.ManaCost)
                 {
                     EventManager.OnAbilityUsed?.Invoke(ability.Execute(caster, _character));
+                    
+                    InputSystem.DisableMovement();
+                    InputSystem.DisableGameInput();
+                    
+                    MovementManager.Instance.DeactivateTilesInRange(ability.AbilityRange);
                 }
             
                 InputSystem.DisableGameInput();

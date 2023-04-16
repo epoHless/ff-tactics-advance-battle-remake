@@ -22,12 +22,21 @@ MonoBehaviour:
   <Ability>k__BackingField: {fileID: 0}
   <Effect>k__BackingField: {fileID: 0}
   <Statistics>k__BackingField:
-    <HP>k__BackingField: 0
-    <CurrentHP>k__BackingField: 0
-    <MP>k__BackingField: 0
-    <CurrentMP>k__BackingField: 0
-    <Attack>k__BackingField: 0
-    <Defense>k__BackingField: 3
-    <Magic>k__BackingField: 0
-    <Resist>k__BackingField: 3
-    <Speed>k__BackingField: 0
+    <HP>k__BackingField:
+      value: 0
+    <CurrentHP>k__BackingField:
+      value: 0
+    <MP>k__BackingField:
+      value: 0
+    <CurrentMP>k__BackingField:
+      value: 0
+    <Attack>k__BackingField:
+      value: 0
+    <Defense>k__BackingField:
+      value: 3
+    <Magic>k__BackingField:
+      value: 0
+    <Resist>k__BackingField:
+      value: 3
+    <Speed>k__BackingField:
+      value: 0

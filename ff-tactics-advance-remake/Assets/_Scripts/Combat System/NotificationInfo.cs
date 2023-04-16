@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(CanvasGroup))]
-public class DamageInfo : Singleton<DamageInfo>
+public class NotificationInfo : Singleton<NotificationInfo>
 {
     [SerializeField] private TMP_Text info;
 
@@ -16,14 +16,14 @@ public class DamageInfo : Singleton<DamageInfo>
         rectTransform.localScale = Vector3.zero;
     }
 
-    public IEnumerator ShowInfo(Vector3 _position, float _data, Color color)
+    public IEnumerator ShowInfo(Vector3 _position, float _data, Color color = default, string _text = "" )
     {
         transform.position = _position;
         
         bool isDone = false;
 
         info.color = color;
-        info.text = $"{Mathf.FloorToInt(_data)} HP";
+        info.text = $"{Mathf.FloorToInt(_data)} {_text}";
         
         LeanTween.scale(gameObject, Vector3.one, .5f).setEaseOutElastic().setOnComplete((() =>
         {

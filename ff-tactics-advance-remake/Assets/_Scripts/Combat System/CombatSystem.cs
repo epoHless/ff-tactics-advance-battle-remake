@@ -57,9 +57,15 @@ public static class CombatSystem
 
         if (_target.BattleStatistics.CurrentHP.Value >= _target.BattleStatistics.HP.Value)
         {
-            _target.BattleStatistics.CurrentHP = _target.BattleStatistics.HP;
+            _target.BattleStatistics.CurrentHP.Value = _target.BattleStatistics.HP.Value;
         }
         
         return heal;
+    }
+
+    public static float ModifyStat(StatisticValue _value, float _percentage)
+    {
+        _value.Value = _value.Value * (1 + _percentage / 100);
+        return _value.Value;
     }
 }

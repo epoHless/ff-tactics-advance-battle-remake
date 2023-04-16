@@ -95,6 +95,12 @@ public class AbilityData : ScriptableObject
         AbilityEffects.Add(new HPEffect());
     }
     
+    [ContextMenu("Add Stat Modification")]
+    public void AddStat()
+    {
+        AbilityEffects.Add(new StatisticsEffect());
+    }
+    
     #endregion
 }
 

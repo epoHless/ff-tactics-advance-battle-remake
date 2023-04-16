@@ -3,12 +3,25 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    [SerializeField] private BattleStatistics battleStatistics;
+
     #region Properties
 
     [field: SerializeField, SORender] public CharacterData Data { get; private set; }
     [field: SerializeField, SORender] public JobData CurrentJob { get; private set; }
     [field: SerializeField, SORender] public CharacterMovement Movement { get; private set; }
-    [field: SerializeField] public BattleStatistics BattleStatistics { get; set; }
+
+    
+    public BattleStatistics BattleStatistics
+    {
+        get => battleStatistics;
+        set
+        {
+            battleStatistics = value;
+            battleStatistics.Init();
+        }
+    }
+
     [field: SerializeField] public List<EquipmentData> Equipment { get; private set; }
 
     public List<AbilityData> EquippedAbilities { get; private set; } = new List<AbilityData>();
@@ -23,7 +36,7 @@ public class Character : MonoBehaviour
 
     private void Awake()
     {
-        BattleStatistics = CurrentJob.BaseStatistics.Clone;
+        BattleStatistics = new BattleStatistics(CurrentJob.BaseStatistics);
     }
 
     private void Start()
