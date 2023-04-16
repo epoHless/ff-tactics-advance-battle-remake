@@ -34,10 +34,13 @@ public class CharacterInfoPanel : ToggablePanel
             charModel.transform.localScale = Vector3.one * 300f;
 
             charModel.layer = 7;
-            charModel.transform.GetChild(1).GetChild(0).gameObject.layer = 7;
-            var body = charModel.transform.GetChild(1).GetChild(1).gameObject;
-            body.GetComponent<SkinnedMeshRenderer>().material = character.Data.CharacterMaterial;
-            body.layer = 7;
+
+            foreach (Transform child in charModel.transform.GetChild(0).transform)
+            {
+                child.gameObject.layer = 7;
+            }
+            // body.GetComponent<SkinnedMeshRenderer>().material = character.Data.CharacterMaterial;
+            // body.layer = 7;
             
             charModel.SetActive(false);
             charModels.Add(charModel);

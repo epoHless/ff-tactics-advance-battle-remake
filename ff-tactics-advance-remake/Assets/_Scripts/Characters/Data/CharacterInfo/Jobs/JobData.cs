@@ -10,6 +10,8 @@ public class JobData : ScriptableObject
     [field: SerializeField] public List<JobRequirement> Branches { get; private set; }
     [field: SerializeField] public StatisticsData BaseStatistics { get; private set; }
     [field: SerializeField] public List<EquipmentCategoryData> EquippableCategories { get; private set; }
+    
+    [field: SerializeField] public AbilityData BaseAttack { get; private set; }
 
     #endregion
 

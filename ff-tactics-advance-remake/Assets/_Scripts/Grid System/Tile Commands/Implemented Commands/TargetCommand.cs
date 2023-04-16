@@ -15,7 +15,7 @@ public class TargetCommand : SelectionCommand
     
     public override void Execute(TileSelector _tileSelector)
     {
-        if (_tileSelector.CharacterOnTile(out Character _character))
+        if (PathFinder.CharacterOnTile(_tileSelector.CurrentTile, out Character _character))
         {
             if (!_character.IsDead)
             {

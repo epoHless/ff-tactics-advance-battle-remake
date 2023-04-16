@@ -83,7 +83,7 @@ namespace GridSystem
 
         public bool IsCharacterOnTile()
         {
-            if (CharacterOnTile(out Character character))
+            if (PathFinder.CharacterOnTile(CurrentTile, out Character character))
             {
                 EventManager.OnCharacterHovered?.Invoke(character);
                 CurrentCharacter = character;
@@ -95,29 +95,6 @@ namespace GridSystem
                 CurrentCharacter = null;
                 return false;
             }
-        }
-
-        /// <summary>
-        /// Checks if a character is in the current tile
-        /// </summary>
-        /// <param name="_character"></param>
-        /// <returns></returns>
-        public bool CharacterOnTile(out Character _character)
-        {
-            var rayOrigin = transform.position + (Vector3.up * 2f);
-            Ray ray = new Ray(rayOrigin, Vector3.down);
-
-            if (Physics.Raycast(ray, out RaycastHit hit, 3f))
-            {
-                if (hit.transform.TryGetComponent(out Character character))
-                {
-                    _character = character;
-                    return true;
-                }
-            }
-
-            _character = null;
-            return false;
         }
 
         #endregion

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class Character : MonoBehaviour
@@ -15,6 +13,8 @@ public class Character : MonoBehaviour
 
     public List<AbilityData> EquippedAbilities { get; private set; } = new List<AbilityData>();
 
+    [field: SerializeField] public AIDecision AIDecision { get; private set; }
+    
     public bool IsDead => BattleStatistics.CurrentHP <= 0;
     
     #endregion

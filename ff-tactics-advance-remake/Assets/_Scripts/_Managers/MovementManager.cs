@@ -29,9 +29,6 @@ public class MovementManager : Singleton<MovementManager>
         EventManager.OnMovementStarted += CallMoveCharacter;
         EventManager.OnDirectionSelect += SelectDirection;
         EventManager.OnTurnChanged += SetCharacter;
-        
-        // EventManager.OnCharacterHovered += SetCharacter;
-        // EventManager.OnCharacterUnhovered += ResetCharacter;
     }
 
     private void OnDisable()
@@ -39,9 +36,6 @@ public class MovementManager : Singleton<MovementManager>
         EventManager.OnMovementStarted -= CallMoveCharacter;
         EventManager.OnDirectionSelect -= SelectDirection;
         EventManager.OnTurnChanged -= SetCharacter;
-        
-        // EventManager.OnCharacterHovered -= SetCharacter;
-        // EventManager.OnCharacterUnhovered -= ResetCharacter;
     }
 
     #endregion
@@ -63,16 +57,6 @@ public class MovementManager : Singleton<MovementManager>
             tile.SelectionBox.SetActive(false);
         }
     }
-    
-    // private void ResetCharacter(Character _character)
-    // {
-    //     GameManager.Instance.statusState.character = null;
-    // }
-    //
-    // private void SetCharacter(Character _character)
-    // {
-    //     GameManager.Instance.statusState.character = _character;
-    // }
 
     #endregion
 
@@ -82,9 +66,6 @@ public class MovementManager : Singleton<MovementManager>
     {
         if (!PathFinder.GetTilesInRange(CharacterTurn.Character, CharacterTurn.Character.Movement.MovementData.Range).Contains(_endTile) ||
             CharacterTurn.Character.Movement.OccupiedTile == _endTile) return;
-        
-        CameraManager.Instance.ToggleCamera(ECameraType.TOPDOWN);
-        CameraManager.Instance.SetFollowObject(CharacterTurn.Character.transform);
         
         StartCoroutine(nameof(MoveCharacter), _endTile);
         DeactivateTilesInRange(CharacterTurn.Character.Movement.MovementData.Range);

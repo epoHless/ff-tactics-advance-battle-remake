@@ -22,3 +22,6 @@ MonoBehaviour:
     <AbilitiesRequired>k__BackingField: 2
   <BaseStatistics>k__BackingField: {fileID: 11400000, guid: 1eb5b8935a508f3488df0ee33573f0d2,
     type: 2}
+  <EquippableCategories>k__BackingField: []
+  <BaseAttack>k__BackingField: {fileID: 11400000, guid: 327281a7affcc6b4bbde99f5f3dd1368,
+    type: 2}

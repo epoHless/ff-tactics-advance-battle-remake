@@ -158,4 +158,27 @@ public static class PathFinder
     {
         return Mathf.CeilToInt(Mathf.Abs(_start.transform.position.x - _neighbor.transform.position.x) +  Mathf.Abs(_start.transform.position.y - _neighbor.transform.position.y));
     }
+    
+    /// <summary>
+    /// Checks if a character is in the current tile
+    /// </summary>
+    /// <param name="_character"></param>
+    /// <returns></returns>
+    public static bool CharacterOnTile(Tile _tile, out Character _character)
+    {
+        var rayOrigin =_tile.transform.position + (Vector3.up * 2f);
+        Ray ray = new Ray(rayOrigin, Vector3.down);
+
+        if (Physics.Raycast(ray, out RaycastHit hit, 3f))
+        {
+            if (hit.transform.TryGetComponent(out Character character))
+            {
+                _character = character;
+                return true;
+            }
+        }
+
+        _character = null;
+        return false;
+    }
 }

@@ -16,7 +16,7 @@ public class AbilityButton : MenuButton
         
         associatedAbility = _ability;
         
-        abilityName.text += associatedAbility.Name;
+        abilityName.text += _ability;
         abilityCost.text = $"{associatedAbility.ManaCost.ToString()} mp" ;
     }
 
