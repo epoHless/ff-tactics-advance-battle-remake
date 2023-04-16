@@ -18,7 +18,6 @@ public class MenuState : GameState
         InputSystem.DisableGameInput();
         InputSystem.DisableConfirm();
 
-        
         CameraManager.Instance.ToggleCamera(ECameraType.TOPDOWN);
         CameraManager.Instance.SetFollowObject(_manager.TileSelector.transform);
 
@@ -29,20 +28,11 @@ public class MenuState : GameState
         else
         {
             _manager.TileSelector.transform.position = _manager.TurnManager.currentTurn.Character.transform.position;
-            _manager.TileSelector.IsCharacterOnTile();
             _manager.TileSelector.ToggleSelector(true);
 
-            if (_manager.TurnManager.currentTurn.Character.AIDecision)
-            {
-                _manager.TurnManager.currentTurn.Character.AIDecision.Init(_manager.TurnManager.currentTurn.Character);
-                _manager.TurnManager.currentTurn.Character.AIDecision.FaceDecision();
-            }
-            else
-            {
-                menu.gameObject.SetActive(true);
-                menu.Init();
-                menu.Toggle(true);
-            }
+            menu.gameObject.SetActive(true);
+            menu.Init();
+            menu.Toggle(true);
         }
         
         EventManager.OnCharacterHovered?.Invoke(TurnManager.Instance.currentTurn.Character);

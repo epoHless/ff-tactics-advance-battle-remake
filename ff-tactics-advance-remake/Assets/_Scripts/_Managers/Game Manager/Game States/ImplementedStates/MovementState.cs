@@ -48,14 +48,12 @@ public class MovementState : GameState
         base.OnExit(_manager);
         
         tileSelector.transform.position = _manager.TurnManager.currentTurn.Character.transform.position;
-        tileSelector.IsCharacterOnTile();
         
         tileSelector.ToggleSelector(false);
 
         if (PlayerMenu.ActiveMenu == _manager.StatusMenu)
         {
             _manager.StatusMenu.gameObject.SetActive(false);
-            // _manager.StatusMenu.SwitchPanel(_manager.PlayerMenu);
         }
         
         MovementManager.Instance.DeactivateTilesInRange(_manager.TurnManager.currentTurn.Character.Movement.MovementData.Range);

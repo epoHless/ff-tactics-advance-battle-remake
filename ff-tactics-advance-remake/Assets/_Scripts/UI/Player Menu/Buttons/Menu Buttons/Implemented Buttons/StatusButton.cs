@@ -1,5 +1,4 @@
-﻿using System;
-using GridSystem;
+﻿using GridSystem;
 using UnityEngine;
 
 public class StatusButton : MenuButton
@@ -8,11 +7,8 @@ public class StatusButton : MenuButton
     
     protected override void ExecuteAction()
     {
-        if (TileSelector.CurrentCharacter)
-        {
-            GameManager.Instance.statusState.ID = ID;
-            GameManager.Instance.statusState.character = TileSelector.CurrentCharacter;
-            GameManager.Instance.ChangeState(GameManager.Instance.statusState);
-        }
+        GameManager.Instance.statusState.ID = ID;
+        GameManager.Instance.statusState.character = TurnManager.Instance.currentTurn.Character;
+        GameManager.Instance.ChangeState(GameManager.Instance.statusState);
     }
 }

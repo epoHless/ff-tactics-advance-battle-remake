@@ -31,20 +31,16 @@ namespace GridSystem
 
         #region Unity Methods
 
-        private void Awake()
-        {
-            CurrentTile = PathFinder.GetTileAtPosition(transform.position);
-        }
-
         private void Start()
         {
-            gameObject.SetActive(false);
-            
             meshTransform.LeanScale(Vector3.one * 0.85f, 1f).setEaseInOutBack().setLoopPingPong();
         }
 
         private void OnEnable()
         {
+            CurrentTile = PathFinder.GetTileAtPosition(transform.position);
+            IsCharacterOnTile();
+            
             InputSystem.AddGridMovementListener(SelectTile);
             InputSystem.AddConfirmListener(ConfirmSelection);
             
