@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e5d8bbe8a2f842989f4a7afe340fbf7f, type: 3}
-  m_Name: MovementData_Test
+  m_Name: MovementData_Soldier
   m_EditorClassIdentifier: 
-  <Range>k__BackingField: 5
+  <Range>k__BackingField: 3
   <JumpHeight>k__BackingField: 2

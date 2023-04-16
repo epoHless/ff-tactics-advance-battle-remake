@@ -1,17 +1,20 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.UI;
+﻿using UnityEngine.UI;
 
 public class AttackAbilityButton : AbilityButton
 {
     private void OnEnable()
     {
-        EventManager.OnTurnChanged += UpdateInfo;
+        EventManager.OnCharacterHovered += UpdateInfo;
+
+        if (TurnManager.Instance)
+        {
+            Init(TurnManager.Instance.currentTurn.Character.CurrentJob.BaseAttack);
+        }
     }
 
     private void OnDisable()
     {
-        EventManager.OnTurnChanged -= UpdateInfo;
+        EventManager.OnCharacterHovered -= UpdateInfo;
     }
 
     public override void Init(AbilityData _ability)
@@ -21,8 +24,8 @@ public class AttackAbilityButton : AbilityButton
         abilityName.text = _ability.Name;
     }
 
-    private void UpdateInfo(TurnInformation _item)
+    private void UpdateInfo(Character character)
     {
-        Init(_item.Character.CurrentJob.BaseAttack);
+        Init(character.CurrentJob.BaseAttack);
     }
 }

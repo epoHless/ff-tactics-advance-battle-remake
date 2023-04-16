@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 73bedee5f4e54508984a9ca23291673f, type: 3}
-  m_Name: Job_Fighter
+  m_Name: Job_BlueMage
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Fighter
+  <Name>k__BackingField: Blue Mage
   <Branches>k__BackingField: []
-  <BaseStatistics>k__BackingField: {fileID: 11400000, guid: 854e1c49f1dfbb549a5e6469c4966c1d,
+  <BaseStatistics>k__BackingField: {fileID: 11400000, guid: 827124749794d0c4e82f099b9ab51adf,
     type: 2}
   <EquippableCategories>k__BackingField:
-  - {fileID: 11400000, guid: 59c83c569dad27b46856eb475abd8b9b, type: 2}
   - {fileID: 11400000, guid: 8658b362974a5994e9321e128e82be68, type: 2}
   - {fileID: 11400000, guid: 34925acd158652947b72f763533a9331, type: 2}
-  <BaseAttack>k__BackingField: {fileID: 11400000, guid: 327281a7affcc6b4bbde99f5f3dd1368,
+  - {fileID: 11400000, guid: 5bf26bdec1985a34caf7098bdb105207, type: 2}
+  - {fileID: 11400000, guid: e76a05203cc622649a98d22a0a7a807f, type: 2}
+  <BaseAttack>k__BackingField: {fileID: 11400000, guid: dde3a7759da951a4096a0960fcf7edd1,
     type: 2}

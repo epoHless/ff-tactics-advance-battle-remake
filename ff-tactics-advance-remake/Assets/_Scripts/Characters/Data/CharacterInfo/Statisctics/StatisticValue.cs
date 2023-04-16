@@ -4,8 +4,6 @@
 public class StatisticValue
 {
     #region Fields
-
-    private string name;
     
     [SerializeField] private float value;
 
@@ -13,7 +11,7 @@ public class StatisticValue
 
     #region Properties
 
-    public int ID;
+    public int ID { get; set; }
     
     public float Value
     {

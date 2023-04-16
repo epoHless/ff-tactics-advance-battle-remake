@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe46dfa9454d43b7a70a29f2c17a3ab9, type: 3}
-  m_Name: Character_Beppino
+  m_Name: Character_Euripide
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Beppino
+  <Name>k__BackingField: Euripide
   <RaceData>k__BackingField: {fileID: 11400000, guid: 5d408ba24377f4b47ba9b147709526cc,
     type: 2}
-  <Model>k__BackingField: {fileID: 3118054320580949706, guid: a255b3b3add6f284f84a813f664dc612,
+  <Model>k__BackingField: {fileID: 6009926419346449374, guid: 6ec15c6dc48982c43ad0c6101f877da0,
     type: 3}
-  <CharacterMaterial>k__BackingField: {fileID: 2100000, guid: 711184a0eae3cd142b7794137f75cf7b,
+  <CharacterMaterial>k__BackingField: {fileID: 2100000, guid: 36526b85ef8af8348936441356a7b0a2,
     type: 2}

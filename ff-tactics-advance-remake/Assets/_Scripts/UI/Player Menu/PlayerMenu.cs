@@ -13,6 +13,7 @@ public class PlayerMenu : ToggablePanel
     protected override void Start()
     {
         base.Start();
+        
         gameObject.SetActive(ToggleOnStart);
     }
 

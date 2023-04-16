@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec9023061c7b4a2ca5ef258e8bd37b31, type: 3}
+  m_Name: Race_Sharko
+  m_EditorClassIdentifier: 
+  <Name>k__BackingField: Sharko
+  <Traversability>k__BackingField: 0000000001000000
+  BaseJobs:
+  - {fileID: 11400000, guid: 2cacca1ff24b99141abf03feb4b99109, type: 2}

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    [SerializeField] private BattleStatistics battleStatistics;
+    private BattleStatistics battleStatistics;
 
     #region Properties
 
@@ -25,8 +25,6 @@ public class Character : MonoBehaviour
     [field: SerializeField] public List<EquipmentData> Equipment { get; private set; }
 
     public List<AbilityData> EquippedAbilities { get; private set; } = new List<AbilityData>();
-
-    [field: SerializeField] public AIDecision AIDecision { get; private set; }
     
     public bool IsDead => BattleStatistics.CurrentHP.Value <= 0;
     

@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 989b611f42e24390bf019d374c760b71, type: 3}
+  m_Name: Equipment_ChainPlate
+  m_EditorClassIdentifier: 
+  <CategoryID>k__BackingField: {fileID: 11400000, guid: 0f8a0600802ee2d4dafdd6ace2488944,
+    type: 2}
+  <Icon>k__BackingField: {fileID: -606094969, guid: 240c86463b87feb48a61264241ad3b8e,
+    type: 3}
+  <Name>k__BackingField: Chain Plate
+  <Description>k__BackingField: 
+  <Element>k__BackingField: {fileID: 0}
+  <Ability>k__BackingField: {fileID: 0}
+  <Effect>k__BackingField: {fileID: 0}
+  <Statistics>k__BackingField:
+    <HP>k__BackingField:
+      value: 0
+    <CurrentHP>k__BackingField:
+      value: 0
+    <MP>k__BackingField:
+      value: 0
+    <CurrentMP>k__BackingField:
+      value: 0
+    <Attack>k__BackingField:
+      value: 0
+    <Defense>k__BackingField:
+      value: 28
+    <Magic>k__BackingField:
+      value: 0
+    <Resist>k__BackingField:
+      value: 4
+    <Speed>k__BackingField:
+      value: 0
+    Stats: []

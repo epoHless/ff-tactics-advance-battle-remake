@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec9023061c7b4a2ca5ef258e8bd37b31, type: 3}
-  m_Name: Race_Human
+  m_Name: Race_Hamsto
   m_EditorClassIdentifier: 
-  <Name>k__BackingField: Human
-  <Traversability>k__BackingField: 0000000001000000
+  <Name>k__BackingField: Hamsto
+  <Traversability>k__BackingField: 00000000
   BaseJobs:
   - {fileID: 11400000, guid: d2339a9dba9a9da408b22feb1868649a, type: 2}

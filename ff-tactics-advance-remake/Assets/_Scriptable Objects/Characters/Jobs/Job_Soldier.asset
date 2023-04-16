@@ -22,6 +22,13 @@ MonoBehaviour:
     <AbilitiesRequired>k__BackingField: 2
   <BaseStatistics>k__BackingField: {fileID: 11400000, guid: 1eb5b8935a508f3488df0ee33573f0d2,
     type: 2}
-  <EquippableCategories>k__BackingField: []
+  <EquippableCategories>k__BackingField:
+  - {fileID: 11400000, guid: ae5b698dcad8a974fa682852739c8cb6, type: 2}
+  - {fileID: 11400000, guid: 735cc4febc4310b4c87daf6d753f80cf, type: 2}
+  - {fileID: 11400000, guid: 1b493dd0176f2f24c9e7629fca2b9f7a, type: 2}
+  - {fileID: 11400000, guid: 8658b362974a5994e9321e128e82be68, type: 2}
+  - {fileID: 11400000, guid: 0f8a0600802ee2d4dafdd6ace2488944, type: 2}
+  - {fileID: 11400000, guid: 34925acd158652947b72f763533a9331, type: 2}
+  - {fileID: 11400000, guid: da4319034070c8045aa74d65f09f560e, type: 2}
   <BaseAttack>k__BackingField: {fileID: 11400000, guid: 327281a7affcc6b4bbde99f5f3dd1368,
     type: 2}
