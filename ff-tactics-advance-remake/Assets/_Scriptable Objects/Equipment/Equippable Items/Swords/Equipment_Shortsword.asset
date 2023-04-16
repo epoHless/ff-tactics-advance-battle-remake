@@ -19,34 +19,26 @@ MonoBehaviour:
   <Name>k__BackingField: Shortsword
   <Description>k__BackingField: One-handed sword in common use.
   <Element>k__BackingField: {fileID: 0}
-  <Ability>k__BackingField: {fileID: 0}
+  <Ability>k__BackingField: {fileID: 11400000, guid: bb3b4d3e0ef2dbb4ebd34a7802eef33c,
+    type: 2}
   <Effect>k__BackingField: {fileID: 0}
   <Statistics>k__BackingField:
     <HP>k__BackingField:
       value: 0
-      ID: 0
     <CurrentHP>k__BackingField:
       value: 0
-      ID: 0
     <MP>k__BackingField:
       value: 0
-      ID: 0
     <CurrentMP>k__BackingField:
       value: 0
-      ID: 0
     <Attack>k__BackingField:
       value: 25
-      ID: 1
     <Defense>k__BackingField:
       value: 0
-      ID: 2
     <Magic>k__BackingField:
       value: 0
-      ID: 3
     <Resist>k__BackingField:
       value: 0
-      ID: 4
     <Speed>k__BackingField:
       value: 0
-      ID: 5
     Stats: []

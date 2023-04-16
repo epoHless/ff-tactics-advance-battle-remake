@@ -10,19 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d6e57f13abe487e8868821a1afdcf4c, type: 3}
-  m_Name: Ability_Protect
+  m_Name: Ability_Meter
   m_EditorClassIdentifier: 
   <Icon>k__BackingField: {fileID: 0}
-  <Name>k__BackingField: Protect
-  <Description>k__BackingField: Raises target's RES
-  <IsMultiTarget>k__BackingField: 0
-  <AbilityPower>k__BackingField: 0
-  <ManaCost>k__BackingField: 6
+  <Name>k__BackingField: Big Meteor
+  <Description>k__BackingField: Raises target's DEF
+  <IsMultiTarget>k__BackingField: 1
+  <AbilityPower>k__BackingField: 20
+  <ManaCost>k__BackingField: 10
   <AbilityType>k__BackingField: 1
-  <AbilityRange>k__BackingField: 4
+  <AbilityRange>k__BackingField: 6
   AbilityEffects:
   - rid: 3409393517236322304
-  - rid: 3409393517236322305
+  - rid: 3409393517236322306
+  - rid: 3409393517236322307
   references:
     version: 2
     RefIds:
@@ -31,13 +32,19 @@ MonoBehaviour:
       data:
         name: ParticleEffect
         <ParticlePosition>k__BackingField: 1
-        <Particle>k__BackingField: {fileID: 7036817304203522129, guid: 3cefa829969829542bf182f16e268213,
+        <Particle>k__BackingField: {fileID: 6429538234199463101, guid: 84024fd2828491b4aadeb9b211ca1793,
           type: 3}
         <Offset>k__BackingField: {x: 0, y: 0, z: 0}
-    - rid: 3409393517236322305
+    - rid: 3409393517236322306
+      type: {class: HPEffect, ns: , asm: Assembly-CSharp}
+      data:
+        name: HPEffect
+        effect: 0
+        offset: {x: 0, y: 0, z: 0}
+    - rid: 3409393517236322307
       type: {class: StatisticsEffect, ns: , asm: Assembly-CSharp}
       data:
         name: StatisticsEffect
-        statsToModify: 02000000
-        PercentageToModify: 10
-        offset: {x: 0, y: 1.5, z: 0}
+        statsToModify: 0200000004000000
+        PercentageToModify: -10
+        offset: {x: 0, y: 0, z: 0}

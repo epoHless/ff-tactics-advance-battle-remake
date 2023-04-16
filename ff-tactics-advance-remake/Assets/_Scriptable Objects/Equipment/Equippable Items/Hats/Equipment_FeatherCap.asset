@@ -19,7 +19,8 @@ MonoBehaviour:
   <Name>k__BackingField: Feather Cap
   <Description>k__BackingField: Sturdy cap with a long feather.
   <Element>k__BackingField: {fileID: 0}
-  <Ability>k__BackingField: {fileID: 0}
+  <Ability>k__BackingField: {fileID: 11400000, guid: 360ffbe3cc9d4db4387e83c45000c9b3,
+    type: 2}
   <Effect>k__BackingField: {fileID: 0}
   <Statistics>k__BackingField:
     <HP>k__BackingField:
@@ -40,3 +41,4 @@ MonoBehaviour:
       value: 4
     <Speed>k__BackingField:
       value: 0
+    Stats: []

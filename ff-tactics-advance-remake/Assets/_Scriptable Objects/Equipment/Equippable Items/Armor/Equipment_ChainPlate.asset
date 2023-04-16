@@ -19,7 +19,8 @@ MonoBehaviour:
   <Name>k__BackingField: Chain Plate
   <Description>k__BackingField: 
   <Element>k__BackingField: {fileID: 0}
-  <Ability>k__BackingField: {fileID: 0}
+  <Ability>k__BackingField: {fileID: 11400000, guid: 29d7dce97ce07bc42a5a1b4cdf16340a,
+    type: 2}
   <Effect>k__BackingField: {fileID: 0}
   <Statistics>k__BackingField:
     <HP>k__BackingField:

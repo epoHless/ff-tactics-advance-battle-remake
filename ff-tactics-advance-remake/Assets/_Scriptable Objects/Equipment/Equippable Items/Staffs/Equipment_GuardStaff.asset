@@ -19,34 +19,26 @@ MonoBehaviour:
   <Name>k__BackingField: Guard Staff
   <Description>k__BackingField: Staff magicked to protect its wielder.
   <Element>k__BackingField: {fileID: 0}
-  <Ability>k__BackingField: {fileID: 0}
+  <Ability>k__BackingField: {fileID: 11400000, guid: f027a6caad90aba44a4e05ac445fabf7,
+    type: 2}
   <Effect>k__BackingField: {fileID: 0}
   <Statistics>k__BackingField:
     <HP>k__BackingField:
       value: 0
-      ID: 0
     <CurrentHP>k__BackingField:
       value: 0
-      ID: 0
     <MP>k__BackingField:
       value: 0
-      ID: 0
     <CurrentMP>k__BackingField:
       value: 0
-      ID: 0
     <Attack>k__BackingField:
       value: 21
-      ID: 1
     <Defense>k__BackingField:
       value: 5
-      ID: 2
     <Magic>k__BackingField:
       value: 0
-      ID: 3
     <Resist>k__BackingField:
       value: 5
-      ID: 4
     <Speed>k__BackingField:
       value: 0
-      ID: 5
     Stats: []

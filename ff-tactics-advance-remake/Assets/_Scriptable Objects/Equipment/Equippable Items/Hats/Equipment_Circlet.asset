@@ -19,7 +19,8 @@ MonoBehaviour:
   <Name>k__BackingField: Circlet
   <Description>k__BackingField: Ornament meant to protect wearer from harmful magic.
   <Element>k__BackingField: {fileID: 0}
-  <Ability>k__BackingField: {fileID: 0}
+  <Ability>k__BackingField: {fileID: 11400000, guid: 3e181f1ba57e2034b9a04c9244902e6e,
+    type: 2}
   <Effect>k__BackingField: {fileID: 0}
   <Statistics>k__BackingField:
     <HP>k__BackingField:
@@ -40,3 +41,4 @@ MonoBehaviour:
       value: 3
     <Speed>k__BackingField:
       value: 0
+    Stats: []

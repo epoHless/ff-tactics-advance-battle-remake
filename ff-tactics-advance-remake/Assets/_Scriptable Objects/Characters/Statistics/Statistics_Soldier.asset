@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067dcdb6a91445cb969067d840ac6af4, type: 3}
   m_Name: Statistics_Soldier
   m_EditorClassIdentifier: 
-  <HP>k__BackingField: 40
-  <MP>k__BackingField: 14
+  <HP>k__BackingField: 120
+  <MP>k__BackingField: 76
   <Attack>k__BackingField: 88
   <Defense>k__BackingField: 88
   <Magic>k__BackingField: 60

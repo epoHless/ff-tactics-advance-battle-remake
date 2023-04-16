@@ -19,7 +19,8 @@ MonoBehaviour:
   <Name>k__BackingField: Iron Armor
   <Description>k__BackingField: 
   <Element>k__BackingField: {fileID: 0}
-  <Ability>k__BackingField: {fileID: 0}
+  <Ability>k__BackingField: {fileID: 11400000, guid: f027a6caad90aba44a4e05ac445fabf7,
+    type: 2}
   <Effect>k__BackingField: {fileID: 0}
   <Statistics>k__BackingField:
     <HP>k__BackingField:

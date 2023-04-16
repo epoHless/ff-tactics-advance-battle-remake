@@ -19,7 +19,8 @@ MonoBehaviour:
   <Name>k__BackingField: Bronze Armor
   <Description>k__BackingField: 
   <Element>k__BackingField: {fileID: 0}
-  <Ability>k__BackingField: {fileID: 0}
+  <Ability>k__BackingField: {fileID: 11400000, guid: 23a05b366e1a02841beb1be15f5d560a,
+    type: 2}
   <Effect>k__BackingField: {fileID: 0}
   <Statistics>k__BackingField:
     <HP>k__BackingField:

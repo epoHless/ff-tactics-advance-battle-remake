@@ -10,34 +10,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d6e57f13abe487e8868821a1afdcf4c, type: 3}
-  m_Name: Ability_Protect
+  m_Name: Ability_Charge
   m_EditorClassIdentifier: 
   <Icon>k__BackingField: {fileID: 0}
-  <Name>k__BackingField: Protect
-  <Description>k__BackingField: Raises target's RES
+  <Name>k__BackingField: Charge
+  <Description>k__BackingField: Reduces DEF and  Deals Damage
   <IsMultiTarget>k__BackingField: 0
-  <AbilityPower>k__BackingField: 0
+  <AbilityPower>k__BackingField: 10
   <ManaCost>k__BackingField: 6
-  <AbilityType>k__BackingField: 1
-  <AbilityRange>k__BackingField: 4
+  <AbilityType>k__BackingField: 0
+  <AbilityRange>k__BackingField: 1
   AbilityEffects:
-  - rid: 3409393517236322304
-  - rid: 3409393517236322305
+  - rid: 3409393425706647552
+  - rid: 3409393471625625600
+  - rid: 3409393525537374208
   references:
     version: 2
     RefIds:
-    - rid: 3409393517236322304
+    - rid: 3409393425706647552
       type: {class: ParticleEffect, ns: , asm: Assembly-CSharp}
       data:
         name: ParticleEffect
         <ParticlePosition>k__BackingField: 1
-        <Particle>k__BackingField: {fileID: 7036817304203522129, guid: 3cefa829969829542bf182f16e268213,
+        <Particle>k__BackingField: {fileID: -7782142262020660024, guid: 1c3dac94110955943a4e5707f432c392,
           type: 3}
-        <Offset>k__BackingField: {x: 0, y: 0, z: 0}
-    - rid: 3409393517236322305
+        <Offset>k__BackingField: {x: 0, y: 1, z: 0}
+    - rid: 3409393471625625600
+      type: {class: HPEffect, ns: , asm: Assembly-CSharp}
+      data:
+        name: HPEffect
+        effect: 0
+        offset: {x: 0, y: 1.5, z: 0}
+    - rid: 3409393525537374208
       type: {class: StatisticsEffect, ns: , asm: Assembly-CSharp}
       data:
         name: StatisticsEffect
         statsToModify: 02000000
-        PercentageToModify: 10
+        PercentageToModify: -15
         offset: {x: 0, y: 1.5, z: 0}

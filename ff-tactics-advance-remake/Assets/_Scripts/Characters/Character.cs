@@ -46,6 +46,7 @@ public class Character : MonoBehaviour
 
         foreach (var data in Equipment)
         {
+            if (!data.Ability) continue;
             EquippedAbilities.Add(data.Ability);
         }
     }

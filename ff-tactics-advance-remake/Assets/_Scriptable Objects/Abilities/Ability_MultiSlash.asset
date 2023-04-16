@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d6e57f13abe487e8868821a1afdcf4c, type: 3}
-  m_Name: Ability_BaseAttack
+  m_Name: Ability_MultiSlash
   m_EditorClassIdentifier: 
   <Icon>k__BackingField: {fileID: 0}
-  <Name>k__BackingField: Fight
+  <Name>k__BackingField: Multi Slash
   <Description>k__BackingField: Deals Damage
-  <IsMultiTarget>k__BackingField: 0
-  <AbilityPower>k__BackingField: 10
-  <ManaCost>k__BackingField: 0
+  <IsMultiTarget>k__BackingField: 1
+  <AbilityPower>k__BackingField: 20
+  <ManaCost>k__BackingField: 4
   <AbilityType>k__BackingField: 0
   <AbilityRange>k__BackingField: 1
   AbilityEffects:

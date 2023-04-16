@@ -19,7 +19,8 @@ MonoBehaviour:
   <Name>k__BackingField: Opal Helm
   <Description>k__BackingField: Formal helm worn in ceremonies.
   <Element>k__BackingField: {fileID: 0}
-  <Ability>k__BackingField: {fileID: 0}
+  <Ability>k__BackingField: {fileID: 11400000, guid: 67e0c17add5d6d241b668b0b9edf4390,
+    type: 2}
   <Effect>k__BackingField: {fileID: 0}
   <Statistics>k__BackingField:
     <HP>k__BackingField:
@@ -40,3 +41,4 @@ MonoBehaviour:
       value: 3
     <Speed>k__BackingField:
       value: 0
+    Stats: []

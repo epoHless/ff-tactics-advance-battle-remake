@@ -19,7 +19,8 @@ MonoBehaviour:
   <Name>k__BackingField: Iron Helm
   <Description>k__BackingField: Heavy, but very sturdy iron helmet.
   <Element>k__BackingField: {fileID: 0}
-  <Ability>k__BackingField: {fileID: 0}
+  <Ability>k__BackingField: {fileID: 11400000, guid: f027a6caad90aba44a4e05ac445fabf7,
+    type: 2}
   <Effect>k__BackingField: {fileID: 0}
   <Statistics>k__BackingField:
     <HP>k__BackingField:
@@ -40,3 +41,4 @@ MonoBehaviour:
       value: 3
     <Speed>k__BackingField:
       value: 0
+    Stats: []

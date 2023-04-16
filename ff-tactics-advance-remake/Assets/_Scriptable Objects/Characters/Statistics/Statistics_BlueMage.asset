@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 067dcdb6a91445cb969067d840ac6af4, type: 3}
   m_Name: Statistics_BlueMage
   m_EditorClassIdentifier: 
-  <HP>k__BackingField: 34
-  <MP>k__BackingField: 30
+  <HP>k__BackingField: 102
+  <MP>k__BackingField: 90
   <Attack>k__BackingField: 80
   <Defense>k__BackingField: 84
   <Magic>k__BackingField: 84
