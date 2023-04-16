@@ -8,7 +8,7 @@ public class StatusButton : MenuButton
     protected override void ExecuteAction()
     {
         GameManager.Instance.statusState.ID = ID;
-        GameManager.Instance.statusState.character = TurnManager.Instance.currentTurn.Character;
+        GameManager.Instance.statusState.character = TileSelector.CurrentCharacter;
         GameManager.Instance.ChangeState(GameManager.Instance.statusState);
     }
 }
