@@ -15,11 +15,13 @@ public class LoadingScreen : Singleton<LoadingScreen>
         base.Awake();
 
         canvasGroup = GetComponent<CanvasGroup>();
-        
     }
 
     private void Start()
     {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         canvasGroup.blocksRaycasts = false;

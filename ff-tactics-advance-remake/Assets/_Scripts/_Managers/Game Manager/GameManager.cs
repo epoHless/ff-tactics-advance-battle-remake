@@ -40,9 +40,6 @@ public class GameManager : Singleton<GameManager>
 
     private void Start()
     {
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
-        
         currentState = menuState;
         currentState.OnEnter(this);
     }

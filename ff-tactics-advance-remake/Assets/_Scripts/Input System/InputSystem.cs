@@ -45,12 +45,12 @@ namespace FinalFantasy
 
         public static void EnableNavigation()
         {
-            Actions.Enable();
+            Actions.Menu.OpenMenu.Enable();
         }
         
         public static void DisableNavigation()
         {
-            Actions.Disable();
+            Actions.Menu.OpenMenu.Disable();
         }
         
         public static void EnableGameInput()

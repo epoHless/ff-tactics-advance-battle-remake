@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.assemblytest.parentforselected": "https://github.com/epoHless/parent-for-go.git",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.2d.tilemap": "1.0.0",
     "com.unity.2d.tilemap.extras": "2.2.5",

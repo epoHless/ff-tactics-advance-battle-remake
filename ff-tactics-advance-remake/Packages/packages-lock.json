@@ -1,12 +1,5 @@
 {
   "dependencies": {
-    "com.assemblytest.parentforselected": {
-      "version": "https://github.com/epoHless/parent-for-go.git",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "9f8e79b268ddbfd2fa4b1d93dcbdbdc4761a698c"
-    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
