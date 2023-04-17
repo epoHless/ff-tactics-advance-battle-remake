@@ -11,10 +11,9 @@ namespace FinalFantasy
         private static PlayerInputActions Actions { get; set; }
         
         public static Vector2 GridAxis => Actions.Movement.GridMovement.ReadValue<Vector2>();
-
         public static bool WasConfirmPressed => Actions.Menu.Confirm.WasPressedThisFrame();
         public static bool WasBackPressed => Actions.Menu.Back.WasPressedThisFrame();
-
+        public static bool WasPausePressed => Actions.Menu.OpenMenu.WasPressedThisFrame();
         public static Vector2 CameraVector => Actions.Camera.Input.ReadValue<Vector2>();
         
         private static bool IsInit { get; set; } = false;
@@ -44,6 +43,16 @@ namespace FinalFantasy
 
         #region Inputs
 
+        public static void EnableNavigation()
+        {
+            Actions.Enable();
+        }
+        
+        public static void DisableNavigation()
+        {
+            Actions.Disable();
+        }
+        
         public static void EnableGameInput()
         {
             Actions.Movement.Enable();
@@ -214,6 +223,52 @@ namespace FinalFantasy
                     break;
                 case EInputType.CANCELLED:
                     Actions.Camera.Input.canceled -= context;
+                    break;
+            }
+        }
+
+        #endregion
+
+        #region Menu Inputs
+
+        public static void EnableMenu()
+        {
+            Actions.Menu.OpenMenu.Enable();
+        }
+        
+        public static void DisableMenu()
+        {
+            Actions.Menu.OpenMenu.Disable();
+        }
+        
+        public static void AddMenuListener(Action<InputAction.CallbackContext> context, EInputType _inputType = EInputType.STARTED)
+        {
+            switch (_inputType)
+            {
+                case EInputType.STARTED:
+                    Actions.Menu.OpenMenu.started += context;
+                    break;
+                case EInputType.PERFORMED:
+                    Actions.Menu.OpenMenu.performed += context;
+                    break;
+                case EInputType.CANCELLED:
+                    Actions.Menu.OpenMenu.canceled += context;
+                    break;
+            }
+        }
+        
+        public static void RemoveMenuListener(Action<InputAction.CallbackContext> context, EInputType _inputType = EInputType.STARTED)
+        {
+            switch (_inputType)
+            {
+                case EInputType.STARTED:
+                    Actions.Menu.OpenMenu.started -= context;
+                    break;
+                case EInputType.PERFORMED:
+                    Actions.Menu.OpenMenu.performed -= context;
+                    break;
+                case EInputType.CANCELLED:
+                    Actions.Menu.OpenMenu.canceled -= context;
                     break;
             }
         }
