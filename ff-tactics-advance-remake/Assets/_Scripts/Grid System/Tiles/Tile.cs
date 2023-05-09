@@ -51,7 +51,7 @@ namespace GridSystem
         #region Methods
 
         [ContextMenu("Calculate Neighbors")]
-        private void GetNeighbors()
+        public void GetNeighbors()
         {
             ArrivalTransform = transform.GetChild(0);
             Height = Mathf.FloorToInt(Collider.size.y);

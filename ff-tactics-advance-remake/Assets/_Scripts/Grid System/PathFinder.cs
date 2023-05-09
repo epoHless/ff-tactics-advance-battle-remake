@@ -24,7 +24,7 @@ public static class PathFinder
                 return GetFinishedList(_character.Movement.OccupiedTile, _endTile);
             }
 
-            var neighborTiles = GetTileNeighbors(_character, currentTile);
+            // var neighborTiles = GetTileNeighbors(_character, currentTile);
 
             foreach (var neighborTile in currentTile.Neighbors)
             {

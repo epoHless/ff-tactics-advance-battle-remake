@@ -43,8 +43,14 @@ public class TurnManager : Singleton<TurnManager>
 
     #region Methods
 
-    public TurnInformation StartTurn()
+    public void StartTurn()
     {
+        if (Characters.Count <= 1)
+        {
+            LoadingScreen.Instance.LoadScreen(0);
+            return;
+        }
+        
         if (turnOrder.Count <= 0)
         {
             turnOrder = new Queue<Character>(Characters.OrderBy(character => character.BattleStatistics.Speed.Value).ToList()); //todo add Wait priority
@@ -53,7 +59,6 @@ public class TurnManager : Singleton<TurnManager>
         EventManager.OnTurnChanged?.Invoke(currentTurn);
 
         currentTurn = new TurnInformation(turnOrder.Dequeue());
-        return currentTurn;
     }
 
     #endregion
